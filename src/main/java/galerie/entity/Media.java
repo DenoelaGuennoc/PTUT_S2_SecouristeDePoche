@@ -7,22 +7,28 @@ import lombok.*;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Illustration {
+public class Media {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
     @Column(unique=true)
     @NonNull
-    private String nomIllustration;
-    
+    private String nomMedia;
+
     @NonNull
-    private String descriptionIllustration;
+    private String descriptionContenu;
 
-    //Trouver comment y mettre des images
+    @NonNull
+    private String typeMedia;
 
-    @ManyToMany (mappedBy = "images")
-    private List<Chapitre> cours = new LinkedList<>();
+    @NonNull
+    private Integer duree;
 
-    @ManyToMany (mappedBy = "dessins")
-    private List<Fiche> guides = new LinkedList<>();
+    @Column(unique=true)
+    @NonNull
+    private String source;
+
+    @ManyToMany (mappedBy = "medias")
+    private List<Chapitre> enseignements = new LinkedList<>();
+    
 }
