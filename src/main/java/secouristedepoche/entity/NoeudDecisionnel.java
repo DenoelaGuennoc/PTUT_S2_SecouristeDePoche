@@ -16,7 +16,7 @@ public class NoeudDecisionnel {
     private String nomNoeud;
     
     public NoeudDecisionnel(Integer idNoeud, String nomNoeud){
-        this id = idNoeud;
-        this nomNoeud = nomNoeud;
+        this.id = idNoeud;
+        this.nomNoeud = nomNoeud;
     }
 }
