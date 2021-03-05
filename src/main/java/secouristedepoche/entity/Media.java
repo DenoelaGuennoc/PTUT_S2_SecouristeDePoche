@@ -1,4 +1,7 @@
 package secouristedepoche.entity;
+
+import java.util.LinkedList;
+import java.util.List;
 import javax.persistence.*;
 import lombok.*;
 
@@ -7,21 +10,28 @@ import lombok.*;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Fiche {
+public class Media {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
     @Column(unique=true)
     @NonNull
-    private String nomFiche;
+    private String nomMedia;
+
+    @NonNull
+    private String descriptionContenu;
+
+    @NonNull
+    private String typeMedia;
+
+    @NonNull
+    private Integer duree;
+
+    @Column(unique=true)
+    @NonNull
+    private String source;
+
+    @ManyToMany (mappedBy = "medias")
+    private List<Chapitre> enseignements = new LinkedList<>();
     
-    @ManyToMany (mappedBy = "consuiteATenir")
-    private List<Chapitre> situations = new LinkedList<>();
-
-    @ManyToMany
-    List<Illustration> dessins = new LinkedList<>();
-
-    @OneToMany(mappedBy = "aideComprehension")
-    private List<Question> information = new LinkedList<>();
-
 }
