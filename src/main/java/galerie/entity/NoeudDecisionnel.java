@@ -7,21 +7,12 @@ import lombok.*;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Question {
+public class NoeudDecisionnel {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
     @Column(unique=true)
     @NonNull
-    private String resumeQuestion;
-
-    @Column(unique=true)
-    @NonNull
-    private String texteQuestion;
+    private String nomNoeud;
     
-    @OneToMany(mappedBy = "questionPosee")
-    List<Reponse> reponsePossible = new LinkedList<>();
-
-    @ManyToOne
-    Fiche aideComprehension;
 }

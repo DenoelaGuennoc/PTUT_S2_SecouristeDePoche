@@ -14,5 +14,19 @@ public class Chapitre {
     @Column(unique=true)
     @NonNull
     private String titreChapitre;
+
+    //Il faut trouver un moyen de mettre du contenu dans chaque chapitre également
     
+    @ManyToOne
+    @NonNull
+    Theme theme;
+
+    @ManyToMany
+    List<Illustration> images = new LinkedList<>();
+
+    @ManyToMany
+    List<Fiche> conduiteATenir = new LinkedList<>();
+
+    @ManyToMany
+    List<Media> medias = new LinkedList<>();
 }
