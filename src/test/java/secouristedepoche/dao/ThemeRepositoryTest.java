@@ -1,6 +1,6 @@
-package galerie.dao;
+package secouristedepoche.dao;
 
-import galerie.entity.Galerie;
+import secouristedepoche.entity.Theme;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
@@ -10,14 +10,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.jdbc.Sql;
-import galerie.dao.GalerieRepository;
+import secouristedepoche.dao.ThemeRepository;
 
 @Log4j2 // Génère le 'logger' pour afficher les messages de trace
 @DataJpaTest
-public class GalerieRepositoryTest {
+public class ThemeRepositoryTest {
 
     @Autowired
-    private GalerieRepository galerieDAO;
+    private ThemeRepository galerieDAO;
 
     @Test
     @Sql("test-data.sql") // On peut charger des donnnées spécifiques pour un test
