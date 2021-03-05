@@ -15,4 +15,8 @@ public class NoeudDecisionnel {
     @NonNull
     private String nomNoeud;
     
+    public NoeudDecisionnel(Integer idNoeud, String nomNoeud){
+        this id = idNoeud;
+        this nomNoeud = nomNoeud;
+    }
 }
