@@ -9,17 +9,13 @@ import java.util.List;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-<<<<<<< HEAD:src/main/java/secouristedepoche/entity/Reponse.java
 public class Reponse {
-=======
-public class Fiche {
->>>>>>> 95634eb9ba2e9291981e84511d08fada274a9a86:src/main/java/secouristedepoche/entity/Fiche.java
+
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
     @Column(unique=true)
     @NonNull
-<<<<<<< HEAD:src/main/java/secouristedepoche/entity/Reponse.java
     private String libelleReponse;
     
     @ManyToOne
@@ -29,7 +25,4 @@ public class Fiche {
     @OneToOne
     @NonNull
     private NoeudDecisionnel noeudFils;
-=======
-    private String nomFiche;
->>>>>>> 95634eb9ba2e9291981e84511d08fada274a9a86:src/main/java/secouristedepoche/entity/Fiche.java
 }
