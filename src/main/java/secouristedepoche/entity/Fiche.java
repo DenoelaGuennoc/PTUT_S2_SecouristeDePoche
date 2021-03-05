@@ -18,6 +18,13 @@ public class Fiche extends NoeudDecisionnel {
     @NonNull
     private String nomFiche;
     
+    public Fiche(Integer idFiche, String nomFiche, Integer idNoeud, String nomNoeud){
+        this.id = idFiche.
+        this.nomFiche = nomFiche;
+        super(idNoeud, nomNoeud);
+    }
+
+
     @ManyToMany (mappedBy = "consuiteATenir")
     private List<Chapitre> situations = new LinkedList<>();
 

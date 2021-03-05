@@ -9,7 +9,7 @@ import java.util.List;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Question {
+public class Question extends NoeudDecisionnel{
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
@@ -20,6 +20,13 @@ public class Question {
     @Column(unique=true)
     @NonNull
     private String texteQuestion;
+
+    public Question (Integer idQuestion, String resumeQuestion, String texteQuestion, Integer idNoeud, String nomNoeud){
+        this.id = idQuestion;
+        this.resumeQuestion = resumeQuestion;
+        this.texteQuestion = texteQuestion;
+        super(idNoeud, nomNoeud);
+    }
     
     @OneToMany(mappedBy = "questionPosee")
     List<Reponse> reponsePossible = new LinkedList<>();

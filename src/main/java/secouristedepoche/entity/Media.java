@@ -21,8 +21,9 @@ public class Media {
     @NonNull
     private String descriptionContenu;
 
+    @Enumerated(EnumType.String)
     @NonNull
-    private String typeMedia;
+    private TypeMedia typeMedia;
 
     @NonNull
     private Integer duree;
