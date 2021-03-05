@@ -15,4 +15,7 @@ public class Theme {
     @NonNull
     private String titreTheme;
     
+    @OneToMany(mappedBy = "theme")
+    private List<Chapitre> chapitres = new LinkedList<>();
+
 }
