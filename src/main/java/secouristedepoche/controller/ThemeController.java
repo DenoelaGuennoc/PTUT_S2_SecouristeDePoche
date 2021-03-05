@@ -1,4 +1,4 @@
-package galerie.controller;
+package secouristedepoche.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,7 +30,7 @@ public class ThemeController {
      * @param model pour transmettre les informations à la vue
      * @return le nom de la vue à afficher ('afficheGaleries.html')
      */
-    @GetMapping(path = "theme")
+    @GetMapping(path = "themes")
     public String afficheToutesLesGaleries(Model model) {
         model.addAttribute("theme", dao.findAll());
         return "afficheTheme";

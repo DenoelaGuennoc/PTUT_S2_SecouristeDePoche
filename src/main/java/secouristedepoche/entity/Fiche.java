@@ -1,11 +1,8 @@
 package secouristedepoche.entity;
 import javax.persistence.*;
 import lombok.*;
-<<<<<<< HEAD
-=======
 import java.util.LinkedList;
 import java.util.List;
->>>>>>> 95634eb9ba2e9291981e84511d08fada274a9a86
 
 // Un exemple d'entité
 // On utilise Lombok pour auto-générer getter / setter / toString...

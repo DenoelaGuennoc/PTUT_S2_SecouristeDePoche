@@ -17,9 +17,9 @@
 		<ul>
 			<!--/* Pour chaque catégorie gdans la liste 'galeries' transmise par le contrôleur */-->
 			<li th:each="t: ${theme">
-				Nom: <em th:text="${t.nom}">Le nom du thème</em>,
+				Titre <em th:text="${t.titreTheme}">Le titre du thème</em>,
                                 <ul>
-                			<li th:each="e: ${t.chapitre}" th:text='${e.intitule}'>
+                			<li th:each="c: ${t.theme}" th:text='${c.titreChapitre}'>
                                             
                                         </li>
                                 </ul>
