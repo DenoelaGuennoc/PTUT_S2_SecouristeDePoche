@@ -1,4 +1,7 @@
 package secouristedepoche.entity;
+
+import java.util.LinkedList;
+import java.util.List;
 import javax.persistence.*;
 import lombok.*;
 
@@ -8,7 +11,7 @@ import lombok.*;
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
 public class Media {
-    @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
     @Column(unique=true)
@@ -18,8 +21,9 @@ public class Media {
     @NonNull
     private String descriptionContenu;
 
+    @Enumerated (EnumType.STRING)
     @NonNull
-    private String typeMedia;
+    private TypeMedia typeMedia;
 
     @NonNull
     private Integer duree;

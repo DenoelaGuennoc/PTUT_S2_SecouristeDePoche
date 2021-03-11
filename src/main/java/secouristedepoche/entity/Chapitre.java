@@ -1,4 +1,6 @@
 package secouristedepoche.entity;
+import java.util.LinkedList;
+import java.util.List;
 import javax.persistence.*;
 import lombok.*;
 
@@ -7,12 +9,26 @@ import lombok.*;
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Question {
+public class Chapitre {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
     @Column(unique=true)
     @NonNull
-    private String libelleQuestion;
+    private String titreChapitre;
+
+    //Il faut trouver un moyen de mettre du contenu dans chaque chapitre également
     
+    @ManyToOne
+    @NonNull
+    Theme theme;
+
+    @ManyToMany
+    List<Illustration> images = new LinkedList<>();
+
+    @ManyToMany
+    List<Fiche> conduiteATenir = new LinkedList<>();
+
+    @ManyToMany
+    List<Media> medias = new LinkedList<>();
 }

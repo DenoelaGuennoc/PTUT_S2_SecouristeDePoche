@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<!--/* 
+	Le contrôleur transmet deux informations à cette vue :
+		- galeries : la liste des galeries à afficher
+		- message : un éventuel message d'erreur ou d'information
+*/-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Liste des thèmes</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css"/>	
+	</head>
+	<body>
+		<h1>Les thèmes et leurs chapitres</h1>			
+		<ul>
+			<!--/* Pour chaque catégorie gdans la liste 'galeries' transmise par le contrôleur */-->
+			<li th:each="t: ${theme">
+				Titre <em th:text="${t.titreTheme}">Le titre du thème</em>,
+                                <ul>
+                			<li th:each="c: ${t.theme}" th:text='${c.titreChapitre}'>
+                                            
+                                        </li>
+                                </ul>
+			</li>
+		</ul>
+		<hr/>
+		<a th:href="@{/}" href="../static/index.html">Retour au menu</a>
+		<hr/>
+	</body>
+</html>
