@@ -1,4 +1,4 @@
-package secouristedepoche.dao
+package secouristedepoche.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import secouristedepoche.entity.Illustration;
