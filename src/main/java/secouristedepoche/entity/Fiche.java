@@ -25,7 +25,7 @@ public class Fiche extends NoeudDecisionnel {
     }
 
 
-    @ManyToMany (mappedBy = "consuiteATenir")
+    @ManyToMany (mappedBy = "conduiteATenir")
     private List<Chapitre> situations = new LinkedList<>();
 
     @ManyToMany
