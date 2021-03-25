@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Liste des thèmes</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css"/>	
+	</head>
+	<body>
+		<h1>Les thèmes</h1>			
+		<ul>
+			<li th:each="t: ${theme}">
+				Titre <em th:text="${t.titreTheme}">Le titre du thème</em>,
+			</li>
+                    
+                    <!--   <li th:each="c: $ {chapitre}">
+                            <em th:text="${c.titre}">Le titre du chapitre</em>
+                        </li>  -->
+                    
+		</ul>	
+		<a th:href="@{/}" href="../static/index.html">Retour au menu</a>		
+	</body>
+</html>
