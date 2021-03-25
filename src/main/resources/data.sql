@@ -1,25 +1,42 @@
 --Thèmes
-INSERT INTO Theme VALUES('Protection');
-INSERT INTO Theme VALUES('Alerte');
-INSERT INTO Theme VALUES('Obstruction des voies aériennes');
-INSERT INTO Theme VALUES('Hémorragie');
-INSERT INTO Theme VALUES('Perte de connaissance');
-INSERT INTO Theme VALUES('Arrêt cardio-respiratoire');
-INSERT INTO Theme VALUES('Malaise');
-INSERT INTO Theme VALUES('Brûlures');
-INSERT INTO Theme VALUES('Plaies');
-INSERT INTO Theme VALUES('Traumatismes');
+INSERT INTO Theme(id, titreTheme) VALUES
+    (1, 'Protection'),
+    (2, 'Alerte'),
+    (3, 'Obstruction des voies aériennes'),
+    (4, 'Hémorragie'),
+    (5, 'Perte de connaissance'),
+    (6, 'Arrêt cardio-respiratoire'),
+    (7, 'Malaise'),
+    (8, 'Brûlures'),
+    (9, 'Plaies'),
+    (10, 'Traumatismes');
 
-/*
 --Chapitres
-INSERT INTO Chapitre VALUES();
+INSERT INTO Chapitre(id, titreChapitre, theme_id) VALUES
+    (1, "L'Obstruction partielle", 3),
+    (1, "L'Obstruction totale", 3);
 
 --Noeuds décisionnels
-INSERT INTO Chapitre VALUES();
+INSERT INTO NouedDecisionnel VALUES
+    (1, 'Respire'),
+    (2, 'Conscient'),
+    (3, 'OBVA'),
+    (4, 'Hemo'),
+    (5, 'Trauma'),
+    (6, 'Plaie'),
+    (7, 'Brulure'),
+    (8, 'Malaise'),
+    (9, 'Type OBVA'),
+    (10, 'Type Hemo'),
+    (11, 'Localisation Trauma'),
+    (12, 'Type Plaie'),
+    (13, 'Localisation Plaie Grave'),
+    (14, 'Type Brulure'),
+    (15, 'Cause Brulure');
 
 --Questions
-INSERT INTO Chapitre VALUES();
-
+INSERT INTO Question VALUES();
+/*
 --Réponses
 INSERT INTO Chapitre VALUES();
 
