@@ -33,10 +33,10 @@ INSERT INTO NouedDecisionnel VALUES
     (13, 'Localisation Plaie Grave'),
     (14, 'Type Brulure'),
     (15, 'Cause Brulure');
-
+/*
 --Questions
 INSERT INTO Question VALUES();
-/*
+
 --Réponses
 INSERT INTO Chapitre VALUES();
 
