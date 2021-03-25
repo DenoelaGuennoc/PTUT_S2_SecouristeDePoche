@@ -19,9 +19,9 @@ public class Fiche extends NoeudDecisionnel {
     private String nomFiche;
     
     public Fiche(Integer idFiche, String nomFiche, Integer idNoeud, String nomNoeud){
-        this.id = idFiche.
-        this.nomFiche = nomFiche;
         super(idNoeud, nomNoeud);
+        this.id = idFiche;
+        this.nomFiche = nomFiche;
     }
 
 

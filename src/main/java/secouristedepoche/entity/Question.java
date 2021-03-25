@@ -1,4 +1,7 @@
 package secouristedepoche.entity;
+import java.util.LinkedList;
+import java.util.List;
+
 import javax.persistence.*;
 import lombok.*;
 
@@ -20,10 +23,10 @@ public class Question extends NoeudDecisionnel{
     private String texteQuestion;
 
     public Question (Integer idQuestion, String resumeQuestion, String texteQuestion, Integer idNoeud, String nomNoeud){
+        super(idNoeud, nomNoeud);
         this.id = idQuestion;
         this.resumeQuestion = resumeQuestion;
         this.texteQuestion = texteQuestion;
-        super(idNoeud, nomNoeud);
     }
     
     @OneToMany(mappedBy = "questionPosee")

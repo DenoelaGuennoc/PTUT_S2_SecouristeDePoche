@@ -1,4 +1,5 @@
+package secouristedepoche.entity;
+
 public enum TypeMedia {
-    Audio,
-    Video
+    AUDIO, VIDEO;
 }

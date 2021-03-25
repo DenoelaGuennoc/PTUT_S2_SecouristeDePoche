@@ -21,7 +21,7 @@ public class Media {
     @NonNull
     private String descriptionContenu;
 
-    @Enumerated(EnumType.String)
+    @Enumerated(EnumType.ORDINAL)
     @NonNull
     private TypeMedia typeMedia;
 
