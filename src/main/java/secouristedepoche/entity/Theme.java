@@ -1,4 +1,7 @@
 package secouristedepoche.entity;
+import java.util.LinkedList;
+import java.util.List;
+
 import javax.persistence.*;
 import lombok.*;
 
