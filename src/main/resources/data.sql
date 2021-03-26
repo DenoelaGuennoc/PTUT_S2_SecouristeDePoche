@@ -17,26 +17,23 @@ INSERT INTO Chapitre(id, titre, theme_id) VALUES
     (2, 'Obstruction totale', 3);
 
 --Noeuds décisionnels
-INSERT INTO NouedDecisionnel VALUES
-    (1, 'Respire'),
-    (2, 'Conscient'),
-    (3, 'OBVA'),
-    (4, 'Hemo'),
-    (5, 'Trauma'),
-    (6, 'Plaie'),
-    (7, 'Brulure'),
-    (8, 'Malaise'),
-    (9, 'Type OBVA'),
-    (10, 'Type Hemo'),
-    (11, 'Localisation Trauma'),
-    (12, 'Type Plaie'),
-    (13, 'Localisation Plaie Grave'),
-    (14, 'Type Brulure'),
-    (15, 'Cause Brulure');
+INSERT INTO NouedDecisionnel(id, nomNoeud, texteQuestion) VALUES
+    (1, 'Respire', 'La victime respire-t-elle ?'),
+    (2, 'Conscient', 'La victime est-elle consciente ?'),
+    (3, 'OBVA', 'La victime a-t-elle avalé un objet de travers ?'),
+    (4, 'Hemo', 'La victime saigne-t-elle abondamment ?'),
+    (5, 'Trauma', 'La victime a-t-elle subit un traumatisme physique ?'),
+    (6, 'Plaie', 'La victime a-t-elle une plaie ?'),
+    (7, 'Brulure', "La victime s'est-elle brûlée ?"),
+    (8, 'Malaise', 'La victime se sent-elle mal ?'),
+    (9, 'Type OBVA', 'La victime peut-elle parler ou tousser ?'),
+    (10, 'Type Hemo', 'De quelle partie du corps saigne la victime ?'),
+    (11, 'Localisation Trauma', 'Où la victime a-t-elle subit un traumatisme ?'),
+    (12, 'Type Plaie', 'La plaie est-elle simple ou grave ?'),
+    (13, 'Localisation Plaie Grave', 'Où se situe la plaie ?'),
+    (14, 'Type Brulure', 'La brûlure est-elle simple ou grave ?'),
+    (15, 'Cause Brulure', 'Quelle est la cause de la brûlure ?');
 /*
---Questions
-INSERT INTO Question VALUES();
-
 --Réponses
 INSERT INTO Chapitre VALUES();
 
