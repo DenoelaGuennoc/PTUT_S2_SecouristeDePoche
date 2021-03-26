@@ -8,13 +8,11 @@
 	<body>
 		<h1>Les thèmes</h1>			
 		<ul>
-			<li th:each="t: ${theme}">
-				Titre <em th:text="${t.titreTheme}">Le titre du thème</em>,
+			<li th:each="t: ${theme}" >
+                                                     
+				 <em th:text="${t.titre}">Le titre du thème</em>
+                                 <em th:each="c: ${chapitre}" th:if="${t.id == c.theme_id}" th:text="${c.titre}" >Le titre du chapitre</em>
 			</li>
-                    
-                    <!--   <li th:each="c: $ {chapitre}">
-                            <em th:text="${c.titre}">Le titre du chapitre</em>
-                        </li>  -->
                     
 		</ul>	
 		<a th:href="@{/}" href="../static/index.html">Retour au menu</a>		

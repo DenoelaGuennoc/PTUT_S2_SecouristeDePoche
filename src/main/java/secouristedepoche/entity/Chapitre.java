@@ -15,7 +15,7 @@ public class Chapitre {
 
     @Column(unique=true)
     @NonNull
-    private String titreChapitre;
+    private String titre;
 
     //Il faut trouver un moyen de mettre du contenu dans chaque chapitre également
     

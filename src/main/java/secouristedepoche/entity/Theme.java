@@ -1,7 +1,6 @@
 package secouristedepoche.entity;
 import java.util.LinkedList;
 import java.util.List;
-
 import javax.persistence.*;
 import lombok.*;
 import java.util.LinkedList;
@@ -18,7 +17,7 @@ public class Theme {
 
     @Column(unique=true)
     @NonNull
-    private String titreTheme;
+    private String titre;
     
     @OneToMany(mappedBy = "theme")
     private List<Chapitre> chapitres = new LinkedList<>();

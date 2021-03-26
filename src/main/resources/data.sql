@@ -1,5 +1,5 @@
 --Thèmes
-INSERT INTO Theme(id, titreTheme) VALUES
+INSERT INTO Theme(id, titre) VALUES
     (1, 'Protection'),
     (2, 'Alerte'),
     (3, 'Obstruction des voies aériennes'),
@@ -12,9 +12,9 @@ INSERT INTO Theme(id, titreTheme) VALUES
     (10, 'Traumatismes');
 
 --Chapitres
-INSERT INTO Chapitre(id, titreChapitre, theme_id) VALUES
-    (1, "L'Obstruction partielle", 3),
-    (1, "L'Obstruction totale", 3);
+INSERT INTO Chapitre(id, titre, theme_id) VALUES
+    (1, 'Obstruction partielle', 3),
+    (2, 'Obstruction totale', 3);
 
 --Noeuds décisionnels
 INSERT INTO NouedDecisionnel VALUES
