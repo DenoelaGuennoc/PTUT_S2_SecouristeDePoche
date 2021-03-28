@@ -44,7 +44,6 @@ public class ThemeController {
     public String afficheThemes(Model model) {
         List<Theme> themes = dao.findAll();
         model.addAttribute("themes", themes );
-        log.info("Theme: {}, chapitres : {}", themes.get(2), themes.get(2).getChapitres());
         return "afficheTheme";
     }
 }
