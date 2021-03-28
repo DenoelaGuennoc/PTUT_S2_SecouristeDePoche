@@ -1,5 +1,7 @@
 package secouristedepoche.controller;
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,10 +19,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.templateresolver.FileTemplateResolver;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Edition des catégories, sans gestion des erreurs
  */
 @Controller
+@Slf4j
 @RequestMapping(path = "/SecouristeDePoche")
 public class ThemeController {
 
@@ -34,19 +39,12 @@ public class ThemeController {
      * @return le nom de la vue à afficher ('afficheGaleries.html')
      */
     
-     @Autowired
-    private SpringTemplateEngine templateEngine;
 
-    @PostConstruct
-    public void extension() {
-        FileTemplateResolver resolver = new FileTemplateResolver();
-        resolver.setSuffix(".html");
-    }
-    
     @GetMapping(path = "themes")
     public String afficheThemes(Model model) {
-        model.addAttribute("theme", dao.findAll());
-        model.addAttribute("chapitre", dao.findAll());
+        List<Theme> themes = dao.findAll();
+        model.addAttribute("themes", themes );
+        log.info("Theme: {}, chapitres : {}", themes.get(2), themes.get(2).getChapitres());
         return "afficheTheme";
     }
 }

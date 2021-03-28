@@ -1,20 +1,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<title>Liste des thèmes</title>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css"/>	
-	</head>
-	<body>
-		<h1>Les thèmes</h1>			
-		<ul>
-			<li th:each="t: ${theme}" >
-                                                     
-				 <em th:text="${t.titre}">Le titre du thème</em>
-                                 <em th:each="c: ${chapitre}" th:if="${t.id == c.theme_id}" th:text="${c.titre}" >Le titre du chapitre</em>
-			</li>
-                    
-		</ul>	
-		<a th:href="@{/}" href="../static/index.html">Retour au menu</a>		
-	</body>
+
+    <head>
+        <title>Liste des thèmes</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css" />
+    </head>
+
+    <body>
+        <h1>Les thèmes</h1>
+        <ul>
+            <li th:each="t: ${themes}"><span th:text="${t.titre}">Titre du thème</span>
+                <ul>
+                    <li th:each="c: ${t.chapitres}" th:text="${c.titre}">Le titre du chapitre</li>
+                </ul>
+            </li>
+        </ul>
+        <a th:href="@{/}" href="../static/index.html">Retour au menu</a>
+    </body>
+
 </html>

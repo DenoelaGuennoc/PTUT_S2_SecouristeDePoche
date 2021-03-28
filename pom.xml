@@ -10,12 +10,12 @@
 		<!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>io.github.bastide</groupId>
-	<artifactId>galerie</artifactId>
+	<groupId>io.github.escolano</groupId>
+	<artifactId>secouriste</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>secouristedepoche</name>
-	<description>Exercice "Galerie d'Art" en Spring-JPA</description>
+	<name>Secouriste de poche</name>
+	<description>PTut FIE-3</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

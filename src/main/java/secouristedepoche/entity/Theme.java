@@ -3,8 +3,7 @@ import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.*;
 import lombok.*;
-import java.util.LinkedList;
-import java.util.List;
+
 
 // Un exemple d'entité
 // On utilise Lombok pour auto-générer getter / setter / toString...
@@ -20,6 +19,7 @@ public class Theme {
     private String titre;
     
     @OneToMany(mappedBy = "theme")
+    @ToString.Exclude
     private List<Chapitre> chapitres = new LinkedList<>();
 
 }
