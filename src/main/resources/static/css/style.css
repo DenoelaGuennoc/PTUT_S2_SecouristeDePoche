@@ -51,6 +51,20 @@ html {
 	font-size: 2.6rem;
 }
 
+#lancerQCM {
+  background-color: #2ab3c8; 
+  border: none;
+  color: black;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 2px solid #208190;
+}
 
   img {
 	vertical-align: middle;
@@ -81,7 +95,7 @@ html {
 	padding: 2rem 1rem;
 	font-size: 100px;
 	line-height: 1.5;
-	width : 16%; /*permet d'avoir un bouton rond*/
+	width : 16%; //permet d'avoir un bouton rond
 }
   
 	
@@ -97,7 +111,7 @@ html {
 	padding: 2rem 1rem;
 	font-size: 100px;
 	line-height: 1.5;
-	width : 16%; /*permet d'avoir un bouton rond*/
+	width : 16%; //permet d'avoir un bouton rond
  };
 
 
@@ -144,3 +158,5 @@ button:focus {
   nav {
 	  background-color: #00809D ;
   }
+  
+  
