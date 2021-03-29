@@ -19,7 +19,6 @@ public class Theme {
     private String titre;
     
     @OneToMany(mappedBy = "theme")
-    @ToString.Exclude
     private List<Chapitre> chapitres = new LinkedList<>();
 
 }

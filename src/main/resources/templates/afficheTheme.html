@@ -10,7 +10,7 @@
     <body>
         <h1>Les thèmes</h1>
         <ul>
-            <li th:each="t: ${themes}"><span th:text="${t.titre}">Titre du thème</span>
+            <li th:each="t: ${themes}" th:text="${t.titre}">Le titre du thème
                 <ul>
                     <li th:each="c: ${t.chapitres}" th:text="${c.titre}">Le titre du chapitre</li>
                 </ul>
