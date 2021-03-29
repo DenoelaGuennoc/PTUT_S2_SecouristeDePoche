@@ -20,7 +20,7 @@ html {
 	font-weight: 400;
 	line-height: 1.5;
 	color: #212529;
-/*	text-align: center; */
+	text-align: center;
 	background-repeat: no-repeat;
   }
   
@@ -43,6 +43,15 @@ html {
 	font-size: 2rem;
   }
 
+#repqu{
+	font-size: 1.9rem;
+}
+
+#qu{
+	font-size: 2.6rem;
+}
+
+
   img {
 	vertical-align: middle;
 	border-style: none;
@@ -59,8 +68,9 @@ html {
 	color : red;
 }
 
-    button.button1 {
-	background-image:-moz-linear-gradient(90deg, #AD0E0E, #CD1313); /*permet d'avoir un dégrtadé*/
+
+.button1 {
+	background-color: #AD0E0E; 
 	border-radius: 70%;
 	display: inline-block;
 	font-weight: 400;
@@ -71,22 +81,54 @@ html {
 	padding: 2rem 1rem;
 	font-size: 100px;
 	line-height: 1.5;
-	width : 16%; 
-        
-  }
-  /*permet d'avoir un bouton rond*/
+	width : 16%; /*permet d'avoir un bouton rond*/
+}
   
-  /* 
-  hover : permet de changer de couleur au survol du boutton
-  */
-	button:hover{
-		background: white
-	} ;
 	
-  button:focus {
+.button2 {
+	background-color: green;
+	border-radius: 70%;
+	display: inline-block;
+	font-weight: 400;
+	color : rgb(62,62,62);
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+	padding: 2rem 1rem;
+	font-size: 100px;
+	line-height: 1.5;
+	width : 16%; /*permet d'avoir un bouton rond*/
+ };
+
+
+ 
+/* 
+hover : permet de changer de couleur au survol du boutton NORMALEMENT ! 
+*/
+
+.button1 {
+  transition-duration: 0.4s;
+}
+
+.button1:hover {
+  background-color: #f4c5c5;
+  color: red; 
+}
+
+.button2 {
+  transition-duration: 0.4s;
+}
+
+.button2:hover {
+  background-color: #d7f6e5;
+  color: green;
+}
+	
+	
+button:focus {
 	outline: 1px dotted;
 	outline: 5px auto -webkit-focus-ring-color;
-  }
+}
   
  nav ul li {
 	list-style: none;
