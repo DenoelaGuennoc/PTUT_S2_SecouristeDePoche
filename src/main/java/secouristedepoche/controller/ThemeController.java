@@ -24,18 +24,9 @@ public class ThemeController {
     @Autowired
     private ThemeRepository dao;
 
-    /**
-     * Affiche toutes les catégories dans la base
-     *
-     * @param model pour transmettre les informations à la vue
-     * @return le nom de la vue à afficher ('afficheGaleries.html')
-     */
-    
-
     @GetMapping(path = "themes")
     public String afficheThemes(Model model) {
-        List<Theme> themes = dao.findAll();
-        model.addAttribute("themes", themes );
+        model.addAttribute("themes", dao.findAll());
         return "afficheTheme";
     }
 }
