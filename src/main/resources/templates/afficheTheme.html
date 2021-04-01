@@ -12,7 +12,7 @@
         <h1>Secouriste de poche</h1>
         <nav>
             <ul>
-                <li> <a href="/SecouristeDePoche/accueil"> Accueil</a></li>
+                <li> <a th:href="@{/}" href="../static/index.html">Accueil</a></li>
                 <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
                 <li> <a href="/SecouristeDePoche/themes">Me former</a></li>
                 <li><a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
@@ -36,7 +36,6 @@
         <ul>
             <li th:each="t:${themes}" th:text="${t.titre}">Le titre du thème</li>
         </ul>
-        <a th:href="@{/}" href="../static/index.html">Retour au menu</a>
     </body>
 
 </html>
