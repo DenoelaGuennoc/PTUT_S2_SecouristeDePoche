@@ -161,7 +161,10 @@ button:focus {
   nav {
 	  background-color: #00809D ;
   }
-  /*
+
+
+
+/*
 permet d'adapter le texte en fonction de la taille de l'écran
 */
 
@@ -171,17 +174,51 @@ permet d'adapter le texte en fonction de la taille de l'écran
 	{width: auto;}
 
 }
-	/*
-	permet de changer le menu
-	*/
 
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
+#hamburger, #hamburger-content{
+	display: inline;
+}
+  
+
+#hamburger-button{
+	display: none;
+	cursor: pointer;
+	background: none;
+	border: none;
+	font-size: 30px;
+	padding: 0;
+	vertical-align: top;
+	line-height: 47px;
+	float: right;
+	margin-right: 32px;
 }
 
-  
+#hamburger-overlay {
+	display: none;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .4);
+}
+
+#hamburger-sidebar{
+	position: fixed;
+	width: 84%;
+	z-index: 20;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #FFF;
+}
+
+#hamburger-sidebar li {
+	display: block;
+}
+
+#hamburger-sidebar-header {
+	background: url()
+}
