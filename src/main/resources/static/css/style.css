@@ -206,7 +206,6 @@ permet d'adapter le texte en fonction de la taille de l'écran
 }
 
 #hamburger-sidebar{
-	display:none;
 	position: fixed;
 	width: 84%;
 	z-index: 20;
@@ -214,6 +213,9 @@ permet d'adapter le texte en fonction de la taille de l'écran
 	top: 0;
 	left: 0;
 	background-color: #FFF;
+	transform: translateX(-100%);
+	transition: transform .2S ease-out;
+
 }
 
 #hamburger-sidebar li {
@@ -221,6 +223,42 @@ permet d'adapter le texte en fonction de la taille de l'écran
 }
 
 #hamburger-sidebar-header {
+	background: url(../Images/menu-burger-background.jpg) center;
 	background-size: cover;
-	height: 128px;
+	height: 300px;
+}
+
+#hamburger-sidebar-body{
+	padding: 16px 8px;
+}
+
+#hamburger-sidebar-body li:before {
+	content: ' ';
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	margin-right: 16px;
+	margin-bottom: 4px;
+}
+
+
+@media screen and (max-width: 1024px) {
+	h1 {
+		font-size: 42px;
+		line-height: 56px;
+	}
+
+	#haburger-content {
+	display: none;
+	}
+
+	#hamburger-button, #hamburger-sidebar,
+	.hamburger-activated #hamburger-overlay {
+		display: block;
+	}
+	.hamburger-activated #hamburger-sidebar {
+		transform: translateX(0);
+	}
+
 }

@@ -28,7 +28,16 @@
                 <button id="hamburger-button">&#9776</button>
                 <div id="hamburger-sidebar">
                     <div id="hamburger-sidebar-header"></div>
-                    <div id="hamburger-sidebar-body"></div>
+                    <div id="hamburger-sidebar-body">
+                        <nav>
+                            <ul>
+                                <li> <a th:href="@{/}" href="../static/index.html">Accueil</a></li>
+                                <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
+                                <li> <a href="/SecouristeDePoche/themes">Me former</a></li>
+                                <li> <a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
                 <div id="hamburger-overlay"></div>
             </div>
