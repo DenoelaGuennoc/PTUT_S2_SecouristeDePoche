@@ -158,5 +158,27 @@ button:focus {
   nav {
 	  background-color: #00809D ;
   }
-  
+  /*
+permet d'adapter le texte en fonction de la taille de l'écran
+*/
+
+@media all and (max-device-width: 480px)
+{
+    #bloc_page
+	{width: auto;}
+
+}
+	/*
+	permet de changer le menu
+	*/
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
   
