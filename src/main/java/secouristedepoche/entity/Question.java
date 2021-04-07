@@ -22,6 +22,11 @@ public class Question extends NoeudDecisionnel{
         super(idNoeud, nomNoeud);
         this.texteQuestion = texteQuestion;
     }
+
+    public Question (Integer idQuestion, String resumeQuestion, Boolean noeudRacine, String texteQuestion, Integer idNoeud, String nomNoeud){
+        super(idNoeud, nomNoeud, noeudRacine);
+        this.texteQuestion = texteQuestion;
+    }
     
     @OneToMany(mappedBy = "questionPosee")
     List<Reponse> reponsePossible = new LinkedList<>();
