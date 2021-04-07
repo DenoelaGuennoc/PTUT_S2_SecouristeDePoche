@@ -21,7 +21,7 @@ public class Theme {
     @OneToMany(mappedBy = "theme")
     private List<Chapitre> chapitres = new LinkedList<>();
 
-    @ManyToMany (mappedBy = "sujet")
+    @ManyToMany (mappedBy = "sujets")
     private List<Quizz> interrogations = new LinkedList<>();
 
 }
