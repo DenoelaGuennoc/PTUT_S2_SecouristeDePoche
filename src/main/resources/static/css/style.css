@@ -176,6 +176,7 @@ permet d'adapter le texte en fonction de la taille de l'écran
 }
 
 
+
 #hamburger, #hamburger-content{
 	display: inline;
 }
@@ -244,6 +245,37 @@ permet d'adapter le texte en fonction de la taille de l'écran
 
 
 @media screen and (max-width: 1024px) {
+
+	.button1{
+		display: none;
+	}
+
+	.buttonTel{
+		background-color: #cf0505; 
+		border-radius: 12px;
+		display: inline-block;
+		color : rgb(37, 37, 37);
+		text-align: center;
+		vertical-align: middle;
+		user-select: none;
+		cursor: pointer;
+		padding: 2rem 1rem;
+		font-size: 60px;
+		line-height: 1;
+		width : 33%;
+	}
+
+	h3{
+		margin-top: 0;
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		line-height: 1.2;
+		font-size: 30px;
+	  }
+h2 {
+	display: none;
+}	
+
 	h1 {
 		font-size: 42px;
 		line-height: 56px;
