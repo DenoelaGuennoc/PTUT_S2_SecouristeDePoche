@@ -4,24 +4,31 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.*;
 
-
 // Un exemple d'entité
 // On utilise Lombok pour auto-générer getter / setter / toString...
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Theme {
+public class Chapitre {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
     @Column(unique=true)
     @NonNull
-    public String titre; //passage en public car ne fonctionnait pas dans templates/afficheTheme sur les ordi de Deno et Camille
+    private String titre;
+
+    //Il faut trouver un moyen de mettre du contenu dans chaque chapitre également
     
-    @OneToMany(mappedBy = "theme")
-    private List<Chapitre> chapitres = new LinkedList<>();
+    @ManyToOne
+    @NonNull
+    Theme theme;
 
-    @ManyToMany (mappedBy = "sujets")
-    private List<Quizz> interrogations = new LinkedList<>();
+    @ManyToMany
+    List<Illustration> images = new LinkedList<>();
 
+    @ManyToMany
+    List<Fiche> conduiteATenir = new LinkedList<>();
+
+    @ManyToMany
+    List<Media> medias = new LinkedList<>();
 }

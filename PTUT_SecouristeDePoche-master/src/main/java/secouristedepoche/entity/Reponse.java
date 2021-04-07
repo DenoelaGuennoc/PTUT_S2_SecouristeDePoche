@@ -1,27 +1,28 @@
 package secouristedepoche.entity;
-import java.util.LinkedList;
-import java.util.List;
 import javax.persistence.*;
 import lombok.*;
-
+import java.util.LinkedList;
+import java.util.List;
 
 // Un exemple d'entité
 // On utilise Lombok pour auto-générer getter / setter / toString...
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Theme {
+public class Reponse {
+
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
     @Column(unique=true)
     @NonNull
-    public String titre; //passage en public car ne fonctionnait pas dans templates/afficheTheme sur les ordi de Deno et Camille
+    private String libelleReponse;
     
-    @OneToMany(mappedBy = "theme")
-    private List<Chapitre> chapitres = new LinkedList<>();
+    @ManyToOne
+    @NonNull
+    Question questionPosee;
 
-    @ManyToMany (mappedBy = "sujets")
-    private List<Quizz> interrogations = new LinkedList<>();
-
+    @OneToOne
+    @NonNull
+    private NoeudDecisionnel noeudFils;
 }
