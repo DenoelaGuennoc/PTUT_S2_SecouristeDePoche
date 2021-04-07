@@ -1,0 +1,110 @@
+ARRET CARDIAQUE
+Version : 1.3.2 Mise à jour : - Juillet 2019 -
+
+
+Définition -
+
+Une personne est en arrêt cardiaque lorsque son cœur ne fonctionne plus ou fonctionne
+d’une façon anarchique, ne permettant plus d’assurer l’oxygénation du cerveau.
+
+
+Signes
+
+Une victime est considérée comme étant en arrêt cardiaque lorsqu’elle ne répond pas, ne
+réagit pas, et :
+- ne respire pas : aucun mouvement de la poitrine n’est visible et aucun bruit ou souffle
+n’est perçu ;
+- ou présente une respiration anormale avec des mouvements respiratoires inefficaces,
+lents, irréguliers et bruyants (gasps).
+
+
+Causes
+
+L’arrêt cardiaque peut être causé par certaines maladies du cœur, la principale est l’infarctus
+du myocarde. Chez l’adulte, dans près de 50 % des cas, cet arrêt cardiaque survient
+brutalement, en dehors de l’hôpital et est souvent lié à une anomalie de fonctionnement
+électrique du cœur : la fibrillation ventriculaire.
+L’arrêt cardiaque peut aussi être consécutif à une détresse circulatoire (hémorragie, brûlure
+grave), à une obstruction totale des voies aériennes, une intoxication, un traumatisme ou
+une noyade.
+
+
+Risques
+
+Le risque d’un arrêt cardiaque est la mort de la victime en quelques minutes. En effet,
+l’apport d’oxygène est indispensable, en particulier au niveau du cerveau et du cœur, pour
+assurer sa survie. Au cours d’un arrêt cardiaque, les lésions du cerveau, consécutives au
+manque d’oxygène, surviennent dès la première minute.
+
+
+Principes d’action
+
+Le sauveteur doit réaliser une série d’actions pour augmenter les chances de survie de la
+victime :
+- ALERTER : alerter de façon précoce les secours ;
+- MASSER / INSUFFLER : pratiquer une réanimation cardio-pulmonaire (RCP) précoce ;
+- DEFIBRILLER : assurer la mise en œuvre d’une défibrillation précoce.
+Ces différentes étapes constituent une chaîne de survie susceptible d’augmenter de 4 à 40
+% le taux de survie des victimes. Chaque minute gagnée dans la mise en place d’une RCP
+efficace peut augmenter de 10 % les chances de survie de la victime.
+
+
+Conduite à tenir
+
+Rechercher l’absence de réponse et pour cela :
+- poser des questions simples (« Comment ça va ? », « Vous m’entendez ? ») ;
+- secouer doucement les épaules ou lui prendre la main et demander d’exécuter
+un ordre simple (« serrez-moi la main » …).
+Si la victime répond ou réagit : elle est consciente. Il convient d’appliquer la CAT adaptée
+au malaise.
+Si la victime ne répond pas et ne réagit pas, il convient de:
+- demander de l’aide, si vous êtes seul ;
+- l’allonger sur le dos ;
+- libérer les voies aériennes ;
+- apprécier la respiration sur 10 secondes au plus. Pour cela :
+ # maintenir la libération des voies aériennes ;
+  ° se pencher sur la victime, oreille et joue du sauveteur au-dessus de la
+bouche et du nez de la victime puis :
+   $ regarder si le ventre et la poitrine se soulèvent ;
+   $ écouter d’éventuels sons provoqués par la respiration ;
+   $ sentir un éventuel flux d’air à l’expiration.
+En l’absence de respiration, en présence d’une respiration anormale (gasps) ou en cas de
+doute :
+… un tiers est présent :
+ # faire alerter les secours et réclamer un DAE ;
+ # débuter immédiatement une RCP en répétant des cycles de 30 compressions
+thoraciques suivies de 2 insufflations. Le service de secours appelé pourra aider le
+sauveteur à la réalisation de la RCP, en donnant des instructions téléphoniques ;
+ # faire mettre en œuvre ou mettre en œuvre un DAE le plus tôt possible et suivre ses
+indications
+ # poursuivre la réanimation entreprise jusqu’au relais par les services de secours.
+… aucun tiers n’est présent :
+ # alerter les secours (1) de préférence avec son téléphone portable. Le mettre sur le
+mode haut-parleur et débuter immédiatement la RCP en attendant que les services
+de secours répondent ;
+ # pratiquer la RCP en répétant des cycles de 30 compressions thoraciques suivies de
+2 insufflations. Le service de secours appelé pourra aider le sauveteur à la réalisation
+de la RCP, en donnant des instructions téléphoniques ;
+ # si un DAE est proche (2) , le mettre en œuvre le plus tôt possible et suivre ses
+indications vocales en interrompant le massage cardiaque le moins possible ;
+ # poursuivre la RCP entreprise jusqu’au relais par les services de secours.
+Dans tous les cas :
+ # si les insufflations ne peuvent pas être effectuées (répulsion, vomissements…) ou si
+le sauveteur ne se sent pas capable, il doit réaliser uniquement les compressions
+thoraciques en continu à un rythme de 100 à 120 compressions / min ;
+ # en présence de plusieurs sauveteurs, relayer le sauveteur qui réalise les
+compressions thoraciques toutes les 2 minutes en interrompant le moins possible les
+compressions thoraciques (en cas d’utilisation d’un DAE, le relai sera réalisé pendant
+l’analyse) ;
+ # le DAE ne doit jamais être éteint et les électrodes ne doivent jamais être décollées
+jusqu’à l’arrivée des secours (même en cas d’amélioration de l’état de la victime).
+
+
+Justifications particulières
+
+(1) A l’époque des téléphones portables, la transmission de l’alerte ne pose plus guère de problème. Dans le cas
+contraire, un sauveteur seul face à une personne en arrêt cardiaque est en grande difficulté. Il doit appeler
+très tôt pour donner un maximum de chance de survie à la victime.
+(2) Le sauveteur récupère lui-même le DAE s’il est à proximité, facilement accessible et qu’il peut se le procurer
+immédiatement sans interrompre la RCP plus de 10 secondes. Dans le cas contraire, le sauveteur réalise la
+RCP jusqu’à ce qu’on lui apporte le DAE.

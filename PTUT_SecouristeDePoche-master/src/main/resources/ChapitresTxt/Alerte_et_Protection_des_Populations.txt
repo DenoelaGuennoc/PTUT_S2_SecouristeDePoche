@@ -1,0 +1,90 @@
+ALERTE ET PROTECTION DES POPULATIONS
+Version : 1.3.2 Mise à jour : - Juillet 2019 -
+
+
+Principes d’organisation
+
+L’alerte aux populations est une mesure exceptionnelle dont l’efficacité repose sur une
+connaissance préalable des risques particuliers auxquels les populations sont exposées.
+L’alerte est diffusée par un ensemble d’outils permettant d’alerter la population de la
+survenance d’une crise grâce aux sirènes, aux médias, aux réseaux sociaux ou encore
+grâce aux sociétés.
+D’autres outils permettent également de diffuser de l’information ou d’alerter la population
+comme les panneaux à messages variables des communes, des autoroutes…
+- Le premier volet est l’alerte des populations qui consiste à diffuser un signal destiné à
+avertir les individus d'un danger imminent ou d’un évènement grave, en train de
+produire ses effets et susceptible de porter atteinte à leur intégrité physique. Il se
+compose de deux codes distincts :
+ # le Signal National d'Alerte (SNA) : variation du signal sur trois cycles
+successifs d'une durée de 1 minute et 41 secondes ;
+ # le signal de fin d'alerte : signal continu de 30 secondes.
+La diffusion de ces signaux repose sur un réseau d’environ 5 300 sirènes permettant, de
+jour comme de nuit, d'attirer rapidement l'attention des populations pour les appeler à réagir.
+Des essais de ce réseau se déroulent le premier mercredi de chaque mois, à midi. Ils
+permettent à la population d’être capable d’identifier clairement le signal. Lors de ces essais
+mensuels, le signal émis est une variation sur un seul cycle de 1 minute et 41 secondes,
+pour ne pas être confondu avec le SNA.
+Par ailleurs, lorsqu’il existe des risques particuliers (chimiques, radioactifs…) et afin de
+prévenir les populations concernées, des systèmes d’alerte adaptés sont mis en place afin
+de pouvoir diffuser un signal.
+Le déclenchement du SNA appelle une réaction immédiate de la population afin d’assurer
+sa mise à l’abri, son information ainsi que son confinement ou son évacuation.
+- Le deuxième volet est l’information qui est primordial pour que les populations adoptent
+les comportements de sauvegarde adéquats. Le ministère peut compter sur des
+acteurs majeurs et particulièrement connectés pour prévenir la population si la situation
+l’exige. Les messages d’alerte et de prévention du ministère sont diffusés de façon
+prioritaire sur Twitter, Facebook et Google mais aussi par certains canaux de
+communication de la RATP, Vinci autoroutes, Radio-France et France Télévisions.
+Parallèlement, le ministère de l’intérieur invite l’ensemble des utilisateurs de Twitter à
+s’abonner et activer les notifications du compte @Beauvau_alerte qui permet à chacun
+d’être notifié sur son téléphone en cas d’évènement grave: 
+ # Facebook offre la possibilité au ministère de l’intérieur de communiquer via un
+dispositif de communication lié à son outil « Safety Check ». Cette fonctionnalité
+se déclenche lorsqu’un évènement met en danger la population et permet aux
+utilisateurs de Facebook d’indiquer à leurs proches qu’ils se trouvent en sécurité.
+Les messages du ministère trouvent une visibilité rapide et forte.
+ # De son côté, Google relaie sur le moteur de recherche, au travers de son outil
+« Posts on Google », les messages du ministère pour les utilisateurs effectuant
+des recherches dans la zone impactée ou lorsque les mots clés tapés par un
+utilisateur sont en rapport avec l’évènement en cours (attentat, ouragan, fusillade,
+lieu,..).
+ # Enfin, les sociétés RATP, Vinci autoroutes, France Télévisions et Radio France
+relaient aussi via leurs applications, réseaux sociaux ou panneaux d’information
+les messages du ministère si la situation l’exige.
+Ces dispositifs s’ajoutent à ceux déjà existants : les prises de parole des autorités ainsi que
+les messages d’alerte et de prévention sur les comptes Twitter et des pages Facebook de
+la place Beauvau, des préfectures et des différentes directions du ministère de l’intérieur.
+
+
+Cas particulier
+
+Seuls les dispositifs d’alerte propres aux aménagements hydrauliques émettent un signal
+distinct en cas de danger (corne de brume). Il s’agit alors d’un signal d’évacuation.
+
+
+Conduite à tenir
+
+La population doit être sensibilisée aux bons comportements en amont afin d’avoir la
+réaction adaptée dès le déclenchement du signal national d’alerte et jusqu’au signal de fin
+d’alerte. Ainsi, « toute personne concourt par son comportement à la sécurité civile »
+conformément à l’article L721-1 du code de la sécurité intérieure.
+Les comportements de sauvegarde sont les suivants :
+- se mettre en sécurité, rejoindre sans délai un bâtiment ;
+- s’informer sur France Bleu, France Info, radios locales, France Télévisions, les sites et
+comptes des réseaux sociaux du gouvernement, du ministère de l’intérieur et des
+préfectures ;
+- respecter les consignes des autorités et en fonction du type de risque, il peut être
+demandé de se confiner ou d’évacuer.
+Pour se confiner, il convient :
+- de fermer les portes et fenêtres ;
+- de calfeutrer les portes, les fenêtres et les bouches d’aération ;
+- d’arrêter les systèmes de ventilation ou de climatisation.
+En cas d’évacuation, emportez votre kit d’urgence préparé à l’avance.
+Dans tous les cas :
+- restez en sécurité et n’allez pas chercher vos enfants à l’école car ils y sont protégés
+par leurs enseignants ;
+- ne téléphonez qu’en cas d’urgence vitale pour laisser les réseaux disponibles pour les
+services de secours.
+Pour en savoir plus et compléter votre kit :
+- http://www.interieur.gouv.fr/Alerte/Alerte-ORSEC
+- http://www.gouvernement.fr/risques

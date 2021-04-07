@@ -1,0 +1,14 @@
+Lexique : 
+différents points : 
+	-
+		#
+			°
+				$
+
+Si exposant : 
+	blablabla (1) = blablabla^1
+	blablablabla (2) = blablablabla²
+	etc
+
+Grandes parties : sont séparées avec 2 sauts de ligne "en haut" et 
+un saut de ligne "en bas" 
