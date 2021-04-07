@@ -12,5 +12,19 @@ button.addEventListener('click', function(e){
     e.preventDefault();
 
     this.parentNode.classList.add(activatedClass);
-    
+
+});
+
+button.addEventListener('keydown', function(e) {
+    if (this.perentNode.classList.contains(activatedClass))
+    {
+        if(e.repeat === false && e.which === 27)  /* éviter les appuis longs    */
+            this.parentNode.classList.remove(activatedClass);
+    }
 })
+
+overlay.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    this.parentNode.classList.remove(activatedClass);
+});
