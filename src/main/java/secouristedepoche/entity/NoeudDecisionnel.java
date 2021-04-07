@@ -14,9 +14,20 @@ public class NoeudDecisionnel {
     @Column(unique=true)
     @NonNull
     private String nomNoeud;
+
+    @Column
+    @NonNull
+    private Boolean noeudRacine;
     
     public NoeudDecisionnel(Integer idNoeud, String nomNoeud){
         this.id = idNoeud;
         this.nomNoeud = nomNoeud;
+        this.noeudRacine = false;
+    }
+
+    public NoeudDecisionnel(Integer idNoeud, String nomNoeud, Boolean noeudRacine){
+        this.id = idNoeud;
+        this.nomNoeud = nomNoeud;
+        this.noeudRacine = noeudRacine;
     }
 }
