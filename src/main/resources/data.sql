@@ -15,7 +15,6 @@ INSERT INTO Theme(id, titre) VALUES
 INSERT INTO Chapitre(id, titre, theme_id) VALUES
     (1, 'Obstruction partielle', 3),
     (2, 'Obstruction totale', 3);
-
 --Noeuds décisionnels
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES
     ('Question', 1, 'Respire', 'La victime respire-t-elle ?'),

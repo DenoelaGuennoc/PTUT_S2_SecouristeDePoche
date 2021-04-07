@@ -9,20 +9,20 @@
 	
 </head>
 
-<body>
+
     <h1>Urgence</h1>
     <nav>
         <ul>
-            <li> <a th:href="@{/}" href="../static/index.html">Accueil</a></li>
+            <li> <a href="/">Accueil</a></li>
             <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
             <li> <a href="/SecouristeDePoche/themes">Me former</a></li>
             <li><a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
         </ul>
     </nav>
-    <div class="logo"><img src="Images/logo ptut.png" alt="Logo du site"></div>
+    <div class="logo"><img src="Images/logo ptut.png" alt="Logo du site"></img></div>
     <p>Salut ! <br> Je suis ....., votre secouriste de poche !</p>
     <h2 id="repqu">Répondez aux questions suivantes pour trouver que faire dans votre situation</h2> 
-    <h3 id="qu">La victime est-elle <span class="rouge"><strong>consciente</strong></span> ? </h3> 
+    <h3 id="qu"> <em th:each="n:${noeuds}" th:if="${n.id == 1}" th:text="${n.texteQuestion}"></em></h3> 
 	<br><button class= "button2">OUI</button> 
 	&nbsp;
 	&nbsp;
@@ -43,6 +43,6 @@
 	
 	
 
-</body>
+
 
 </html>

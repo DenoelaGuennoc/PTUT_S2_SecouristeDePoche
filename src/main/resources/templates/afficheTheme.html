@@ -12,14 +12,14 @@
         <h1>Secouriste de poche</h1>
         <nav>
             <ul>
-                <li> <a th:href="@{/}" href="../static/index.html">Accueil</a></li>
+                <li> <a href="/">Accueil</a></li>
                 <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
                 <li> <a href="/SecouristeDePoche/themes">Me former</a></li>
                 <li><a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
             </ul>
         </nav>
 
-        <div class="logo"><img src="Images/logo ptut.png" alt="Logo du site"/></div>
+        <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site"/></div>
         <h2 id="bienv">Bienvenu sur votre espace de formation !</h2> 
     
 	<p> Vous faites le bon choix en venant ici, félicitation ! Dans la vie, il y a certaines choses que tout le monde devrait connaître, et les gestes de premiers secours en font partie. </p>
@@ -35,6 +35,9 @@
 
         <ul>
             <li th:each="t:${themes}" th:text="${t.titre}">Le titre du thème</li>
+            <!--  <ul>
+                <li th:each="c:${t.getChapitres()}" th:text="${c.titre}"> le titre du chapitre correspondant au thème </li>
+            </ul> -->
         </ul>
     </body>
 
