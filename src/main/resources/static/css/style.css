@@ -206,6 +206,7 @@ permet d'adapter le texte en fonction de la taille de l'écran
 }
 
 #hamburger-sidebar{
+	display:none;
 	position: fixed;
 	width: 84%;
 	z-index: 20;
@@ -220,5 +221,6 @@ permet d'adapter le texte en fonction de la taille de l'écran
 }
 
 #hamburger-sidebar-header {
-	background: url()
+	background-size: cover;
+	height: 128px;
 }
