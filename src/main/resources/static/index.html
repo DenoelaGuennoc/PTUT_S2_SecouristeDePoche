@@ -11,13 +11,12 @@
 
     <body>
             <h1>Secouriste de poche</h1>
-        </div>
         <header>
             <div id="hamburger">
                 <div id="hamburger-content">
                     <nav>
                         <ul>
-                            <li> <a th:href="@{/}" href="../static/index.html">Accueil</a></li>
+                            <li> <a href="/">Accueil</a></li>
                             <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
                             <li> <a href="/SecouristeDePoche/themes">Me former</a></li>
                             <li> <a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
@@ -26,19 +25,19 @@
                 </div>
                 <button id="hamburger-button">&#9776</button>
                 <div id="hamburger-sidebar">
-                    <div id="hamburger-sidebar-header"></div>
+                    <div id="hamburger-sidebar-header">
                     <div id="hamburger-sidebar-body">
                         <nav>
                             <ul>
-                                <li> <a th:href="@{/}" href="../static/index.html">Accueil</a></li>
+                                <li> <a href="/">Accueil</a></li>
                                 <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
                                 <li> <a href="/SecouristeDePoche/themes">Me former</a></li>
                                 <li> <a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
                             </ul>
                         </nav>
                     </div>
+                    </div>
                 </div>
-                <div id="hamburger-overlay"></div>
             </div>
         </header>
         <script type="text/javascript" src="js/main.js"></script>
@@ -47,8 +46,7 @@
     <p>Salut ! <br> Je suis ....., votre secouriste de poche !</p>
     <br>
     <br>
-    <h2>En cas d’<span class="rouge"> <a class="rouge" href="afficheUrgence.html"><strong>URGENCE</strong></a></span> cliquez ici : <br><br><a href="Page2.html"><button class= 'button1'>SOS</button></a></br> </h2>
-	<h3>En cas d’<span class="rouge"> <a class="rouge" href="afficheUrgence.html"><strong>URGENCE</strong></a></span> cliquez ici : <br><br><a href="Page2.html"><button class= 'buttonTel'>SOS</button></a></br> </h3>
+    <h2>En cas d’<span class="rouge"> <a class="rouge" href="/SecouristeDePoche/urgence"><strong>URGENCE</strong></a></span> cliquez ici : <br><br><a href="/SecouristeDePoche/urgence"><button class= 'button1'>SOS</button></a></br> </h2>
 	<!La classe rouge permet de mettre le mot urgence en rouge>
 
 

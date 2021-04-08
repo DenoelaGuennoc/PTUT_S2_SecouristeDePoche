@@ -16,7 +16,7 @@ INSERT INTO Chapitre(id, titre, theme_id) VALUES
     (1, 'Obstruction partielle', 3),
     (2, 'Obstruction totale', 3);
 --Noeuds décisionnels
-INSERT INTO NoeudDecisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES
+INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES
     ('Question', 1, 'Respire', 'La victime respire-t-elle ?'),
     ('Question', 3, 'OBVA', 'La victime a-t-elle avalé un objet de travers ?'),
     ('Question', 4, 'Hemo', 'La victime saigne-t-elle abondamment ?'),
@@ -31,7 +31,7 @@ INSERT INTO NoeudDecisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES
     ('Question', 13, 'Localisation Plaie Grave', 'Où se situe la plaie ?'),
     ('Question', 14, 'Type Brulure', 'La brûlure est-elle simple ou grave ?'),
     ('Question', 15, 'Cause Brulure', 'Quelle est la cause de la brûlure ?');
-INSERT INTO NoeudDecisionnel(DTYPE, id, noeudRacine, nom_Noeud, texte_Question) VALUES
+INSERT INTO Noeud_Decisionnel(DTYPE, id,nom_Noeud, noeud_Racine, texte_Question) VALUES
     ('Question', 2, 'Conscient', TRUE, 'La victime est-elle consciente ?');
 /*
 --Réponses
