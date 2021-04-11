@@ -9,12 +9,69 @@ INSERT INTO Theme(id, titre) VALUES
     (7, 'Malaise'),
     (8, 'Brûlures'),
     (9, 'Plaies'),
-    (10, 'Traumatismes');
+    (10, 'Traumatismes'), 
+    (11, 'Fiche Technique');
 
---Chapitres
-INSERT INTO Chapitre(id, titre, theme_id) VALUES
-    (1, 'Obstruction partielle', 3),
-    (2, 'Obstruction totale', 3);
+--Chapitres sans contenu
+INSERT INTO Chapitre(id, titre,theme_id) VALUES
+    (1,'Protection', 1), 
+    (2, 'Alerte', 2), 
+    (3, 'Alerte et Protection', 2), 
+    (4, 'Obstruction aiguë des voies aériennes', 3), 
+    (5, 'Hémorragie externe', 4), 
+    (6, 'Perte de connaissance', 5), 
+    (7, 'Arrêt cardio-respiratoire', 6), 
+    (8, 'Malaise', 7), 
+    (9, 'Brûlure', 8), 
+    (10, 'Plaie', 9), 
+    (11, 'Traumatisme', 10), 
+    (12, 'Compression Locale', 11), 
+    (13, 'Compression Thoracique', 11), 
+    (14, 'Défibrillateur Automatisé Externe', 11), 
+    (15, 'Défibrillation', 11), 
+    (16, 'Désobstruction par la methode des claques dans le dos', 11), 
+    (17, 'Désobstruction par la méthode des compressions abdominales', 11), 
+    (18, 'Désobstruction par la méthode des compressions thoraciques', 11), 
+    (19, 'Garrot', 11), 
+    (20, 'Insufflations', 11), 
+    (21, 'Libération des voies aériennes',11), 
+    (22, 'Maintien de la tête', 11), 
+    (23, 'Position Latérale de Séurité', 11); 
+
+/*Problème pour mettre le fichier Txt dans la table Chapitre
+    Première technique: 
+        LOAD DATA INFILE mais je pense que c'est pas ça
+    Deuxième technique: 
+    'Alerte',*[*] FROM OPENROWSET(BULK N'\Alerte.txt', SINGLE_BLOB), 2)"; 
+        Problème : "attendu "DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE" " 
+*/
+
+--Illustrations
+--INSERT INTO Illustration(id, nomIllustration, descriptionIllustration, dessinIllustration) VALUES 
+
+-- Chapitre_images
+--INSERT INTO Chapitre_images(Chapitre_id, images_id) VALUES
+
+--Fiche 
+--INSERT INTO Fiche(idFiche, nomFiche, idNoeud, nomNoeud) VALUES 
+
+--Fiche_dessins
+--INSERT INTO Fiche_dessins(Fiche_id, dessins_id) VALUES
+
+--Chapitre_conduiteATenir
+--INSERT INTO Chapitre_conduiteATenir(Chapitre_id, conduiteATenir_id) VALUES 
+
+--Quizz
+--INSERT INTO Quizz(id, intitule, reponse_A, reponse_B, reponse_C, reponse_D, reponse_Vraie) VALUES
+--Importer tout ca du excel 
+
+--Pas sûre
+--Questions
+--INSERT INTO Question(idQuestion,resumeQuestion,texteQuestion,idNoeud,nomNoeud, idFiche) VALUES
+
+--Réponse
+
+
 --Noeuds décisionnels
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES
     ('Question', 1, 'Respire', 'La victime respire-t-elle ?'),
