@@ -63,7 +63,7 @@ INSERT INTO Chapitre(id, titre,theme_id) VALUES
 
 --Quizz
 --INSERT INTO Quizz(id, intitule, reponse_A, reponse_B, reponse_C, reponse_D, reponse_Vraie) VALUES
---Importer tout ca du excel 
+
 
 --Pas sûre
 --Questions
