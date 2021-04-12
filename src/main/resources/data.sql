@@ -96,8 +96,8 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id,nom_Noeud, noeud_Racine, texte_Question)
     ('Question', 2, 'Conscient', TRUE, 'La victime est-elle consciente ?');
 
 --Réponses
-INSERT INTO Reponse(id, libelleReponse, questionPosee_id, noeudFils) VALUES
-    (1, "OUI", 2, 4),
+INSERT INTO Reponse(id, libelleReponse, questionPosee_id, noeudFils_id) VALUES
+    (1, "OUI", 2, 3),
     (2, "NON", 2, 1);
 
 /*
