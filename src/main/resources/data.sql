@@ -13,7 +13,7 @@ INSERT INTO Theme(id, titre) VALUES
     (11, 'Fiche Technique');
 
 --Chapitres sans contenu
-INSERT INTO Chapitre(id, titre,theme_id) VALUES
+INSERT INTO Chapitre(id, titre, theme_id) VALUES
     (1,'Protection', 1), 
     (2, 'Alerte', 2), 
     (3, 'Alerte et Protection', 2), 
@@ -94,10 +94,13 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES
     ('Question', 15, 'Cause Brulure', 'Quelle est la cause de la brûlure ?');
 INSERT INTO Noeud_Decisionnel(DTYPE, id,nom_Noeud, noeud_Racine, texte_Question) VALUES
     ('Question', 2, 'Conscient', TRUE, 'La victime est-elle consciente ?');
-/*
---Réponses
-INSERT INTO Chapitre VALUES();
 
+--Réponses
+INSERT INTO Reponse(id, libelleReponse, questionPosee_id, noeudFils) VALUES
+    (1, "OUI", 2, 4),
+    (2, "NON", 2, 1);
+
+/*
 --Illustrations
 INSERT INTO Chapitre VALUES();
 
