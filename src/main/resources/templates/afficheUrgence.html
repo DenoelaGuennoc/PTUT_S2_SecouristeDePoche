@@ -25,13 +25,10 @@
    
     <h2 id="repqu">Répondez aux questions suivantes pour trouver que faire dans votre situation</h2> 
     <h3 id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3> 
-	<br><button class= "button2">OUI</button> 
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	<button class= 'button1'>NON</button></br>
+    <input id="noeudId" name="idNoeud" type="hidden" value=n.id/>
+	<br>
+    <button class= "buttonReponse">...</button> 
 	
-	<!balise span permet de mettre le mot urgence en rouge>
+	
+	<!--balise span permet de mettre le mot urgence en rouge-->
 </html>
