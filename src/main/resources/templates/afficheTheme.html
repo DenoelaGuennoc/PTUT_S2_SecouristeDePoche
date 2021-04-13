@@ -37,7 +37,7 @@
         <ul class="presentation">
             <li th:each="t:${themes}" th:text="${t.titre}">Le titre du thème
                 <ul>
-                    <li th:each="c:${t?.chapitres}" th:text="${c.titre}"> le titre du chapitre correspondant au thème
+                    <li th:each="c:${t.chapitres}" th:text="${c.titre}"> le titre du chapitre correspondant au thème
                     </li>
                 </ul>
             </li>

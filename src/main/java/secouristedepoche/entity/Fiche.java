@@ -11,16 +11,18 @@ import java.util.List;
 @Entity // Une entité JPA
 public class Fiche extends NoeudDecisionnel {
 
+    /*
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
+    */
 
     @Column(unique=true)
     @NonNull
     private String nomFiche;
     
-    public Fiche(Integer idFiche, String nomFiche, Integer idNoeud, String nomNoeud){
+    public Fiche(/*Integer idFiche,*/ String nomFiche, Integer idNoeud, String nomNoeud){
         super(idNoeud, nomNoeud);
-        this.id = idFiche;
+        //this.id = idFiche;
         this.nomFiche = nomFiche;
     }
 

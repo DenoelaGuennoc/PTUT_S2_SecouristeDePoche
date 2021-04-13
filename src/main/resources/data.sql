@@ -92,13 +92,16 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES
     ('Question', 13, 'Localisation Plaie Grave', 'Où se situe la plaie ?'),
     ('Question', 14, 'Type Brulure', 'La brûlure est-elle simple ou grave ?'),
     ('Question', 15, 'Cause Brulure', 'Quelle est la cause de la brûlure ?');
+    --('Question', 16, 'Type de victime', 'La victime est-elle :');
 INSERT INTO Noeud_Decisionnel(DTYPE, id,nom_Noeud, noeud_Racine, texte_Question) VALUES
     ('Question', 2, 'Conscient', TRUE, 'La victime est-elle consciente ?');
 
 --Réponses
-INSERT INTO Reponse(id, libelleReponse, questionPosee_id, noeudFils_id) VALUES
-    (1, "OUI", 2, 3),
-    (2, "NON", 2, 1);
+INSERT INTO Reponse(id, libelle_reponse, question_posee_id, noeud_fils_id) VALUES
+    (1, 'OUI', 2, 3),
+    (2, 'NON', 2, 1);
+    --(3, 'OUI', 1, 16),
+    --(4, 'NON', 1, 16); --voir comment demander le type de victime sachant un OneToOne entre réponse et noeud fils
 
 /*
 --Illustrations

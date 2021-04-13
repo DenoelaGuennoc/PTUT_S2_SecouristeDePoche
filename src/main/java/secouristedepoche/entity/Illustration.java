@@ -24,7 +24,7 @@ public class Illustration {
     //Trouver comment y mettre des images
     @Column (unique=true)
     @NonNull 
-    private String dessinIllustration; 
+    private String urlIllustration; 
 
     @ManyToMany (mappedBy = "images")
     private List<Chapitre> cours = new LinkedList<>();

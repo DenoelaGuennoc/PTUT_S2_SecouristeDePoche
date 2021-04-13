@@ -15,14 +15,13 @@ public class NoeudDecisionnel {
     @NonNull
     private String nomNoeud;
 
-    @Column
+    @Column(columnDefinition="tinyint(1) default 0")
     @NonNull
     private Boolean noeudRacine;
     
     public NoeudDecisionnel(Integer idNoeud, String nomNoeud){
         this.id = idNoeud;
         this.nomNoeud = nomNoeud;
-        this.noeudRacine = false;
     }
 
     public NoeudDecisionnel(Integer idNoeud, String nomNoeud, Boolean noeudRacine){
