@@ -35,7 +35,4 @@ overlay.addEventListener('click', function(e) {
 function afficheReponse(){
     let noeudId = document.getElementById("noeudId");
     resHTML = "";
-    array.forEach(reponse => {
-        if(noeudId == reponse.questionPosee_id)
-    });
 }
