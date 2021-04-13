@@ -16,7 +16,7 @@ public class Theme {
 
     @Column(unique=true)
     @NonNull
-    private String titre; //passage en public car ne fonctionnait pas dans templates/afficheTheme sur les ordi de Deno et Camille
+    private String titre; 
     
     @OneToMany(mappedBy = "theme")
     private List<Chapitre> chapitres = new LinkedList<>();

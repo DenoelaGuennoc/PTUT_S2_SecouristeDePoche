@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css" />
-    <link rel="shortcut icon" href="Images/heart-icon.ico" />
+    <link rel="shortcut icon" href="../static/Images/heart-icon.ico" th:src="@{/Images/heart-icon.ico}" />
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         </ul>
     </nav>
 
-    <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site" /></div>
+    <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site" th:src="@{/Images/logo ptut.png}" /></div>
     <h2 id="bienv">Bienvenu sur votre espace de formation !</h2>
     <br>
 
