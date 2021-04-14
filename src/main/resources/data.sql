@@ -76,7 +76,6 @@ LINES TERMINATED BY '/n'; => Erreur de syntaxe */
 --Réponse
 
 
---Noeuds décisionnels
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES
     ('Question', 1, 'Respire', 'La victime respire-t-elle ?'),
     ('Question', 3, 'OBVA', 'La victime a-t-elle avalé un objet de travers ?'),
@@ -99,7 +98,9 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id,nom_Noeud, noeud_Racine, texte_Question)
 --Réponses
 INSERT INTO Reponse(id, libelle_reponse, question_posee_id, noeud_fils_id) VALUES
     (1, 'OUI', 2, 3),
-    (2, 'NON', 2, 1);
+    (2, 'NON', 2, 1),
+    (3, 'OUI', 3, 4),
+    (4, 'NON', 3, 9);
     --(3, 'OUI', 1, 16),
     --(4, 'NON', 1, 16); --voir comment demander le type de victime sachant un OneToOne entre réponse et noeud fils
 

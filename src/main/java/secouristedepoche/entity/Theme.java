@@ -12,6 +12,7 @@ import lombok.*;
 @Entity // Une entité JPA
 public class Theme {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @Column(nullable = false)
     private Integer id;
 
     @Column(unique=true)

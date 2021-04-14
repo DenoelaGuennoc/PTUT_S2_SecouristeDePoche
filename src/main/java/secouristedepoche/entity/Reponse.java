@@ -14,7 +14,6 @@ public class Reponse {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
-    @Column(unique=true)
     @NonNull
     private String libelleReponse;
     

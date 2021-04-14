@@ -28,17 +28,25 @@
     </nav>
     
    
-    <h2 id="repqu">Répondez aux questions suivantes pour trouver que faire dans votre situation</h2> 
-    <h3 id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3> 
+    <!-- <h2 id="repqu">Répondez aux questions suivantes pour trouver que faire dans votre situation</h2>  -->
+    <div id="question">
+        <h3 id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3> 
+    </div>
     <input id="noeudId" name="idNoeud" type="hidden" value=n.id/>
 	<br>
     <button id="doAjax">Exécuter la requête AJAX</button><br>
 	<div id="reponses"></div>
 
+    <!-- Template pour l'affichage de la question -->
+    <script id="questionTemplate" type="text/template">
+        {{texteQuestion}}
+    </script>
+
 	<!-- Template qui permet d'afficher les boutons de réponse aux questions avec Mustache -->
     <script id="reponsesTemplate" type="text/template">
         {{#content}}
-            <button class="boutonReponse">{{libelleReponse}}</button>
+            <button id="boutonReponse_">{{libelleReponse}}</button>
+            <!-- ici il faut réussir à récupérer l'id de la réponse pour le mettre dans l'id du bouton puis compléter l'EventListener sur le js en fonction -->
         {{/content}}
     </script>
 
