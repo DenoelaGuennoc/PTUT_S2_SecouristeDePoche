@@ -244,6 +244,8 @@ permet d'adapter le texte en fonction de la taille de l'écran
 }
 
 
+
+
 @media screen and (max-width: 1024px) {
 
 	.button1{
@@ -281,16 +283,9 @@ h2 {
 		line-height: 56px;
 	}
 
-	#haburger-content {
+	#hamburger-content {
 	display: none;
 	}
 
-	#hamburger-button, #hamburger-sidebar,
-	.hamburger-activated #hamburger-overlay {
-		display: block;
-	}
-	.hamburger-activated #hamburger-sidebar {
-		transform: translateX(0);
-	}
 
 }
