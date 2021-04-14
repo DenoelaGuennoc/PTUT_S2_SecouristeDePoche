@@ -21,6 +21,7 @@ public class Media {
     @NonNull
     private String nomMedia;
 
+    @Column(unique=true)
     @NonNull
     private String descriptionContenu;
 

@@ -17,10 +17,14 @@ public class Illustration {
     @NonNull
     private String nomIllustration;
     
+    @Column(unique=true)
     @NonNull
     private String descriptionIllustration;
 
     //Trouver comment y mettre des images
+    @Column (unique=true)
+    @NonNull 
+    private String urlIllustration; 
 
     @ManyToMany (mappedBy = "images")
     private List<Chapitre> cours = new LinkedList<>();

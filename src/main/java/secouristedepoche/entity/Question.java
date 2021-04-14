@@ -13,17 +13,26 @@ import java.util.List;
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
 public class Question extends NoeudDecisionnel{
+    
+    //@Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    //private Integer id;
+
+    @Column(unique=true)
+    @NonNull
+    private String resumeQuestion;
 
     @Column(unique=true)
     @NonNull
     private String texteQuestion;
 
-    public Question (Integer idQuestion, String resumeQuestion, String texteQuestion, Integer idNoeud, String nomNoeud){
+    public Question (/*Integer idQuestion,*/ String resumeQuestion, String texteQuestion, Integer idNoeud, String nomNoeud){
         super(idNoeud, nomNoeud);
+        //this.id = idQuestion; 
+        this.resumeQuestion = resumeQuestion; 
         this.texteQuestion = texteQuestion;
     }
 
-    public Question (Integer idQuestion, String resumeQuestion, Boolean noeudRacine, String texteQuestion, Integer idNoeud, String nomNoeud){
+    public Question (/*Integer idQuestion, String resumeQuestion,*/ Boolean noeudRacine, String texteQuestion, Integer idNoeud, String nomNoeud){
         super(idNoeud, nomNoeud, noeudRacine);
         this.texteQuestion = texteQuestion;
     }

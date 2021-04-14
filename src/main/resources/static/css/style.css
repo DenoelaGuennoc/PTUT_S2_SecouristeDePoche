@@ -162,7 +162,23 @@ button:focus {
 	  background-color: #00809D ;
   }
 
+  ul.presentation li{
+      width: 200px;
+  list-style: none;
+  margin: 0;
+  padding: 0.5em;
+  }
 
+  ul.presentation li:hover{
+	background-color:#00809D;
+	color: white;
+}
+
+  span.presentation{
+		display: inline-flex;
+		align-items: center;
+		cursor: pointer;
+  }
 
 /*
 permet d'adapter le texte en fonction de la taille de l'écran

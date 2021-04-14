@@ -6,12 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css" />
     <link rel="shortcut icon" href="Images/heart-icon.ico" />
-	
+	div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site"></div>
 </head>
 
+     <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site" th:src="@{/Images/logo ptut.png}"></div>
 
     <h1>Urgence</h1>
     <nav>
+        <div class="logo"><img src="Images/logo ptut.png" alt="Logo du site"></img></div>
         <ul>
             <li> <a href="/">Accueil</a></li>
             <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
@@ -19,30 +21,14 @@
             <li><a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
         </ul>
     </nav>
-    <div class="logo"><img src="Images/logo ptut.png" alt="Logo du site"></img></div>
-    <p>Salut ! <br> Je suis ....., votre secouriste de poche !</p>
+    
+   
     <h2 id="repqu">Répondez aux questions suivantes pour trouver que faire dans votre situation</h2> 
-    <h3 id="qu"> <em th:each="n:${noeuds}" th:if="${n.id == 1}" th:text="${n.texteQuestion}"></em></h3> 
-	<br><button class= "button2">OUI</button> 
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	&nbsp;
-	<button class= 'button1'>NON</button></br>
-	
-	<!balise span permet de mettre le mot urgence en rouge>
+    <h3 id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3> 
+    <input id="noeudId" name="idNoeud" type="hidden" value=n.id/>
+	<br>
+    <button class= "buttonReponse">...</button> 
 	
 	
-<br>
-<br>
-<br>
-<br>
-    <div><img src="Images/ptut num urgences.png" alt="Numéros d'urgence"></div>
-	
-	
-	
-
-
-
+	<!--balise span permet de mettre le mot urgence en rouge-->
 </html>

@@ -17,9 +17,10 @@ public class Chapitre {
     @NonNull
     private String titre;
 
-    //Il faut trouver un moyen de mettre du contenu dans chaque chapitre également
-    @NonNull
-    private String contenuTexte;
+   //Il faut trouver un moyen de mettre du contenu dans chaque chapitre également
+    @Column(unique=true)
+    //@NonNull // ! à repasser en NonNull quand ils seront créés
+    private String contenu; 
     
     @ManyToOne
     @NonNull
