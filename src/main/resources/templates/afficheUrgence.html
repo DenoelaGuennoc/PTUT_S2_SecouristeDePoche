@@ -5,15 +5,20 @@
     <title>Secouriste de poche</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css" />
-    <link rel="shortcut icon" href="Images/heart-icon.ico" />
-	div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site"></div>
+    <!-- <link rel="shortcut icon" href="Images/heart-icon.ico" /> -->
+
+    <!-- On charge la bibliothèque JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- On charge le moteur de template mustache https://mustache.github.io/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+
 </head>
 
      <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site" th:src="@{/Images/logo ptut.png}"></div>
 
     <h1>Urgence</h1>
     <nav>
-        <div class="logo"><img src="Images/logo ptut.png" alt="Logo du site"></img></div>
         <ul>
             <li> <a href="/">Accueil</a></li>
             <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
@@ -27,8 +32,16 @@
     <h3 id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3> 
     <input id="noeudId" name="idNoeud" type="hidden" value=n.id/>
 	<br>
-    <button class= "buttonReponse">...</button> 
-	
-	
-	<!--balise span permet de mettre le mot urgence en rouge-->
+    <button id="doAjax">Exécuter la requête AJAX</button><br>
+	<div id="reponses"></div>
+
+	<!-- Template qui permet d'afficher les boutons de réponse aux questions avec Mustache -->
+    <script id="reponsesTemplate" type="text/template">
+        {{#content}}
+            <button class="boutonReponse">{{libelleReponse}}</button>
+        {{/content}}
+    </script>
+
+    <script type="text/javascript" src="static/urgenceQuestionReponses.js" th:src="@{/urgenceQuestionReponses.js}"></script>
+
 </html>
