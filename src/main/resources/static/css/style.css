@@ -261,7 +261,7 @@ permet d'adapter le texte en fonction de la taille de l'écran
 
 
 
-
+/* permet de changer le bouton et le texte lors de l'affichage sur téléphone*/
 @media screen and (max-width: 1024px) {
 
 	.button1{
