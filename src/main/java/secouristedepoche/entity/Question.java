@@ -3,6 +3,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 import javax.persistence.*;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
+
 import lombok.*;
 import java.util.LinkedList;
 import java.util.List;
@@ -42,4 +46,5 @@ public class Question extends NoeudDecisionnel{
 
     @ManyToOne
     Fiche aideComprehension;
+
 }

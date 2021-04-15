@@ -1,5 +1,9 @@
 package secouristedepoche.entity;
 import javax.persistence.*;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
+
 import lombok.*;
 
 // Un exemple d'entité
@@ -29,4 +33,5 @@ public class NoeudDecisionnel {
         this.nomNoeud = nomNoeud;
         this.noeudRacine = noeudRacine;
     }
+
 }
