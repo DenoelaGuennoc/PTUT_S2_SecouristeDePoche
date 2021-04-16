@@ -61,13 +61,12 @@ INSERT INTO Chapitre(id, titre, theme_id) VALUES
 --Chapitre_conduiteATenir
 --INSERT INTO Chapitre_conduiteATenir(Chapitre_id, conduiteATenir_id) VALUES 
 
---Quizz     (id, intitule, reponse_A, reponse_B, reponse_C, reponse_D, reponse_Vraie) 
-/*LOAD DATA INFILE '/src/main/resources/ChapitresTxt/Quizz.txt' INTO TABLE Quizz 
-FIELDS TERMINATED BY '|'
-LINES TERMINATED BY '/n'; => Erreur de syntaxe */
+--Quizz      
+INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse_Vraie,sujets_id) VALUES
+    (1,'Quand peut on dire qu une personne a perdu connaissance?','ne respire pas','ne répond pas mais réagit','ne répond pas, ne réagit pas mais respire','ne répond pas, ne réagit pas et ne respire plus','C: ne répond pas, ne réagit pas mais respire',5),
+    (2,'Quelles sont les causes d une perte de connaissance?','médicale, traumatique ou toxique','médicale et traumatique','médicale ou traumatique','médicale, traumatique et toxique','A: traumatique, médicale ou toxique',5); 
 
---Quizz_sujets
---INSERT INTO Quizz_sujets(Quizz_id, sujets_id) VALUES
+
 
 --Pas sûre
 --Questions

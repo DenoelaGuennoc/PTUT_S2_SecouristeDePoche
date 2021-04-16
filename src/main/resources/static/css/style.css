@@ -54,7 +54,7 @@ html {
 	font-size: 2.6rem;
 }
 
-#lancerQCM {
+.lancerQCM {
   background-color: #2ab3c8; 
   border: none;
   color: black;
@@ -303,5 +303,9 @@ h2 {
 	display: none;
 	}
 
+
+}
+
+.header {
 
 }

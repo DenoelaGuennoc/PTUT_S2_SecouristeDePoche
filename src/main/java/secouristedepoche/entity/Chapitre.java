@@ -23,7 +23,7 @@ public class Chapitre {
     private String contenu; 
     
     @ManyToOne
-    @NonNull
+    @NonNull        
     Theme theme;
 
     @ManyToMany
