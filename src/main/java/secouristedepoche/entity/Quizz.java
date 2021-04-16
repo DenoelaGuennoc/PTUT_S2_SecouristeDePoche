@@ -37,7 +37,7 @@ public class Quizz {
     @NonNull
     private String reponseVraie;
 
-    @ManyToMany
-    List<Theme> sujets = new LinkedList<>();
+    @ManyToOne
+    Theme sujets ;
     
 }

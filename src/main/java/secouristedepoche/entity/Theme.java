@@ -1,4 +1,5 @@
 package secouristedepoche.entity;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.*;
@@ -19,9 +20,9 @@ public class Theme {
     private String titre; 
     
     @OneToMany(mappedBy = "theme")
-    private List<Chapitre> chapitres = new LinkedList<>();
+    private List<Chapitre> ch = new ArrayList<>();
 
-    @ManyToMany (mappedBy = "sujets")
+    @OneToMany (mappedBy = "sujets")
     private List<Quizz> interrogations = new LinkedList<>();
 
 }
