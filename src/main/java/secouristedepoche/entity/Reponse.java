@@ -1,5 +1,9 @@
 package secouristedepoche.entity;
 import javax.persistence.*;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
+
 import lombok.*;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,7 +18,6 @@ public class Reponse {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
-    @Column(unique=true)
     @NonNull
     private String libelleReponse;
     
@@ -25,4 +28,5 @@ public class Reponse {
     @OneToOne
     @NonNull
     private NoeudDecisionnel noeudFils;
+
 }

@@ -35,7 +35,7 @@
     <span class="presentation">
         <ul class="presentation" th:each="t:${themes}">
             <li  th:text="${t.titre}">
-                <li> <a href="/SecouristeDePoche/chapitres"> <li th:each="c:${chapitres}" th:text="${c.titre}" ></li></a> </li>             
+                <li> <a href="/SecouristeDePoche/chapitres"> <li th:each="c:${t.chapitres}" th:text="${c.titre}" ></li></a> </li>             
             </li>
                 
         </ul>

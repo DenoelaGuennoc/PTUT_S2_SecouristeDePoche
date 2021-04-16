@@ -28,11 +28,3 @@ overlay.addEventListener('click', function(e) {
 
     this.parentNode.classList.remove(activatedClass);
 });
-
-
-//Fonction pour récupérer les réponses associées à la question posée
-// voir pour récupérer les données des réponses possibles
-function afficheReponse(){
-    let noeudId = document.getElementById("noeudId");
-    resHTML = "";
-}
