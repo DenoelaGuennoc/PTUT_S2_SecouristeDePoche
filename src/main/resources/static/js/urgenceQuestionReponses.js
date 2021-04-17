@@ -65,12 +65,38 @@ function doRequestQuestion() {
 }
 
 // compléter l'id dans l'EventListener en fonction de l'HTML
-document.getElementById("boutonReponse_").addEventListener("click", changeIdQuestion);
 
-function changeIdQuestion(event) {
+/* document.querySelectorAll("boutonReponse").forEach(item => {
+    item.addEventListener('click', event => {
+        let idBouton = event.target.id;
+        console.log(idBouton);
+        let noeudFilsId = idBouton.split("_")[1];
+        console.log(noeudFilsId);
+        questionId = noeudFilsId;
+        doRequestQuestion();
+        doRequestResponse();
+    })
+}) */
+
+
+/* let boutonsReponse = document.getElementsByClassName("boutonReponse")
+boutonsReponse.forEach(item => item.addEventListener('click', changeIdQuestion)); */
+
+// Revoir à partir d'ici pour le passge d'un noeud à l'autre
+
+/* let boutonsReponse = document.querySelectorAll(".boutonReponse");
+
+boutonsReponse.forEach(function(elem) {
+    console.log("étape 1");
+    elem.addEventListener("input", changeIdQuestion);
+}); */
+
+
+/* function changeIdQuestion(event) {
+    console.log("click")
     let idBouton = event.target.id;
-    let noeudFilsId = idBouton.split("_")[1];;
-    questionId = noeudFilsId;
+    //let noeudFilsId = idBouton.split("_")[1];;
+    questionId = idBouton; //noeudFilsId;
     doRequestQuestion();
     doRequestResponse();
-}
+} */
