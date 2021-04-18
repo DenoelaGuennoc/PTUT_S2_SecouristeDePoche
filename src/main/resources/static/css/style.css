@@ -199,7 +199,6 @@ permet d'adapter le texte en fonction de la taille de l'écran
   
 
 #hamburger-button{
-	display: none;
 	cursor: pointer;
 	background: none;
 	border: none;
@@ -212,7 +211,6 @@ permet d'adapter le texte en fonction de la taille de l'écran
 }
 
 #hamburger-overlay {
-	display: none;
 	position: fixed;
 	z-index: 10;
 	top: 0;
@@ -261,7 +259,12 @@ permet d'adapter le texte en fonction de la taille de l'écran
 
 
 
-/* permet de changer le bouton et le texte lors de l'affichage sur téléphone*/
+/* 
+permet de changer le bouton et le texte lors de l'affichage sur téléphone
+*/
+
+
+
 @media screen and (max-width: 1024px) {
 
 	.button1{
@@ -290,9 +293,10 @@ permet d'adapter le texte en fonction de la taille de l'écran
 		line-height: 1.2;
 		font-size: 30px;
 	  }
-h2 {
+	
+	h2 {
 	display: none;
-}	
+	}	
 
 	h1 {
 		font-size: 42px;

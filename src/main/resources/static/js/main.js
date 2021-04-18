@@ -12,9 +12,9 @@ button.addEventListener('click', function(e){
     e.preventDefault();
 
     this.parentNode.classList.add(activatedClass);
-
+    
 });
-
+console.log("cc");
 button.addEventListener('keydown', function(e) {
     if (this.perentNode.classList.contains(activatedClass))
     {
