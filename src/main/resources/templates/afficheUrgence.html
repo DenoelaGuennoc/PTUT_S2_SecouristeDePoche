@@ -40,7 +40,7 @@
 
     <!-- Template pour l'affichage de la question -->
     <script id="questionTemplate" type="text/template">
-        {{texteQuestion}}
+        <div class="titresNoeud">{{texteQuestion}}</div>
     </script>
 
 	<!-- Template qui permet d'afficher les boutons de réponse aux questions avec Mustache -->
@@ -52,13 +52,13 @@
 
     <!-- Template pour l'affichage du nom d'une fiche -->
     <script id="ficheTitreTemplate" type="text/template">
-        {{nomFiche}}
+        <div class="titresNoeud">{{nomFiche}}</div>
     </script>
 
     <!-- Template pour l'affichage des illustrations d'une fiche -->
     <script id="ficheIllustrationsTemplate" type="text/template">
         {{#content}}
-            <img src='{{urlIllustration}}' th:src='@{/Images/Illustrations/{{nomIllustration}}.png}' alt='{{descriptionIllustration}}' id='Illustration_{{id}}'>
+            <img class="illustrationsFiches" src='{{urlIllustration}}' th:src='@{/Images/Illustrations/{{nomIllustration}}.png}' alt='{{descriptionIllustration}}' id='Illustration_{{id}}'>
         {{/content}}
     </script>
 
