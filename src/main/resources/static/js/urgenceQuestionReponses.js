@@ -1,4 +1,4 @@
-let questionId = 2;
+let noeudId = 2;
 let reponseId = 0;
 
 
@@ -38,7 +38,7 @@ function showErrorResponse(xhr, status, message) {
 function doRequestResponse() {
     $.ajax({
         //appel de l'API auto-générée
-        url: "../api/questions/" + questionId + "/reponsePossible",
+        url: "../api/questions/" + noeudId + "/reponsePossible",
         dataType: "json",
         success: showResultResponse,
         error: showErrorResponse
@@ -46,20 +46,36 @@ function doRequestResponse() {
 }
 
 
-/* Affichage de la question */
+/* Affichage de la question ou de la fiche */
 
 // Fonction qui traite les résultats de la requête
-function showResultQuestion(resultJson) {
-    // Le code source du template est dans la page
-    var template = $('#questionTemplate').html();
-    // On combine le template avec le résultat de la requête
-    var processedTemplate = Mustache.to_html(template, resultJson);
-    // On affiche le résultat dans la page
-    $('#question').html(processedTemplate);
+function showResultNoeud(resultJson) {
+    // si c'est une question
+    if(resultJson.nomFiche == null){
+        // Le code source du template est dans la page
+        var template = $('#questionTemplate').html();
+        // On combine le template avec le résultat de la requête
+        var processedTemplate = Mustache.to_html(template, resultJson);
+        // On affiche le résultat dans la page
+        $('#question').html(processedTemplate);
+
+        doRequestResponse();
+    }
+    // si c'est une fiche
+    else {
+        // Le code source du template est dans la page
+        var template = $('#ficheTitreTemplate').html();
+        // On combine le template avec le résultat de la requête
+        var processedTemplate = Mustache.to_html(template, resultJson);
+        // On affiche le résultat dans la page
+        $('#fiche_titre').html(processedTemplate);
+        
+        doRequestIllustrations();
+    }
 }
 
 // Fonction qui traite les erreurs de la requête
-function showErrorQuestion(xhr, status, message) {
+function showErrorNoeud(xhr, status, message) {
     $("#question").html("Erreur: " + status + " : " + message);
 }
 
@@ -67,13 +83,13 @@ function showErrorQuestion(xhr, status, message) {
 /* Changement des questions et réponses */
 
 //Fonction pour faire l'appel AJAX
-function doRequestQuestion() {
+function doRequestNoeud() {
     $.ajax({
         //appel de l'API auto-générée
-        url: "../api/questions/" + questionId,
+        url: "../api/noeudDecisionnels/" + noeudId,
         dataType: "json",
-        success: showResultQuestion,
-        error: showErrorQuestion
+        success: showResultNoeud,
+        error: showErrorNoeud
     });
 }
 
@@ -102,7 +118,33 @@ async function changeIdQuestion() {
     let idBouton = event.target.id;
     reponseId = idBouton.split("_")[1];
     let noeudFilsId = await doRequestNoeudFils();
-    questionId = noeudFilsId;
-    doRequestQuestion();
-    doRequestResponse();
+    noeudId = noeudFilsId;
+    doRequestNoeud();
+}
+
+
+// Fonction qui traite les résultats de la requête
+function showResultIllustrations(resultJson) {
+    // Le code source du template est dans la page
+    var template = $('#ficheIllustrationsTemplate').html();
+    // On combine le template avec le résultat de la requête
+    var processedTemplate = Mustache.to_html(template, resultJson);
+    // On affiche le résultat dans la page
+    $('#fiche_illustrations').html(processedTemplate);
+}
+
+// Fonction qui traite les erreurs de la requête
+function showErrorIllustrations(xhr, status, message) {
+    $("#fiche_illustrations").html("Erreur: " + status + " : " + message);
+}
+
+//Fonction pour faire l'appel AJAX
+function doRequestIllustrations() {
+    $.ajax({
+        //appel de l'API auto-générée
+        url: "../api/fiches/" + noeudId + "/dessins",
+        dataType: "json",
+        success: showResultIllustrations,
+        error: showErrorIllustrations
+    });
 }

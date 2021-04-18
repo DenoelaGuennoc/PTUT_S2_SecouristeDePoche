@@ -36,7 +36,7 @@ INSERT INTO Chapitre(id, titre, theme_id) VALUES
     (20, 'Insufflations', 11), 
     (21, 'Libération des voies aériennes',11), 
     (22, 'Maintien de la tête', 11), 
-    (23, 'Position Latérale de Séurité', 11); 
+    (23, 'Position Latérale de Sécurité', 11); 
 
 /*Problème pour mettre le fichier Txt dans la table Chapitre
     Première technique: 
@@ -62,7 +62,7 @@ INSERT INTO Chapitre(id, titre, theme_id) VALUES
 --INSERT INTO Chapitre_conduiteATenir(Chapitre_id, conduiteATenir_id) VALUES 
 
 --Quizz      
-INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse_Vraie,sujets_id) VALUES
+INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse_Vraie, sujets_id) VALUES
     (1,'Quand peut on dire qu une personne a perdu connaissance?','ne respire pas','ne répond pas mais réagit','ne répond pas, ne réagit pas mais respire','ne répond pas, ne réagit pas et ne respire plus','C: ne répond pas, ne réagit pas mais respire',5),
     (2,'Quelles sont les causes d une perte de connaissance?','médicale, traumatique ou toxique','médicale et traumatique','médicale ou traumatique','médicale, traumatique et toxique','A: traumatique, médicale ou toxique',5),
     (3,'Vers quoi risque d évoluer une perte de connaissance?','arrêt respiratoire, arrêt cardiaque et malaise','arrêt cardiaque et arrêt respiratoire','arrêt cardiaque','arrêt respiratoire','B: arrêt cardiaque et arrêt respiratoire',5), 
@@ -159,32 +159,36 @@ INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse
     (94,'Quel outil ne sert pas à  alerter la population de la survenance d une crise?','Sirènes','Médias','Panneaux publicitaires','Réseaux sociaux','C: Panneaux publicitaires',2),
     (95,'Combien de temps dure le SNA?','Variation du signal sur 3 cycles successifs d une durée de 1minutes et 21 secondes','Variation du signal sur 2 cycles successifs d une durée de 1minutes et 30 secondes','Variation du signal sur 2 cycles successifs d une durée de 1minutes et 21 secondes','Variation du signal sur 3 cycles successifs d une durée de 1minutes et 41 secondes','D: Variation du signal sur 3 cycles successifs d une durée de 1minutes et 41 secondes',2);
 
-
---Pas sûre
 --Questions
---INSERT INTO Question(idQuestion,resumeQuestion,texteQuestion,idNoeud,nomNoeud, idFiche) VALUES
+INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question, aide_comprehension_id) VALUES
+    ('Question', 1, 'Respire', 'La victime respire-t-elle ?', null), --voir pour ajouter aide_comprehension (fiche 23)
+    ('Question', 3, 'OBVA', 'La victime a-t-elle avalé un objet de travers ?', null),
+    ('Question', 4, 'Hemo', 'La victime saigne-t-elle abondamment ?', null),
+    ('Question', 5, 'Trauma', 'La victime a-t-elle subit un traumatisme physique ?', null),
+    ('Question', 6, 'Plaie', 'La victime a-t-elle une plaie ?', null),
+    ('Question', 7, 'Brulure', 'La victime s''est-elle brûlée ?', null),
+    ('Question', 8, 'Malaise', 'La victime se sent-elle mal ?', null),
+    ('Question', 9, 'Type OBVA', 'La victime peut-elle parler ou tousser ?', null),
+    ('Question', 10, 'Type Hemo', 'De quelle partie du corps saigne la victime ?', null),
+    ('Question', 11, 'Localisation Trauma', 'Où la victime a-t-elle subit un traumatisme ?', null),
+    ('Question', 12, 'Type Plaie', 'La plaie est-elle simple ou grave ?', null),
+    ('Question', 13, 'Localisation Plaie Grave', 'Où se situe la plaie ?', null),
+    ('Question', 14, 'Type Brulure', 'La brûlure est-elle simple ou grave ?', null),
+    ('Question', 15, 'Cause Brulure', 'Quelle est la cause de la brûlure ?', null),
+    ('Question', 16, 'Type de victime PLS', 'La victime est-elle :', null),
+    ('Question', 17, 'Type de victime ACR', 'La victime est-elle :', null),
+    ('Question', 18, 'Type de victime OBVA totale', 'La victime est-elle :', null);
+INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, noeud_Racine, texte_Question, aide_comprehension_id) VALUES
+    ('Question', 2, 'Conscient', TRUE, 'La victime est-elle consciente ?', null); --voir pour ajouter aide_comprehension (fiche 24)
 
---Réponse
-
-
-INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES
-    ('Question', 1, 'Respire', 'La victime respire-t-elle ?'),
-    ('Question', 3, 'OBVA', 'La victime a-t-elle avalé un objet de travers ?'),
-    ('Question', 4, 'Hemo', 'La victime saigne-t-elle abondamment ?'),
-    ('Question', 5, 'Trauma', 'La victime a-t-elle subit un traumatisme physique ?'),
-    ('Question', 6, 'Plaie', 'La victime a-t-elle une plaie ?'),
-    ('Question', 7, 'Brulure', 'La victime s''est-elle brûlée ?'),
-    ('Question', 8, 'Malaise', 'La victime se sent-elle mal ?'),
-    ('Question', 9, 'Type OBVA', 'La victime peut-elle parler ou tousser ?'),
-    ('Question', 10, 'Type Hemo', 'De quelle partie du corps saigne la victime ?'),
-    ('Question', 11, 'Localisation Trauma', 'Où la victime a-t-elle subit un traumatisme ?'),
-    ('Question', 12, 'Type Plaie', 'La plaie est-elle simple ou grave ?'),
-    ('Question', 13, 'Localisation Plaie Grave', 'Où se situe la plaie ?'),
-    ('Question', 14, 'Type Brulure', 'La brûlure est-elle simple ou grave ?'),
-    ('Question', 15, 'Cause Brulure', 'Quelle est la cause de la brûlure ?');
-    --('Question', 16, 'Type de victime', 'La victime est-elle :');
-INSERT INTO Noeud_Decisionnel(DTYPE, id,nom_Noeud, noeud_Racine, texte_Question) VALUES
-    ('Question', 2, 'Conscient', TRUE, 'La victime est-elle consciente ?');
+--Fiches
+INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, nom_Fiche) VALUES
+    ('Fiche', 19, 'PLS', 'Position Latérale de Sécurité'),
+    ('Fiche', 20, 'ACR', 'Arrêt Cardiorespiratoire'),
+    ('Fiche', 21, 'OBVA_Totale', 'Obstruction totale des voies aérienne'),
+    ('Fiche', 22, 'OBVA_Partielle', 'Obstruction partielle des voies aérienne'),
+    ('Fiche', 23, 'LVA', 'Libération des voies aériennes'),
+    ('Fiche', 24, 'Inconscience', 'Reconnaitre inconscience');
 
 --Réponses
 INSERT INTO Reponse(id, libelle_reponse, question_posee_id, noeud_fils_id) VALUES
@@ -210,17 +214,124 @@ INSERT INTO Reponse(id, libelle_reponse, question_posee_id, noeud_fils_id) VALUE
     (12, 'NON', 7, 8),
     (15, 'Grave', 14, 15),
     --(16, 'Simple', 14, ), --ajouter l'id de la fiche brulure simple
+    -- respire ? 1
+    (17, 'OUI', 1, 19),
+    (18, 'NON', 1, 20);
 
     --(3, 'OUI', 1, 16),
     --(4, 'NON', 1, 16); --voir comment demander le type de victime sachant un OneToOne entre réponse et noeud fils
 
-/*
+
 --Illustrations
-INSERT INTO Chapitre VALUES();
+INSERT INTO Illustration(id, description_illustration, nom_illustration, url_illustration) VALUES
+    (1, 'brûlure chimique aux yeux', 'Brulure_ChimiqueOeil_T_1', 'static/Images/Illustrations/Brulure_ChimiqueOeil_T_1.png'),
+    (2, 'rincer une brûlure grave', 'Brulure_grave_T_1', 'static/Images/Illustrations/Brulure_grave_T_1.png'),
+    (3, '', 'Brulure_Simple_AEN_1', 'static/Images/Illustrations/Brulure_Simple_AEN_1.png'),
+    (4, '', 'Brulure_Simple_AEN_2', 'static/Images/Illustrations/Brulure_Simple_AEN_2.png'),
+    (5, '', 'Brulure_Simple_AEN_3', 'static/Images/Illustrations/Brulure_Simple_AEN_3.png'),
+    (6, '', 'Brulure_Simple_AEN_4', 'static/Images/Illustrations/Brulure_Simple_AEN_4.png'),
+    (7, '', 'Hemorragie_Nez_T_1', 'static/Images/Illustrations/Hemorragie_Nez_T_1.png'),
+    (8, '', 'Hemorragie_Nez_T_2', 'static/Images/Illustrations/Hemorragie_Nez_T_2.png'),
+    (9, '', 'Hemorragie_Nez_T_3', 'static/Images/Illustrations/Hemorragie_Nez_T_3.png'),
+    (10, '', 'Hemorragie_Nez_T_4', 'static/Images/Illustrations/Hemorragie_Nez_T_4.png'),
+    (11, '', 'Inconscient_ACR_A_1', 'static/Images/Illustrations/Inconscient_ACR_A_1.png'),
+    (12, '', 'Inconscient_ACR_A_2', 'static/Images/Illustrations/Inconscient_ACR_A_2.png'),
+    (13, '', 'Inconscient_ACR_A_3', 'static/Images/Illustrations/Inconscient_ACR_A_3.png'),
+    (14, '', 'Inconscient_ACR_A_4', 'static/Images/Illustrations/Inconscient_ACR_A_4.png'),
+    (15, '', 'Inconscient_ACR_A_5', 'static/Images/Illustrations/Inconscient_ACR_A_5.png'),
+    (16, '', 'Inconscient_ACR_Defibrillateur_T_1', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_1.png'),
+    (17, '', 'Inconscient_ACR_Defibrillateur_T_2', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_2.png'),
+    (18, '', 'Inconscient_ACR_Defibrillateur_T_3', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_3.png'),
+    (19, '', 'Inconscient_ACR_Defibrillateur_T_4', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_4.png'),
+    (20, '', 'Inconscient_ACR_Defibrillateur_T_5', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_5.png'),
+    (21, '', 'Inconscient_ACR_Defibrillateur_T_6', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_6.png'),
+    (22, '', 'Inconscient_ACR_E_1', 'static/Images/Illustrations/Inconscient_ACR_E_1.png'),
+    (23, '', 'Inconscient_ACR_E_2', 'static/Images/Illustrations/Inconscient_ACR_E_2.png'),
+    (24, '', 'Inconscient_ACR_E_3', 'static/Images/Illustrations/Inconscient_ACR_E_3.png'),
+    (25, '', 'Inconscient_ACR_Insuflations_AE_1', 'static/Images/Illustrations/Inconscient_ACR_Insuflations_AE_1.png'),
+    (26, '', 'Inconscient_ACR_Insuflations_AE_2', 'static/Images/Illustrations/Inconscient_ACR_Insuflations_AE_2.png'),
+    (27, '', 'Inconscient_ACR_Insuflations_AE_3', 'static/Images/Illustrations/Inconscient_ACR_Insuflations_AE_3.png'),
+    (28, '', 'Inconscient_ACR_Insuflations_AE_4', 'static/Images/Illustrations/Inconscient_ACR_Insuflations_AE_4.png'),
+    (29, '', 'Inconscient_ACR_N_1', 'static/Images/Illustrations/Inconscient_ACR_N_1.png'),
+    (30, '', 'Inconscient_ACR_N_2', 'static/Images/Illustrations/Inconscient_ACR_N_2.png'),
+    (31, '', 'Inconscient_ACR_N_3', 'static/Images/Illustrations/Inconscient_ACR_N_3.png'),
+    (32, '', 'Inconscient_Constat_AE_1', 'static/Images/Illustrations/Inconscient_Constat_AE_1.png'),
+    (33, '', 'Inconscient_Constat_AE_2', 'static/Images/Illustrations/Inconscient_Constat_AE_2.png'),
+    (34, '', 'Inconscient_LVA_AE_1', 'static/Images/Illustrations/Inconscient_LVA_AE_1.png'),
+    (35, '', 'Inconscient_LVA_AE_2', 'static/Images/Illustrations/Inconscient_LVA_AE_2.png'),
+    (36, '', 'Inconscient_LVA_AE_3', 'static/Images/Illustrations/Inconscient_LVA_AE_3.png'),
+    (37, '', 'Inconscient_LVA_AE_4', 'static/Images/Illustrations/Inconscient_LVA_AE_4.png'),
+    (38, '', 'Inconscient_LVA_AE_5', 'static/Images/Illustrations/Inconscient_LVA_AE_5.png'),
+    (39, '', 'Inconscient_LVA_AE_6', 'static/Images/Illustrations/Inconscient_LVA_AE_6.png'),
+    (40, '', 'Inconscient_PLS_AE_1', 'static/Images/Illustrations/Inconscient_PLS_AE_1.png'),
+    (41, '', 'Inconscient_PLS_AE_2', 'static/Images/Illustrations/Inconscient_PLS_AE_2.png'),
+    (42, '', 'Inconscient_PLS_AE_3', 'static/Images/Illustrations/Inconscient_PLS_AE_3.png'),
+    (43, '', 'Inconscient_PLS_AE_4', 'static/Images/Illustrations/Inconscient_PLS_AE_4.png'),
+    (44, '', 'Inconscient_PLS_AE_5', 'static/Images/Illustrations/Inconscient_PLS_AE_5.png'),
+    (45, '', 'Inconscient_PLS_AE_6', 'static/Images/Illustrations/Inconscient_PLS_AE_6.png'),
+    (46, '', 'Inconscient_PLS_AE_7', 'static/Images/Illustrations/Inconscient_PLS_AE_7.png'),
+    (47, '', 'Inconscient_PLS_AE_8', 'static/Images/Illustrations/Inconscient_PLS_AE_8.png'),
+    (48, '', 'Inconscient_PLS_AE_9', 'static/Images/Illustrations/Inconscient_PLS_AE_9.png'),
+    (49, '', 'Inconscient_PLS_AE_10', 'static/Images/Illustrations/Inconscient_PLS_AE_10.png'),
+    (50, '', 'Inconscient_PLS_AE_11', 'static/Images/Illustrations/Inconscient_PLS_AE_11.png'),
+    (51, '', 'Inconscient_PLS_AE_12', 'static/Images/Illustrations/Inconscient_PLS_AE_12.png'),
+    (52, '', 'Inconscient_PLS_AE_13', 'static/Images/Illustrations/Inconscient_PLS_AE_13.png'),
+    (53, '', 'Inconscient_PLS_AE_14', 'static/Images/Illustrations/Inconscient_PLS_AE_14.png'),
+    (54, '', 'Inconscient_PLS_AE_15', 'static/Images/Illustrations/Inconscient_PLS_AE_15.png'),
+    (55, '', 'Inconscient_PLS_AE_16', 'static/Images/Illustrations/Inconscient_PLS_AE_16.png'),
+    (56, '', 'Inconscient_PLS_AE_17', 'static/Images/Illustrations/Inconscient_PLS_AE_17.png'),
+    (57, '', 'Inconscient_PLS_N_1', 'static/Images/Illustrations/Inconscient_PLS_N_1.png'),
+    (58, '', 'OBVA_AEN_1', 'static/Images/Illustrations/OBVA_AEN_1.png'),
+    (59, '', 'OBVA_Partielle_AEN_1', 'static/Images/Illustrations/OBVA_Partielle_AEN_1.png'),
+    (60, '', 'OBVA_Partielle_AEN_2', 'static/Images/Illustrations/OBVA_Partielle_AEN_2.png'),
+    (61, '', 'OBVA_Totale_A_2', 'static/Images/Illustrations/OBVA_Totale_A_2.png'),
+    (62, '', 'OBVA_Totale_A_3', 'static/Images/Illustrations/OBVA_Totale_A_3.png'),
+    (63, '', 'OBVA_Totale_A_4', 'static/Images/Illustrations/OBVA_Totale_A_4.png'),
+    (64, '', 'OBVA_Totale_A_5', 'static/Images/Illustrations/OBVA_Totale_A_5.png'),
+    (65, '', 'OBVA_Totale_A_6', 'static/Images/Illustrations/OBVA_Totale_A_6.png'),
+    (66, '', 'OBVA_Totale_A_7', 'static/Images/Illustrations/OBVA_Totale_A_7.png'),
+    (67, '', 'OBVA_Totale_A_8', 'static/Images/Illustrations/OBVA_Totale_A_8.png'),
+    (68, '', 'OBVA_Totale_A_9', 'static/Images/Illustrations/OBVA_Totale_A_9.png'),
+    (69, '', 'OBVA_Totale_A_10', 'static/Images/Illustrations/OBVA_Totale_A_10.png'),
+    (70, '', 'OBVA_Totale_A_11', 'static/Images/Illustrations/OBVA_Totale_A_11.png'),
+    (71, '', 'OBVA_Totale_A_12', 'static/Images/Illustrations/OBVA_Totale_A_12.png'),
+    (72, '', 'OBVA_Totale_AE_1', 'static/Images/Illustrations/OBVA_Totale_AE_1.png'),
+    (73, '', 'OBVA_Totale_Aenceinteobese_1', 'static/Images/Illustrations/OBVA_Totale_Aenceinteobese_1.png'),
+    (74, '', 'OBVA_Totale_Aenceinteobese_2', 'static/Images/Illustrations/OBVA_Totale_Aenceinteobese_2.png'),
+    (75, '', 'Traumatisme_Membre_T_1', 'static/Images/Illustrations/Traumatisme_Membre_T_1.png'),
+    (76, '', 'Traumatisme_Membre_T_2', 'static/Images/Illustrations/Traumatisme_Membre_T_2.png'),
+    (77, '', 'Traumatisme_Rachis_T_1', 'static/Images/Illustrations/Traumatisme_Rachis_T_1.png'),
+    (78, '', 'Traumatisme_Rachis_T_2', 'static/Images/Illustrations/Traumatisme_Rachis_T_2.png'),
+    (79, '', 'Traumatisme_Rachis_T_3', 'static/Images/Illustrations/Traumatisme_Rachis_T_3.png');
+    /* (80, '', '', 'static/Images/Illustrations/.png'),
+    (81, '', '', 'static/Images/Illustrations/.png'),
+    (82, '', '', 'static/Images/Illustrations/.png'),
+    (83, '', '', 'static/Images/Illustrations/.png'),
+    (84, '', '', 'static/Images/Illustrations/.png'),
+    (85, '', '', 'static/Images/Illustrations/.png'), */
 
---Fiches
-INSERT INTO Chapitre VALUES();
+--Liens Illustrations -> Fiches
+INSERT INTO NOEUD_DECISIONNEL_DESSINS(guides_id, dessins_id) VALUES
+    --PLS
+    (19, 40), (19, 41), (19, 42), (19, 43), (19, 44), (19, 45), (19, 46), (19, 47), (19, 48), (19, 49),
+    (19, 50), (19, 51), (19, 52), (19, 53), (19, 54), (19, 55), (19, 56),
+    --Reconnaître l'inconscience
+    (24, 32), (24, 33),
+    --LVA
+    (23, 34), (23, 35), (23, 36), (23, 37), (23, 38), (23, 39);
 
+    /* (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), */
+
+/*
 --Media
 INSERT INTO Chapitre VALUES();
 */

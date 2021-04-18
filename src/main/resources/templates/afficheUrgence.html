@@ -35,6 +35,8 @@
     <input id="noeudId" name="idNoeud" type="hidden" value=n.id/>
 	<br>
 	<div id="reponses"></div>
+    <div id="fiche_titre"></div>
+    <div id="fiche_illustrations"></div>
 
     <!-- Template pour l'affichage de la question -->
     <script id="questionTemplate" type="text/template">
@@ -45,6 +47,18 @@
     <script id="reponsesTemplate" type="text/template">
         {{#content}}
             <button class="boutonReponse" id='boutonReponse_{{id}}' >{{libelleReponse}}</button>
+        {{/content}}
+    </script>
+
+    <!-- Template pour l'affichage du nom d'une fiche -->
+    <script id="ficheTitreTemplate" type="text/template">
+        {{nomFiche}}
+    </script>
+
+    <!-- Template pour l'affichage des illustrations d'une fiche -->
+    <script id="ficheIllustrationsTemplate" type="text/template">
+        {{#content}}
+            <img src='{{urlIllustration}}' th:src='@{/Images/Illustrations/{{nomIllustration}}.png}' alt='{{descriptionIllustration}}' id='Illustration_{{id}}'>
         {{/content}}
     </script>
 

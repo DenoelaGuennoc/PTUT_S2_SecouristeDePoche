@@ -17,8 +17,7 @@ public class Illustration {
     @NonNull
     private String nomIllustration;
     
-    @Column(unique=true)
-    @NonNull
+    @Column
     private String descriptionIllustration;
 
     //Trouver comment y mettre des images
