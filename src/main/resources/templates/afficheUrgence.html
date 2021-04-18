@@ -29,22 +29,36 @@
     
    
     <!-- <h2 id="repqu">Répondez aux questions suivantes pour trouver que faire dans votre situation</h2>  -->
-    <div id="question">
-        <h3 id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3> 
+    <div id="titreNoeud">
+        <h3 class="titresNoeud" id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3> 
     </div>
     <input id="noeudId" name="idNoeud" type="hidden" value=n.id/>
 	<br>
-	<div id="reponses"></div>
+	<div id="contenuNoeud"></div>
+    <div id="aide_comprehension_titre"></div>
+    <div id="aide_comprehension_illustrations"></div>
 
     <!-- Template pour l'affichage de la question -->
     <script id="questionTemplate" type="text/template">
-        {{texteQuestion}}
+        <h3 class="titresNoeud">{{texteQuestion}}</h3>
     </script>
 
 	<!-- Template qui permet d'afficher les boutons de réponse aux questions avec Mustache -->
     <script id="reponsesTemplate" type="text/template">
         {{#content}}
             <button class="boutonReponse" id='boutonReponse_{{id}}' >{{libelleReponse}}</button>
+        {{/content}}
+    </script>
+
+    <!-- Template pour l'affichage du nom d'une fiche -->
+    <script id="ficheTitreTemplate" type="text/template">
+        <h3 class="titresNoeud">{{nomFiche}}</h3>
+    </script>
+
+    <!-- Template pour l'affichage des illustrations d'une fiche -->
+    <script id="ficheIllustrationsTemplate" type="text/template">
+        {{#content}}
+            <img class="illustrationsFiches" src='{{urlIllustration}}' th:src='@{/Images/Illustrations/{{nomIllustration}}.png}' alt='{{descriptionIllustration}}' id='Illustration_{{id}}'>
         {{/content}}
     </script>
 

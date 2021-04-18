@@ -1,6 +1,6 @@
-let questionId = 2;
+let noeudId = 2;
 let reponseId = 0;
-//let noeudFilsId = 0;
+
 
 /* Affichage des réponses */
 
@@ -18,7 +18,7 @@ function showResultResponse(resultJson) {
     // On combine le template avec le résultat de la requête
     var processedTemplate = Mustache.to_html(template, resultJson);
     // On affiche le résultat dans la page
-    $('#reponses').html(processedTemplate);
+    $('#contenuNoeud').html(processedTemplate);
 
     // On récupère les id de tous les boutons créés pour y mettre des event listeners
     let boutonsReponse = document.getElementsByClassName("boutonReponse");
@@ -31,14 +31,14 @@ function showResultResponse(resultJson) {
 
 // Fonction qui traite les erreurs de la requête
 function showErrorResponse(xhr, status, message) {
-    $("#reponses").html("Erreur: " + status + " : " + message);
+    $("#contenuNoeud").html("Erreur: " + status + " : " + message);
 }
 
 //Fonction pour faire l'appel AJAX
 function doRequestResponse() {
     $.ajax({
         //appel de l'API auto-générée
-        url: "../api/questions/" + questionId + "/reponsePossible",
+        url: "../api/questions/" + noeudId + "/reponsePossible",
         dataType: "json",
         success: showResultResponse,
         error: showErrorResponse
@@ -46,32 +46,50 @@ function doRequestResponse() {
 }
 
 
-
-/* Affichage de la question */
+/* Affichage de la question ou de la fiche */
 
 // Fonction qui traite les résultats de la requête
-function showResultQuestion(resultJson) {
-    // Le code source du template est dans la page
-    var template = $('#questionTemplate').html();
-    // On combine le template avec le résultat de la requête
-    var processedTemplate = Mustache.to_html(template, resultJson);
-    // On affiche le résultat dans la page
-    $('#question').html(processedTemplate);
+function showResultNoeud(resultJson) {
+    // si c'est une question
+    if(resultJson.nomFiche == null){
+        // Le code source du template est dans la page
+        var template = $('#questionTemplate').html();
+        // On combine le template avec le résultat de la requête
+        var processedTemplate = Mustache.to_html(template, resultJson);
+        // On affiche le résultat dans la page
+        $('#titreNoeud').html(processedTemplate);
+
+        doRequestResponse();
+    }
+    // si c'est une fiche
+    else {
+        // Le code source du template est dans la page
+        var template = $('#ficheTitreTemplate').html();
+        // On combine le template avec le résultat de la requête
+        var processedTemplate = Mustache.to_html(template, resultJson);
+        // On affiche le résultat dans la page
+        $('#titreNoeud').html(processedTemplate);
+        
+        doRequestIllustrations();
+    }
 }
 
 // Fonction qui traite les erreurs de la requête
-function showErrorQuestion(xhr, status, message) {
-    $("#question").html("Erreur: " + status + " : " + message);
+function showErrorNoeud(xhr, status, message) {
+    $("#titreNoeud").html("Erreur: " + status + " : " + message);
 }
 
+
+/* Changement des questions et réponses */
+
 //Fonction pour faire l'appel AJAX
-function doRequestQuestion() {
+function doRequestNoeud() {
     $.ajax({
         //appel de l'API auto-générée
-        url: "../api/questions/" + questionId,
+        url: "../api/noeudDecisionnels/" + noeudId,
         dataType: "json",
-        success: showResultQuestion,
-        error: showErrorQuestion
+        success: showResultNoeud,
+        error: showErrorNoeud
     });
 }
 
@@ -97,15 +115,36 @@ function doRequestNoeudFils(){
 
 //Fonction pour changer les questions et réponses sur la page en fonction de la réponse de l'utilisateur
 async function changeIdQuestion() {
-    console.log("click")
     let idBouton = event.target.id;
-    console.log("id bouton = " + idBouton);
     reponseId = idBouton.split("_")[1];
-    console.log("id réponse = " + reponseId);
     let noeudFilsId = await doRequestNoeudFils();
-    console.log("id noeud fils = " + noeudFilsId);
-    questionId = noeudFilsId;
-    console.log("id question fille = " + questionId);
-    doRequestQuestion();
-    doRequestResponse();
+    noeudId = noeudFilsId;
+    doRequestNoeud();
+}
+
+
+// Fonction qui traite les résultats de la requête
+function showResultIllustrations(resultJson) {
+    // Le code source du template est dans la page
+    var template = $('#ficheIllustrationsTemplate').html();
+    // On combine le template avec le résultat de la requête
+    var processedTemplate = Mustache.to_html(template, resultJson);
+    // On affiche le résultat dans la page
+    $('#contenuNoeud').html(processedTemplate);
+}
+
+// Fonction qui traite les erreurs de la requête
+function showErrorIllustrations(xhr, status, message) {
+    $("#contenuNoeud").html("Erreur: " + status + " : " + message);
+}
+
+//Fonction pour faire l'appel AJAX
+function doRequestIllustrations() {
+    $.ajax({
+        //appel de l'API auto-générée
+        url: "../api/fiches/" + noeudId + "/dessins",
+        dataType: "json",
+        success: showResultIllustrations,
+        error: showErrorIllustrations
+    });
 }

@@ -14,7 +14,40 @@ INSERT INTO Theme(id, titre) VALUES
 
 --Chapitres sans contenu
 INSERT INTO Chapitre(id, titre, contenu, theme_id) VALUES
-    (1,'Protection', '1', 1), 
+    (1,'Protection', 'PROTECTION
+Version : 1.2.2 Mise à jour :  Juillet 2019 
+
+~Protection d’une personne exposée à un danger%
+
+Une victime ou toute autre personne menacée par un danger doit en être protégée,
+notamment du sur-accident. Pour cela, le sauveteur, lorsqu’il peut agir sans risque pour sa
+propre sécurité doit immédiatement supprimer ou écarter le danger de façon permanente.
+Si nécessaire, cette première mesure est complétée en délimitant clairement et largement
+la zone de danger, de façon visible, afin d’éviter toute intrusion dans la zone. Cette
+délimitation se fait en utilisant tous les moyens matériels à disposition ainsi que le concours
+des personnes aptes aux alentours.
+
+~Dégagement d’urgence d’une victime%
+
+Lorsque la victime ne peut se soustraire d’elle-même à un danger réel, immédiat et non
+contrôlable, un dégagement d’urgence peut être alors réalisé par le sauveteur. Cette
+manœuvre peut être dangereuse pour la victime ou lui-même. Elle doit donc rester
+exceptionnelle.
+Le dégagement d’urgence de la victime doit alors permettre de placer celle-ci dans un
+endroit suffisamment éloigné du danger et de ses conséquences.
+Aucune technique n’est imposée lors de la réalisation d’un dégagement d’urgence.
+Toutefois, lors de sa réalisation, le sauveteur s’engage par le cheminement le plus sûr et le
+plus rapide seulement si la victime est visible, facile à atteindre et que rien ne gêne son
+dégagement. Il assure son extraction en fonction de ses capacités.
+
+~Devant une attaque terroriste ou une situation de violence%
+
+Devant une attaque terroriste ou une situation de violence, le sauveteur tentera d’appliquer
+les consignes nationales éditées par le ministère de l’intérieur et disponibles en ligne
+« réagir en cas d’attaque terroriste ».
+Ainsi, la conduite à tenir pour le sauveteur avant l’arrivée des forces de l’ordre pourrait être
+la suivante : s’échapper, si c’est impossible se cacher, alerter et obéir aux forces de l’ordre,
+réaliser les gestes de premiers secours, rester vigilant.', 1), 
     (2, 'Alerte', '
 Version : 1.2.3 Mise à jour : - Juillet 2019 - 
 
@@ -61,11 +94,173 @@ Lorsque le sauveteur demande à une autre personne de donner l’alerte, il conv
 - après l’alerte, de vérifier qu’elle a correctement exécuté l’action.
 Si possible, envoyer une personne pour accueillir les secours et organiser leur accès sur le
 lieu de l’accident, au plus près de la victime', 2), 
-    (3, 'Alerte et Protection', '1', 2), 
-    (4, 'Obstruction aiguë des voies aériennes', '1', 3), 
-    (5, 'Hémorragie externe',  'HEMORRAGIES EXTERNES
-Version : 2.2.2 Mise à jour : - Juillet 2019 -
+    (3, 'Alerte et Protection', 'ALERTE ET PROTECTION DES POPULATIONS
+Version : 1.3.2 Mise à jour :  Juillet 2019 
 
+~Principes d’organisation%
+
+L’alerte aux populations est une mesure exceptionnelle dont l’efficacité repose sur une
+connaissance préalable des risques particuliers auxquels les populations sont exposées.
+L’alerte est diffusée par un ensemble d’outils permettant d’alerter la population de la
+survenance d’une crise grâce aux sirènes, aux médias, aux réseaux sociaux ou encore
+grâce aux sociétés.
+D’autres outils permettent également de diffuser de l’information ou d’alerter la population
+comme les panneaux à messages variables des communes, des autoroutes…
+- Le premier volet est l’alerte des populations qui consiste à diffuser un signal destiné à
+avertir les individus d un danger imminent ou d’un évènement grave, en train de
+produire ses effets et susceptible de porter atteinte à leur intégrité physique. Il se
+compose de deux codes distincts :
+ # le Signal National d Alerte (SNA) : variation du signal sur trois cycles
+successifs d une durée de 1 minute et 41 secondes ;
+ # le signal de fin d alerte : signal continu de 30 secondes.
+La diffusion de ces signaux repose sur un réseau d’environ 5 300 sirènes permettant, de
+jour comme de nuit, d attirer rapidement l attention des populations pour les appeler à réagir.
+Des essais de ce réseau se déroulent le premier mercredi de chaque mois, à midi. Ils
+permettent à la population d’être capable d’identifier clairement le signal. Lors de ces essais
+mensuels, le signal émis est une variation sur un seul cycle de 1 minute et 41 secondes,
+pour ne pas être confondu avec le SNA.
+Par ailleurs, lorsqu’il existe des risques particuliers (chimiques, radioactifs…) et afin de
+prévenir les populations concernées, des systèmes d’alerte adaptés sont mis en place afin
+de pouvoir diffuser un signal.
+Le déclenchement du SNA appelle une réaction immédiate de la population afin d’assurer
+sa mise à l’abri, son information ainsi que son confinement ou son évacuation.
+- Le deuxième volet est l’information qui est primordial pour que les populations adoptent
+les comportements de sauvegarde adéquats. Le ministère peut compter sur des
+acteurs majeurs et particulièrement connectés pour prévenir la population si la situation
+l’exige. Les messages d’alerte et de prévention du ministère sont diffusés de façon
+prioritaire sur Twitter, Facebook et Google mais aussi par certains canaux de
+communication de la RATP, Vinci autoroutes, Radio-France et France Télévisions.
+Parallèlement, le ministère de l’intérieur invite l’ensemble des utilisateurs de Twitter à
+s’abonner et activer les notifications du compte @Beauvau_alerte qui permet à chacun
+d’être notifié sur son téléphone en cas d’évènement grave: 
+ # Facebook offre la possibilité au ministère de l’intérieur de communiquer via un
+dispositif de communication lié à son outil « Safety Check ». Cette fonctionnalité
+se déclenche lorsqu’un évènement met en danger la population et permet aux
+utilisateurs de Facebook d’indiquer à leurs proches qu’ils se trouvent en sécurité.
+Les messages du ministère trouvent une visibilité rapide et forte.
+ # De son côté, Google relaie sur le moteur de recherche, au travers de son outil
+« Posts on Google », les messages du ministère pour les utilisateurs effectuant
+des recherches dans la zone impactée ou lorsque les mots clés tapés par un
+utilisateur sont en rapport avec l’évènement en cours (attentat, ouragan, fusillade,
+lieu,..).
+ # Enfin, les sociétés RATP, Vinci autoroutes, France Télévisions et Radio France
+relaient aussi via leurs applications, réseaux sociaux ou panneaux d’information
+les messages du ministère si la situation l’exige.
+Ces dispositifs s’ajoutent à ceux déjà existants : les prises de parole des autorités ainsi que
+les messages d’alerte et de prévention sur les comptes Twitter et des pages Facebook de
+la place Beauvau, des préfectures et des différentes directions du ministère de l’intérieur.
+
+~Cas particulier%
+
+Seuls les dispositifs d’alerte propres aux aménagements hydrauliques émettent un signal
+distinct en cas de danger (corne de brume). Il s’agit alors d’un signal d’évacuation.
+
+~Conduite à tenir%
+
+La population doit être sensibilisée aux bons comportements en amont afin d’avoir la
+réaction adaptée dès le déclenchement du signal national d’alerte et jusqu’au signal de fin
+d’alerte. Ainsi, « toute personne concourt par son comportement à la sécurité civile »
+conformément à l’article L721-1 du code de la sécurité intérieure.
+Les comportements de sauvegarde sont les suivants :
+- se mettre en sécurité, rejoindre sans délai un bâtiment ;
+- s’informer sur France Bleu, France Info, radios locales, France Télévisions, les sites et
+comptes des réseaux sociaux du gouvernement, du ministère de l’intérieur et des
+préfectures ;
+- respecter les consignes des autorités et en fonction du type de risque, il peut être
+demandé de se confiner ou d’évacuer.
+Pour se confiner, il convient :
+- de fermer les portes et fenêtres ;
+- de calfeutrer les portes, les fenêtres et les bouches d’aération ;
+- d’arrêter les systèmes de ventilation ou de climatisation.
+En cas d’évacuation, emportez votre kit d’urgence préparé à l’avance.
+Dans tous les cas :
+- restez en sécurité et n’allez pas chercher vos enfants à l’école car ils y sont protégés
+par leurs enseignants ;
+- ne téléphonez qu’en cas d’urgence vitale pour laisser les réseaux disponibles pour les
+services de secours.
+Pour en savoir plus et compléter votre kit :
+- http://www.interieur.gouv.fr/Alerte/Alerte-ORSEC
+- http://www.gouvernement.fr/risques', 2), 
+    (4, 'Obstruction aiguë des voies aériennes', 'OBSTRUCTION AIGUË DES VOIES AERIENNES
+PAR UN CORPS ETRANGER Version : 1.3.2 Mise à jour :  Juillet 2019 
+
+
+~Définition - Signes%
+
+L’obstruction des voies aériennes est la gêne ou l empêchement brutal des mouvements de
+l’air entre l’extérieur et les poumons. Elle est qualifiée :
+- d’obstruction partielle, lorsque la respiration reste efficace. La victime :
+ # peut parler ou crier ;
+ # tousse vigoureusement ;
+ # respire, parfois avec un bruit surajouté.
+- d’obstruction grave, lorsque la respiration n’est plus efficace, voire impossible. La
+victime :
+ # porte les mains à sa gorge ;
+ # ne peut plus parler, crier, tousser ou émettre un son ;
+ # garde la bouche ouverte ;
+ # s’agite, devient rapidement bleue puis perd connaissance.
+
+~Causes%
+
+Les corps étrangers qui sont le plus souvent à l’origine d’une obstruction aiguë des voies
+aériennes sont les aliments (noix, cacahuètes, carottes) ou des objets (aimants de magnets,
+jouets).
+L’obstruction, particulièrement fréquente chez l’enfant, se produit le plus souvent lorsque la
+personne est en train de manger, de boire ou de porter un objet à la bouche.
+
+~Risques%
+
+En l’absence de gestes de secours efficaces, le risque d’une obstruction des voies
+aériennes par un corps étranger est de mettre en jeu immédiatement la vie de la victime, ou
+d’entraîner des complications respiratoires graves.
+
+~Principes d’action%
+
+L’action du sauveteur doit permettre :
+- de désobstruer les voies aériennes en cas d’obstruction grave ;
+- d’empêcher toute aggravation en cas d’obstruction partielle.
+
+~Conduite à tenir%
+
+En présence d’une victime présentant une obstruction partielle :
+- ne jamais pratiquer de technique de désobstruction ;
+- installer la victime dans la position où elle se sent le mieux ;
+- l’encourager à tousser (1);
+- demander un avis médical et appliquer les consignes ;
+- surveiller attentivement la victime.
+Si l’obstruction devient grave, il convient d’appliquer la conduite à tenir devant une
+obstruction grave.
+En présence d’une victime présentant une obstruction grave :
+- donner des claques dans le dos ;
+- réaliser des compressions en cas d’inefficacité des « claques dans le dos » :
+ # au niveau abdominal s’il s’agit d’un adulte ou d’un enfant ;
+ # au niveau thoracique s’il s’agit d’un nourrisson ;
+ # au niveau thoracique s il s’agit d’un adulte obèse ou d’une femme
+enceinte lorsqu il est impossible d’encercler l’abdomen ;
+- répéter le cycle « claques dans le dos » et « compressions » ;
+- interrompre les manœuvres dès :
+ # l’apparition d’une toux, de cris ou de pleurs ;
+ # la reprise de la respiration ;
+ # le rejet du corps étranger.
+Si les manœuvres de désobstruction sont efficaces :
+- installer la victime dans la position où elle se sent le mieux ;
+- la réconforter en lui parlant régulièrement ;
+- desserrer les vêtements ;
+- faire alerter ou alerter les secours et appliquer leurs consignes ;
+- surveiller la victime.
+Si la victime perd connaissance :
+- l’accompagner au sol ;
+- faire alerter ou alerter les secours ;
+- réaliser une réanimation cardio-pulmonaire ;
+- vérifier la présence du corps étranger dans la bouche à la fin de chaque cycle de
+compressions thoraciques. Le retirer prudemment s’il est accessible.
+
+
+~JUSTIFICATIONS PARTICULIERES%
+
+(1) Le fait d’encourager à tousser aide au rejet du corps étranger', 3), 
+    (5, 'Hémorragie externe',  'HEMORRAGIES EXTERNES
+Version : 2.2.2 Mise à jour :  Juillet 2019 
 
 ~Définition  Signes %
 
@@ -78,13 +273,11 @@ Le plus souvent, il est facile de constater une hémorragie. Toutefois, celle-ci
 temporairement être masquée par la position de la victime ou un vêtement particulièrement
 absorbant (manteau, blouson…).
 
-
 ~Causes %
 
 L’hémorragie est généralement secondaire à un traumatisme comme un coup, une chute,
 une plaie par un objet tranchant (couteau), un projectile (une balle) ou une maladie comme
 la rupture de varice chez la personne âgée.
-
 
 ~Risques %
 
@@ -95,12 +288,10 @@ diminution importante de la quantité de sang dans l’organisme ;
 effractions cutanées (plaies, piqûres) ou en cas de projection sur les muqueuses
 (bouche, yeux).
 
-
 ~Principes d’action %
 
 Le sauveteur doit arrêter ou limiter la perte de sang de la victime et retarder l’installation
 d’une détresse qui peut entraîner la mort.
-
 
 ~Conduite à tenir %
 
@@ -133,7 +324,6 @@ pâleur intense, perte de connaissance) :
 - pratiquer les gestes qui s’imposent si la victime a perdu connaissance ou présente
 un arrêt cardiaque.
 
-
 ~Conduites à tenir particulières %
 
 En présence d’une victime qui saigne du nez :
@@ -162,7 +352,6 @@ En cas d’aggravation :
 - contacter à nouveau les secours pour signaler l’aggravation ;
 - pratiquer les gestes qui s’imposent si la victime a perdu connaissance.
 
-
 ~Contact du sauveteur avec le sang de la victime %
 
 Si le sauveteur risque d’entrer en contact avec le sang de la victime, il doit si possible :
@@ -179,36 +368,1065 @@ secours
  # présente une plaie, même minime, ayant été souillée ;
  # a subi une projection sur le visage.
 
-
 ~Justifications particulières %
 
 (1) La position allongée retarde ou empêche l’installation d’une détresse liée à la perte importante de sang',4), 
-    (6, 'Perte de connaissance', '1', 5), 
-    (7, 'Arrêt cardio-respiratoire', '1', 6), 
-    (8, 'Malaise', '1', 7), 
-    (9, 'Brûlure', '1', 8), 
-    (10, 'Plaie', '1', 9), 
-    (11, 'Traumatisme', '1', 10), 
-    (12, 'Compression Locale', '1', 11), 
-    (13, 'Compression Thoracique', '1', 11), 
-    (14, 'Défibrillateur Automatisé Externe', '1', 11), 
-    (15, 'Défibrillation',  '1',11), 
-    (16, 'Désobstruction par la methode des claques dans le dos', '1', 11), 
-    (17, 'Désobstruction par la méthode des compressions abdominales', '1', 11), 
-    (18, 'Désobstruction par la méthode des compressions thoraciques', '1', 11), 
-    (19, 'Garrot', '1', 11), 
-    (20, 'Insufflations', '1', 11), 
-    (21, 'Libération des voies aériennes', '1',11), 
-    (22, 'Maintien de la tête', '1', 11), 
-    (23, 'Position Latérale de Séurité', '1', 11); 
+    (6, 'Perte de connaissance', 'PERTE DE CONNAISSANCE
+Version : 1.1.3 Mise à jour : septembre 2018 
 
-/*Problème pour mettre le fichier Txt dans la table Chapitre
-    Première technique: 
-        LOAD DATA INFILE mais je pense que c'est pas ça
-    Deuxième technique: 
-    'Alerte',*[*] FROM OPENROWSET(BULK N'\Alerte.txt', SINGLE_BLOB), 2)"; 
-        Problème : "attendu "DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE" " 
-*/
+~Définition  Signes%
+
+Une personne a perdu connaissance lorsqu’elle ne répond et ne réagit à aucune sollicitation
+verbale ou physique et respire.
+
+~Causes%
+
+Les causes de cette perte de connaissance peuvent être d’origine traumatique, médicale
+ou toxique.
+
+~Risques%
+
+Le risque de la perte de connaissance est d’évoluer vers l’arrêt respiratoire et l’arrêt
+cardiaque. En effet, la respiration n’est possible que si les voies aériennes permettent le
+passage de l’air sans encombre.
+Une personne qui a perdu connaissance, laissée sur le dos, est toujours exposée à des
+difficultés respiratoires, du fait de l’encombrement ou de l’obstruction des voies aériennes
+par :
+- des liquides présents dans la gorge (salive, sang, liquide gastrique) ;
+- la chute de la langue en arrière.
+
+~Principes d’action%
+
+Le sauveteur doit assurer la liberté des voies aériennes de la victime afin de permettre
+l’écoulement des liquides vers l’extérieur en attendant l’arrivée des secours.
+
+~Conduite à tenir%
+
+- Rechercher l’absence de réponse et pour cela :
+ # poser des questions simples (« Comment ça va ? », « Vous m’entendez ? ») ;
+ # secouer doucement les épaules ou lui prendre la main et demander d’exécuter
+un ordre simple (« Serrez-moi la main »...) ;
+Si la victime répond ou réagit : elle est consciente. Il convient d’adopter la conduite à tenir
+adaptée au malaise.
+Si la victime ne répond pas et ne réagit pas, il convient de :
+- demander de l’aide, si vous êtes seul ;
+- l’allonger sur le dos ;
+- libérer les voies aériennes ;
+- apprécier la respiration sur 10 secondes au plus. Pour cela :
+ # maintenir la libération des voies aériennes ;
+ # se pencher sur la victime, oreille et joue du sauveteur au-dessus de la bouche
+et du nez de la victime puis :
+  ° regarder si le ventre et la poitrine se soulèvent ;
+  ° écouter d’éventuels sons provoqués par la respiration ;
+  ° sentir un éventuel flux d’air à l’expiration.
+En présence d’une victime qui ne répond pas, ne réagit pas et respire (perte de
+connaissance) :
+- la placer en position stable sur le côté (Position latérale de sécurité) ;
+- faire alerter ou alerter les secours ;
+- surveiller en permanence la respiration de la victime, jusqu’à l’arrivée des secours.
+Pour cela :
+ # regarder si le ventre et la poitrine se soulèvent ;
+ # écouter d’éventuels sons provoqués par la respiration ;
+ # sentir, avec le plat de la main, le soulèvement du thorax.
+- protéger contre la chaleur, le froid ou les intempéries.
+Si la victime ne respire pas ou si sa respiration s’arrête ou devient anormale, il convient
+d’adopter la conduite à tenir face à un arrêt cardiaque et de prévenir les secours de
+l’évolution.', 5), 
+    (7, 'Arrêt cardio-respiratoire', 'ARRET CARDIAQUE
+Version : 1.3.2 Mise à jour :  Juillet 2019 
+
+~Définition %
+
+Une personne est en arrêt cardiaque lorsque son cœur ne fonctionne plus ou fonctionne
+d’une façon anarchique, ne permettant plus d’assurer l’oxygénation du cerveau.
+
+~Signes%
+
+Une victime est considérée comme étant en arrêt cardiaque lorsqu’elle ne répond pas, ne
+réagit pas, et :
+- ne respire pas : aucun mouvement de la poitrine n’est visible et aucun bruit ou souffle
+n’est perçu ;
+- ou présente une respiration anormale avec des mouvements respiratoires inefficaces,
+lents, irréguliers et bruyants (gasps).
+
+~Causes%
+
+L’arrêt cardiaque peut être causé par certaines maladies du cœur, la principale est l’infarctus
+du myocarde. Chez l’adulte, dans près de 50 % des cas, cet arrêt cardiaque survient
+brutalement, en dehors de l’hôpital et est souvent lié à une anomalie de fonctionnement
+électrique du cœur : la fibrillation ventriculaire.
+L’arrêt cardiaque peut aussi être consécutif à une détresse circulatoire (hémorragie, brûlure
+grave), à une obstruction totale des voies aériennes, une intoxication, un traumatisme ou
+une noyade.
+
+~Risques%
+
+Le risque d’un arrêt cardiaque est la mort de la victime en quelques minutes. En effet,
+l’apport d’oxygène est indispensable, en particulier au niveau du cerveau et du cœur, pour
+assurer sa survie. Au cours d’un arrêt cardiaque, les lésions du cerveau, consécutives au
+manque d’oxygène, surviennent dès la première minute.
+
+~Principes d’action%
+
+Le sauveteur doit réaliser une série d’actions pour augmenter les chances de survie de la
+victime :
+- ALERTER : alerter de façon précoce les secours ;
+- MASSER / INSUFFLER : pratiquer une réanimation cardio-pulmonaire (RCP) précoce ;
+- DEFIBRILLER : assurer la mise en œuvre d’une défibrillation précoce.
+Ces différentes étapes constituent une chaîne de survie susceptible d’augmenter de 4 à 40
+% le taux de survie des victimes. Chaque minute gagnée dans la mise en place d’une RCP
+efficace peut augmenter de 10 % les chances de survie de la victime.
+
+~Conduite à tenir%
+
+Rechercher l’absence de réponse et pour cela :
+- poser des questions simples (« Comment ça va ? », « Vous m’entendez ? ») ;
+- secouer doucement les épaules ou lui prendre la main et demander d’exécuter
+un ordre simple (« serrez-moi la main » …).
+Si la victime répond ou réagit : elle est consciente. Il convient d’appliquer la CAT adaptée
+au malaise.
+Si la victime ne répond pas et ne réagit pas, il convient de:
+- demander de l’aide, si vous êtes seul ;
+- l’allonger sur le dos ;
+- libérer les voies aériennes ;
+- apprécier la respiration sur 10 secondes au plus. Pour cela :
+ # maintenir la libération des voies aériennes ;
+  ° se pencher sur la victime, oreille et joue du sauveteur au-dessus de la
+bouche et du nez de la victime puis :
+   $ regarder si le ventre et la poitrine se soulèvent ;
+   $ écouter d’éventuels sons provoqués par la respiration ;
+   $ sentir un éventuel flux d’air à l’expiration.
+En l’absence de respiration, en présence d’une respiration anormale (gasps) ou en cas de
+doute :
+… un tiers est présent :
+ # faire alerter les secours et réclamer un DAE ;
+ # débuter immédiatement une RCP en répétant des cycles de 30 compressions
+thoraciques suivies de 2 insufflations. Le service de secours appelé pourra aider le
+sauveteur à la réalisation de la RCP, en donnant des instructions téléphoniques ;
+ # faire mettre en œuvre ou mettre en œuvre un DAE le plus tôt possible et suivre ses
+indications
+ # poursuivre la réanimation entreprise jusqu’au relais par les services de secours.
+… aucun tiers n’est présent :
+ # alerter les secours (1) de préférence avec son téléphone portable. Le mettre sur le
+mode haut-parleur et débuter immédiatement la RCP en attendant que les services
+de secours répondent ;
+ # pratiquer la RCP en répétant des cycles de 30 compressions thoraciques suivies de
+2 insufflations. Le service de secours appelé pourra aider le sauveteur à la réalisation
+de la RCP, en donnant des instructions téléphoniques ;
+ # si un DAE est proche (2) , le mettre en œuvre le plus tôt possible et suivre ses
+indications vocales en interrompant le massage cardiaque le moins possible ;
+ # poursuivre la RCP entreprise jusqu’au relais par les services de secours.
+Dans tous les cas :
+ # si les insufflations ne peuvent pas être effectuées (répulsion, vomissements…) ou si
+le sauveteur ne se sent pas capable, il doit réaliser uniquement les compressions
+thoraciques en continu à un rythme de 100 à 120 compressions / min ;
+ # en présence de plusieurs sauveteurs, relayer le sauveteur qui réalise les
+compressions thoraciques toutes les 2 minutes en interrompant le moins possible les
+compressions thoraciques (en cas d’utilisation d’un DAE, le relai sera réalisé pendant
+l’analyse) ;
+ # le DAE ne doit jamais être éteint et les électrodes ne doivent jamais être décollées
+jusqu’à l’arrivée des secours (même en cas d’amélioration de l’état de la victime).
+
+~Justifications particulières%
+
+(1) A l’époque des téléphones portables, la transmission de l’alerte ne pose plus guère de problème. Dans le cas
+contraire, un sauveteur seul face à une personne en arrêt cardiaque est en grande difficulté. Il doit appeler
+très tôt pour donner un maximum de chance de survie à la victime.
+(2) Le sauveteur récupère lui-même le DAE s’il est à proximité, facilement accessible et qu’il peut se le procurer
+immédiatement sans interrompre la RCP plus de 10 secondes. Dans le cas contraire, le sauveteur réalise la
+RCP jusqu’à ce qu’on lui apporte le DAE.', 6), 
+    (8, 'Malaise', 'MALAISE
+Version : 1.2.1 Mise à jour :  Janvier 2017 
+
+~Définition  Signes%
+
+Le malaise est une sensation pénible traduisant un trouble du fonctionnement de
+l’organisme, sans pouvoir en identifier obligatoirement l’origine. Cette sensation, parfois
+répétitive, peut être fugace ou durable, de survenue brutale ou progressive.
+La victime, consciente, ne se sent pas bien et présente des signes inhabituels.
+
+~Causes%
+
+Le malaise peut avoir diverses origines : maladies, intoxications, allergies…
+
+~Risques%
+
+Certains signes doivent être rapidement reconnus car la prise en charge de la victime est
+urgente en service spécialisé pour éviter des séquelles définitives ou une évolution fatale.
+Certains signes, apparemment sans gravité, peuvent être révélateurs d’une situation
+pouvant à tout moment entraîner une détresse vitale.
+
+~Principes d’action%
+
+Le sauveteur, après avoir mis la victime au repos, doit recueillir en écoutant et en observant,
+les informations à transmettre pour obtenir un avis médical.
+
+~Conduite à tenir%
+
+- observer les signes d’apparition soudaine, isolés ou associés, même de très
+courte durée, qui peuvent orienter le médecin vers :
+ # un accident cardiaque : douleur dans la poitrine ;
+ # un accident vasculaire cérébral (AVC) :
+  ° faiblesse ou paralysie d’un bras ;
+  ° déformation de la face ;
+  ° perte de la vision d un oeil ou des deux ;
+  ° difficulté de langage (incohérence de la parole) ou de compréhension ;
+  ° mal de tête sévère, inhabituel ;
+  ° perte d’équilibre, instabilité de la marche ou chute inexpliquée.
+Ces deux pathologies imposent une prise en charge urgente.
+- un autre type de malaise, la victime se plaint :
+ # d’une douleur abdominale intense ;
+ # d’une difficulté à respirer ou à parler ;
+ # d’une sensation de froid et présente des sueurs abondantes ou une
+pâleur intense.
+- mettre au repos en position :
+ # allongée confortablement par exemple sur un lit ou un canapé, ou à
+défaut sur le sol ;
+ # assise en cas de difficultés à respirer ;
+ # sinon, dans la position où elle se sent le mieux.
+- desserrer les vêtements, en cas de gêne.
+- rassurer la victime en lui parlant régulièrement.
+- protéger contre la chaleur, le froid ou les intempéries.
+- se renseigner auprès de la victime ou de son entourage sur :
+ # son âge ;
+ # la durée du malaise ;
+ # son état de santé actuel (maladies, hospitalisations ou traumatisme
+récents) ;
+ # les traitements médicamenteux qu’elle prend ;
+ # la survenue d’un malaise identique par le passé.
+- à sa demande, lui donner :
+ # son traitement habituel pour ce malaise ;
+ # du sucre en morceaux.
+- demander un avis médical et transmettre les informations recueillies (souvent le
+médecin régulateur demande à parler directement à la victime) puis appliquer les
+consignes.
+En cas d’aggravation en attendant les secours :
+- contacter à nouveau les services de secours pour signaler l’aggravation ;
+- pratiquer les gestes qui s’imposent, si elle est a perdu connaissance', 7), 
+    (9, 'Brûlure', 'BRULURES
+Version : 1.2.2 Mise à jour :  Juillet 2019 
+
+~Définition  Signes%
+
+La brûlure est une lésion de la peau, des voies aériennes ou digestives. Elle est qualifiée
+de :
+- brûlure simple, lorsqu’il s’agit de rougeurs de la peau chez l’adulte ou d’une cloque dont
+la surface est inférieure à celle de la moitié de la paume de la main de la victime ;
+- brûlure grave, dès lors que l’on est en présence :
+ # d’une ou plusieurs cloques dont la surface totale est supérieure à
+celle de la moitié de la paume de la main de la victime ;
+ # d’une destruction plus profonde (aspect blanchâtre ou noirâtre
+parfois indolore) associée souvent à des cloques et à une rougeur
+plus ou moins étendue ;
+ # d’une brûlure dont la localisation est sur le visage ou le cou, les
+mains, les articulations ou au voisinage des orifices naturels ;
+ # d’une rougeur étendue (un coup de soleil généralisé par exemple)
+de la peau chez l’enfant ;
+ # d’une brûlure d’origine chimique, électrique ou radiologique.
+
+~Causes%
+
+La brûlure peut être provoquée par la chaleur, des substances chimiques, l’électricité, le
+frottement ou des radiations.
+
+~Risques%
+
+Suivant l’étendue, la profondeur et la localisation, la brûlure peut entraîner :
+- un danger immédiat comme une défaillance circulatoire (en cas de brûlure étendue) ou
+respiratoire (lors d’une brûlure au visage, au cou ou consécutive à l inhalation de
+fumée) ; 
+- une douleur sévère ;
+- des conséquences retardées comme l’infection, les séquelles fonctionnelles ou
+esthétiques.
+
+~Principes d’action%
+
+Le sauveteur doit identifier la gravité et la nature de la brûlure afin d’adopter la conduite à
+tenir adaptée.
+
+~Conduite à tenir%
+
+- refroidir immédiatement (1) la surface brûlée par ruissellement d’eau du robinet
+tempérée et à faible pression. Débuter l’arrosage après 30 minutes n’a pas
+d’intérêt ;
+- en parallèle, retirer les vêtements, s’ils n’adhèrent pas à la peau ;
+- évaluer la gravité de la brûlure, puis…
+… face à une brûlure grave :
+- faire alerter ou alerter les secours dès le début de l’arrosage ;
+- poursuivre le refroidissement, selon les consignes données ;
+- installer en position adaptée, après refroidissement :
+ # allongée confortablement (lit, canapé ou à défaut sur le sol) ;
+ # assise en cas de gêne respiratoire ;
+ # en laissant la partie brûlée visible si possible ;
+ # surveiller continuellement.
+NB : Aucun produit ne doit être appliqué sur une brûlure grave sans avis médical.
+… face à une brûlure simple :
+- poursuivre le refroidissement jusqu’à disparition de la douleur ;
+- ne jamais percer les cloques ;
+- protéger les cloques par un pansement stérile ;
+- demander un avis médical ou d’un autre professionnel de santé :
+ # pour vérifier la validité de la vaccination antitétanique ;
+ # s’il s’agit d’un enfant ou d’un nourrisson ;
+ # en cas d’apparition dans les jours qui suivent de fièvre, d’une zone
+chaude, rouge, gonflée ou douloureuse.
+
+~Conduites à tenir particulières%
+
+En présence d’une brûlure par produits chimiques :
+- rincer immédiatement et abondamment à l’eau courante tempérée, suivant les
+consignes données lors de l’alerte des secours :
+ # l’ensemble du corps en cas de projection sur les vêtements ou la peau ;
+ # l’œil, s’il est atteint, en veillant à ce que l’eau de lavage ne coule pas sur
+l’autre œil.
+- ôter les vêtements imbibés de produits, en se protégeant ;
+- ne jamais faire vomir ou boire, en cas d’ingestion de produit chimique ;
+- conserver l’emballage du produit en cause ;
+- se laver les mains après avoir réalisé les gestes de secours.
+En présence d’une brûlure électrique :
+- ne jamais toucher la victime avant la suppression du risque ;
+- arroser la zone visiblement brûlée à l’eau courante tempérée ;
+- faire alerter ou alerter les secours et appliquer les consignes.
+En présence d’une brûlure interne par inhalation de vapeurs chaudes ou
+caustiques :
+- en cas de difficultés respiratoires, placer la victime en position assise ;
+- faire alerter ou alerter les secours et appliquer les consignes.
+
+~Justifications particulières%
+
+(1) Le refroidissement immédiat d’une brûlure limite son extension, ses conséquences et la douleur', 8),
+    (10, 'Plaie', 'PLAIES
+Version : 1.2.1 Mise à jour : Janvier 2017 
+
+~Définition  Signes%
+
+La plaie est une lésion de la peau, revêtement protecteur du corps, avec une atteinte
+possible des tissus situés dessous. Elle est qualifiée de :
+- plaie simple, lorsqu’il s’agit d’une petite coupure superficielle, d’une éraflure saignant
+peu ;
+- plaie grave du fait :
+ # d’une hémorragie associée ;
+ # d’un mécanisme pénétrant : objet tranchant ou perforant, morsures,
+projectiles ;
+ # de sa localisation : thoracique, abdominale, oculaire ou proche d’un orifice
+naturel ;
+ # de son aspect : déchiqueté, écrasé.
+
+~Causes%
+
+La plaie est généralement secondaire à un traumatisme, elle est provoquée par une
+coupure, une éraflure, une morsure ou une piqûre.
+
+~Risques%
+
+Une plaie, suivant son importance et sa localisation, peut être à l’origine d’une aggravation
+immédiate de l’état de la victime par hémorragie ou par défaillance de la respiration.
+Elle peut être aussi à l’origine d’une infection secondaire dont le tétanos.
+Le tétanos est une maladie très grave, parfois mortelle. Seule la vaccination antitétanique
+protège de cette maladie.
+
+~Principes d’action%
+
+Le sauveteur doit identifier la gravité de la plaie afin d’adopter une conduite à tenir adaptée.
+
+~Conduite à tenir%
+
+- Evaluer la gravité de la plaie, puis…
+… face à une plaie grave :
+- ne jamais retirer le corps étranger (couteau, morceau de verre…) (1);
+- en cas d’hémorragie, arrêter le saignement (cf. hémorragies externes) ;
+- si la plaie est située au niveau du thorax, la laisser à l’air libre ;
+- installer confortablement et sans délai la victime en position d’attente, par exemple
+sur un lit ou un canapé, ou à défaut sur le sol :
+ # assise (2) en présence d’une plaie au thorax ;
+ # allongée (3), jambes fléchies (4) en présence d’une plaie de l’abdomen ;
+ # allongée, yeux fermés (5) en demandant de ne pas bouger la tête en
+présence d’une plaie à l’œil et si possible en maintenant sa tête à deux
+mains ;
+ # allongée (6) dans tous les autres cas.
+- protéger contre la chaleur, le froid ou les intempéries ;
+- faire alerter ou alerter les secours et appliquer les consignes ;
+- réconforter la victime en lui parlant régulièrement et en lui expliquant ce qui se
+passe ;
+- surveiller la victime.
+… face à une plaie simple :
+- se laver les mains à l’eau et au savon ;
+- nettoyer la plaie en rinçant abondamment à l’eau courante, avec ou sans savon (7), en
+s’aidant d’une compresse si besoin pour enlever les souillures ;
+- désinfecter à l’aide d’un antiseptique, éventuellement ;
+- protéger par un pansement adhésif ;
+- conseiller de consulter un médecin ou un autre professionnel de santé :
+ # pour vérifier la validité de la vaccination antitétanique ;
+ # en cas d’apparition dans les jours qui suivent de fièvre, d’une zone chaude,
+rouge, gonflée ou douloureuse.
+
+~Justifications particulières%
+
+(1) L’interdiction de retirer un corps étranger d’une plaie évite toute aggravation de la lésion ou du saignement.
+(2) La position assise facilite la respiration lorsque l’on est en présence d’une plaie au thorax.
+(3) La position allongée permet de prévenir les détresses et d’éviter les complications.
+(4) La flexion des jambes d’une victime préalablement allongée permet, par le relâchement des muscles de
+l’abdomen, de diminuer la douleur.
+(5) La fermeture des yeux et l’immobilité de la tête permettent de limiter les risques d’aggravation de la lésion
+de l’œil.
+(6) La position allongée permet de prévenir les détresses et d’éviter les complications.
+(7) Le lavage à l’eau, avec ou sans savon, permet d’éliminer les germes qui pourraient provoquer une infection', 9), 
+    (11, 'Traumatisme', 'TRAUMATISME
+Version : 2.1.2 Mise à jour :  Juillet 2019 
+
+~Définition  Signes%
+
+Les atteintes traumatiques sont des lésions des os (fractures), des articulations (entorses
+ou luxations), des organes ou de la peau. Pour une meilleure compréhension, ce dernier
+type d’atteinte fait l’objet d’un traitement spécifique (Cf. Brûlures et Plaies).
+Elles peuvent provoquer immédiatement une douleur vive, une difficulté ou une impossibilité
+de bouger, éventuellement accompagnées d’un gonflement ou d’une déformation de la zone
+atteinte.
+Lorsque le choc se situe au niveau de la tête, du thorax ou de l’abdomen, une atteinte des
+organes sous-jacents est toujours possible et peut se révéler secondairement par d’autres
+signes (perte de connaissance, maux de tête persistants, vomissements, agitation,
+somnolence, douleur abdominale…).
+Lorsque le traumatisme se situe au niveau de la colonne vertébrale (douleur du dos ou de
+la nuque), une atteinte de la moelle épinière est possible.
+
+~Causes%
+
+Les traumatismes peuvent être le résultat d’un choc, d’un coup, d’une chute ou d’un faux
+mouvement et peuvent atteindre toutes les parties du corps.
+
+~Risques%
+
+Les risques, lors d’une atteinte traumatique, sont d’entrainer des complications
+neurologiques (paralysie, trouble de la conscience ou perte de connaissance), respiratoires
+(gêne ou détresse) ou circulatoires (détresse).
+
+~Principes d’action%
+
+Le sauveteur ne doit pas mobiliser la victime.
+
+~Conduite à tenir%
+
+Si la victime a perdu connaissance :
+- adopter la conduite à tenir face à une perte de connaissance.
+Si la victime est consciente et présente immédiatement des signes :
+- conseiller fermement de ne pas mobiliser la partie atteinte ;
+- faire alerter ou alerter les secours et appliquer leurs consignes ;
+- protéger de la chaleur, du froid ou des intempéries ;
+- surveiller la victime et lui parler régulièrement.
+Si la victime présente une douleur du cou à la suite d un traumatisme (suspicion de
+traumatisme du rachis cervical) :
+- demander à la victime de ne pas bouger la tête ;
+- faire alerter ou alerter les secours et appliquer leurs consignes ;
+- si possible stabiliser le rachis cervical dans la position où il se trouve en maintenant
+sa tête à deux mains ;
+- surveiller la victime et lui parler régulièrement.
+Si la victime présente une fracture de membre déplacée, ne pas tenter de la réaligner', 10), 
+    (12, 'Compression Locale', 'FICHE TECHNIQUE N° 1
+COMPRESSION LOCALE
+Version : 1.2.1 Mise à jour :  Janvier 2017 
+
+~INDICATION%
+La compression locale est indiquée sur toute plaie qui saigne abondamment.
+
+~JUSTIFICATION%
+La compression des vaisseaux sanguins, au niveau d’une plaie arrête le saignement.
+
+~Par compression directe%
+
+Appuyer fortement sur l’endroit qui saigne avec les doigts ou la paume de la main, en
+interposant une épaisseur de tissu propre recouvrant complètement la plaie (mouchoirs,
+torchons, vêtements…) et ce jusqu’à l’arrivée des secours.
+En l’absence de tissu, la victime si elle le peut ou le sauveteur, appuie directement avec sa
+main.
+
+~Par pansement compressif%
+
+Si le sauveteur doit se libérer et que la victime ne peut pas appuyer elle-même sur la plaie
+qui saigne, il remplace la compression directe qu’il réalise par une épaisseur de tissu propre
+recouvrant complètement la plaie (mouchoirs, torchons, vêtements…) fixée par une bande
+élastique ou un lien large assez long pour serrer suffisamment et arrêter ainsi le saignement.
+Le remplacement de cette compression est impossible lorsque l’endroit qui saigne est situé
+au niveau du cou, de la tête, du thorax ou de l’abdomen.
+
+~POINTS CLEFS%
+
+La compression locale doit être :
+- suffisante pour arrêter le saignement ;
+- permanente', 11), 
+    (13, 'Compression Thoracique', 'FICHE TECHNIQUE N° 2
+COMPRESSIONS THORACIQUES
+Version : 1.2.2 Mise à jour :  Juillet 2019 
+
+~INDICATION%
+Cette technique est indiquée en présence d’une victime en arrêt cardiaque.
+
+~JUSTIFICATION%
+Cette technique permet d’oxygéner les organes d’une victime en arrêt cardiaque en 
+rétablissant une circulation artificielle.
+Quel que soit l’âge de la victime, il convient de :
+- l’installer en position horizontale, sur le dos, préférentiellement sur une surface
+rigide ;
+- se placer auprès d’elle, le plus souvent à genoux ;
+- dénuder la poitrine de la victime, dans la mesure du possible.
+
+~Chez l’adulte%
+
+- placer le talon d’une main au centre de la poitrine, sur la ligne médiane, sur la moitié
+inférieure du sternum ;
+- placer l’autre main au-dessus de la première en entrecroisant les doigts des deux
+mains pour éviter d appuyer sur les côtes ;
+- réaliser des compressions sternales d environ 5 cm sans dépasser 6 cm tout en
+veillant à :
+ # conserver les bras parfaitement verticaux ;
+ # tendre les bras ;
+ # verrouiller les coudes ;
+ # maintenir une fréquence comprise entre 100 et 120 compressions par minute.
+ # assurer un temps de compression égal à celui du relâchement (1) ;
+ # entre chaque compression, laisser le thorax reprendre sa forme initiale, sans
+décoller les mains.
+
+~Chez l’enfant%
+
+- placer le talon d’une main à une largeur de doigt au-dessus d’un repère constitué
+par le bas du sternum à la jonction des dernières côtes ;
+- relever les doigts pour ne pas appuyer sur les côtes ;
+- réaliser les compressions sternales comme chez l’adulte en veillant à enfoncer le
+thorax sur le tiers de son épaisseur soit environ 5 cm.
+Si la victime (enfant) est grande ou si le sauveteur est petit et n a pas suffisamment de force,
+il peut être utile d’utiliser la même technique que chez l’adulte.
+
+~Chez le nourrisson%
+
+- Placer la pulpe de deux doigts d’une main dans l’axe du sternum, à une largeur de
+doigt au-dessus d’un repère constitué par le bas du sternum à la jonction des
+dernières côtes ;
+- réaliser les compressions sternales à l aide de la pulpe des deux doigts en veillant à
+enfoncer le thorax sur le tiers de l’épaisseur soit environ 4 cm.
+
+~POINTS CLEFS%
+
+Les compressions thoraciques doivent :
+- comprimer fortement le sternum ;
+- avoir une fréquence comprise entre 100 et 120 par minute.
+
+~Justification particulières%
+
+(1) Cette technique offre une efficacité maximale. Elle permet au thorax de reprendre sa dimension initiale
+après chaque compression thoracique, afin que le cœur se remplisse bien de sang', 11), 
+    (14, 'Défibrillateur Automatisé Externe', 'FICHE MATERIEL 
+DEFIBRILLATEUR AUTOMATISE EXTERNE
+Version : 1.2.3 Mise à jour :  Juillet 2019 
+
+~But%
+
+Le défibrillateur automatisé externe (DAE) est un appareil qui permet :
+- d’analyser l’activité électrique du cœur de la victime ;
+- de reconnaître une anomalie du fonctionnement électrique du cœur à l’origine de l’arrêt
+cardiaque ;
+- de délivrer ou d’inviter le sauveteur à délivrer un choc électrique (information vocale et
+visuelle), afin d’arrêter l’activité électrique anarchique du cœur.
+
+~Composition%
+
+Le défibrillateur automatisé externe est composé :
+- d’un haut-parleur qui donne des messages sonores et guide le sauveteur dans son
+action ;
+- d’un métronome qui rythme les compressions thoraciques du sauveteur (en option) ;
+- d’un accumulateur d’énergie qui permet de réaliser des chocs électriques ;
+- éventuellement, d’un bouton qui permet de délivrer le choc électrique lorsqu’il est
+indiqué par l’appareil.
+Le DAE est toujours accompagné d’une paire d’électrodes de défibrillation pré-gélifiées
+autocollantes avec câble intégré. Ces électrodes, à usage unique, sont contenues dans un
+emballage hermétique. Une seconde paire doit être disponible en cas de défaillance de la
+première.
+Une fois collées sur la peau du thorax de la victime, les électrodes permettent :
+- de capter et transmettre l’activité électrique cardiaque au défibrillateur ;
+- de délivrer le choc électrique lorsqu’il est indiqué. Plusieurs accessoires peuvent être
+joints au défibrillateur dont :
+ # une paire de ciseaux, pour couper les vêtements et dénuder la poitrine de la
+victime ;
+ # des compresses ou du papier absorbant, pour sécher la peau de la poitrine de
+la victime si elle est mouillée ou humide ;
+ # d’un rasoir jetable pour raser les poils de la victime, s’ils sont particulièrement
+abondants, à l’endroit où l’on colle les électrodes.
+
+~Localisation%
+
+Actuellement, les DAE mis à disposition du public sont de plus en plus nombreux, on les
+trouve notamment dans :
+- les halls d’aéroports et les avions des grandes compagnies aériennes ;
+- les grands magasins, les centres commerciaux ;
+- les halls de gares, les trains ;
+- les lieux de travail ;
+- certains immeubles d’habitation…
+Dans ces cas, les appareils sont parfois placés dans des armoires murales repérées par un
+logo facilement identifiable.
+D’ici 2022, la plupart des Etablissements Recevant du Public (ERP) seront équipés de DAE
+(décret n°201-1186 du 19 décembre 2018 relatif aux défibrillateurs automatisés externes).
+
+~Risques et contraintes%
+
+Si la victime présente un timbre autocollant médicamenteux sur la zone de pose des
+électrodes, le sauveteur retire le timbre et essuie la zone avant de coller l’électrode.
+Si la victime présente un stimulateur cardiaque (le plus souvent le sauveteur constate une
+cicatrice et perçoit un boîtier sous la peau, sous la clavicule droite ou est informé par la
+famille) à l’endroit de pose de l’électrode, le sauveteur colle l’électrode à une largeur de
+main de l’appareil (environ 8 cm de la bosse perçue).
+Si la victime est allongée sur un sol mouillé (bord de piscine, pluie…) ou si son thorax est
+mouillé, le sauveteur, si possible, déplace la victime pour l’allonger sur une surface sèche
+et, si possible, sèche son thorax avant de débuter la défibrillation (1).
+Si la victime est allongée sur une surface en métal : si c’est possible et en se faisant aider
+si besoin, le sauveteur déplace la victime ou glisse un tissu sous elle (couverture…) avant
+de débuter la défibrillation (2).
+Si le DAE détecte un mouvement au cours de l’analyse, le sauveteur doit s’assurer de ne
+pas toucher la victime au cours de l’analyse. En l’absence de contact avec la victime, il
+vérifie la respiration de celle-ci.
+Si le DAE demande toujours de connecter les électrodes alors que cette opération a déjà
+été effectuée, le sauveteur, vérifie que :
+- les électrodes sont bien collées et le câble de connexion correctement connecté au
+DAE ;
+- si le problème n’est pas résolu et qu’une seconde paire d’électrodes est disponible,
+remplacer les électrodes.
+
+~Justifications particulières %
+(1) L’efficacité d’un choc électrique sur une victime allongée sur un sol mouillé est diminuée. Il n’existe pas de
+risque réel pour le sauveteur.
+(2) L’efficacité d’un choc électrique sur une victime allongée sur une surface métallique est diminuée. Il n’existe
+pas de risque réel pour le sauveteur.', 11),
+    (15, 'Défibrillation',  'FICHE TECHNIQUE N° 3 
+DEFIBRILLATION
+Version : 1.2.3 Mise à jour :  Juillet 2019 
+
+~INDICATION%
+Cette technique est indiquée en présence d’une victime en arrêt cardiaque.
+
+~JUSTIFICATION%
+Cette technique peut permettre de retrouver une activité cardiaque normale. Elle est
+sûre et sans risque même si elle est utilisée par des personnes qui sont peu ou pas
+formées.
+Le DAE doit être utilisé en suivant toutes les indications de l’appareil (schéma, messages
+vocaux).
+Si plus d un sauveteur est présent, la RCP doit être poursuivie durant l’installation du DAE.
+Les compressions thoraciques doivent être interrompues seulement lorsque le DAE indique
+de ne plus toucher à la victime.
+
+~Chez l’adulte%
+
+- Mettre en fonction le défibrillateur ;
+- suivre les indications de l’appareil (1);
+Ces indications précisent, dans un premier temps, de mettre en place les électrodes. Pour
+cela :
+- enlever ou couper les vêtements recouvrant la poitrine de la victime, si nécessaire ;
+- sécher le thorax de la victime s’il est humide ;
+- déballer et appliquer les électrodes, sur la poitrine nue de la victime, dans la position
+indiquée sur le schéma figurant sur l’emballage ou sur les électrodes ;
+- connecter les électrodes au défibrillateur, si nécessaire.
+Lorsque le DAE l’indique, ne plus toucher la victime et s’assurer que les personnes aux
+alentours fassent de même (2).
+Si le défibrillateur annonce que le choc est nécessaire :
+- demander aux personnes aux alentours de s’écarter ;
+- laisser le DAE déclencher le choc électrique (défibrillateur entièrement automatique)
+ou appuyer sur le bouton «choc» lorsque l’appareil le demande (défibrillateur semiautomatique) ;
+- reprendre immédiatement les compressions thoraciques après la délivrance du choc.
+Si le défibrillateur annonce que le choc n’est pas nécessaire :
+- reprendre immédiatement les compressions thoraciques.
+
+~Chez l’enfant ou le nourrisson%
+
+La défibrillation doit être réalisée avec des appareils adaptés (électrodes enfants, réducteur
+d’énergie…). La position des électrodes collées sur la poitrine de la victime doit être
+conforme aux schémas du fabricant.
+En leur absence, les électrodes adultes sont alors positionnées au milieu du thorax pour
+l’une et au milieu du dos pour l’autre.
+
+~POINTS CLEFS%
+
+La mise en œuvre du défibrillateur doit :
+- être la plus précoce possible ;
+- interrompre le moins possible la pratique des compressions thoraciques.
+
+~Justifications particulières%
+
+(1) Ces indications peuvent être vocales ou visuelles. Leur suivi strict permet de réaliser les différentes
+opérations plus rapidement et en sécurité.
+(2) Tout mouvement de la victime durant la phase d’analyse du rythme cardiaque est susceptible de la fausser ',11), 
+    (16, 'Désobstruction par la methode des claques dans le dos', 'FICHE TECHNIQUE N° 4
+DESOBSTRUCTION PAR LA METHODE DES CLAQUES DANS LE DOS 
+Version : 1.3.2 Mise à jour :  Juillet 2019 
+
+~INDICATION %
+Cette technique est indiquée en cas d’obstruction grave des voies aériennes
+par un corps étranger
+
+~JUSTIFICATION%
+Le but de la claque dans le dos est de provoquer un mouvement de toux pour
+débloquer et expulser le corps étranger qui obstrue les voies aériennes.
+La technique de désobstruction des voies aériennes varie en fonction du gabarit de la
+victime.
+
+~Chez l’adulte et le grand enfant%
+
+- laisser la victime debout ou assise ;
+- se placer sur le côté et légèrement en arrière de la victime ;
+- soutenir le thorax avec une main ;
+- pencher la victime vers l’avant ;
+- donner de 1 à 5 claques vigoureuses dans le dos, entre les deux omoplates, avec le
+talon de la main ouverte.
+
+~Chez la victime qui peut tenir sur la cuisse du sauveteur%
+
+- s’asseoir ;
+- basculer la victime sur sa cuisse, la face vers le bas ;
+- donner de 1 à 5 claques vigoureuses dans le dos, entre les deux omoplates, avec le
+talon de la main ouverte.
+
+~Chez la victime qui peut tenir sur l’avant-bras du sauveteur (nourrisson,
+petit enfant)%
+
+- coucher la victime à califourchon sur l’avant-bras, la face vers le sol ;
+- Maintenir sa tête avec les doigts, de part et d’autre de la bouche : le pouce d’un côté
+et un ou deux doigts de la même main de l’autre côté placés au niveau de l’angle de
+la mâchoire inférieure sans appuyer sur la gorge ;
+- incliner la victime afin que la tête soit plus basse que le thorax ;
+- donner 1 à 5 claques, entre les deux omoplates, avec le talon de la main ouverte.
+
+~POINTS CLEFS%
+
+La claque doit être donnée :
+- entre les 2 omoplates ;
+- avec le talon de la main ouverte ;
+- de façon vigoureuse.', 11), 
+    (17, 'Désobstruction par la méthode des compressions abdominales', 'FICHE TECHNIQUE N° 5
+DESOBSTRUCTION PAR LA METHODE DES COMPRESSIONS ABDOMINALES 
+Version : 1.2.3 Mise à jour :  Juillet 2019 
+
+~INDICATION %
+Cette technique est indiquée en cas d’obstruction grave des voies aériennes
+par un corps étranger chez un adulte ou un enfant après une série de 5 claques dans
+le dos inefficaces, et si le sauveteur peut se tenir debout ou à genou derrière elle.
+
+~JUSTIFICATION%
+Le but de cette technique est de comprimer l’air contenu dans les poumons
+de la victime afin d’expulser le corps étranger par un effet de « piston ». Suivant
+l’importance et la position du corps étranger, plusieurs pressions successives
+peuvent être nécessaires pour l’expulser.
+
+~Chez l’adulte ou l’enfant%
+
+- Se placer debout ou à genoux (enfant) derrière la victime, contre son dos ;
+- passer ses bras, sous ceux de la victime, de part et d’autre de la partie supérieure de
+son abdomen ;
+- pencher la victime vers l’avant ;
+- Placer le point fermé (dos de la main vers le ciel) juste au-dessus du nombril
+- placer la seconde main sur la première, les avant-bras n’appuyant pas sur les côtes ;
+- tirer franchement en exerçant une pression vers l’arrière et vers le haut ;
+- effectuer de 1 à 5 compressions, en relâchant entre chacune. 
+
+~POINTS CLEFS%
+
+La compression doit être faite :
+- au creux de l estomac ;
+- sans appuyer sur les côtes ;
+- vers l’arrière et vers le haut', 11), 
+    (18, 'Désobstruction par la méthode des compressions thoraciques', 'FICHE TECHNIQUE N° 6
+DESOBSTRUCTION PAR LA METHODE DES COMPRESSIONS THORACIQUES 
+Version : 1.3.2 Mise à jour : Juillet 2019 
+
+~INDICATION %
+Cette technique est indiquée en cas d’obstruction grave des voies aériennes
+par un corps étranger, lorsqu’il est impossible d’encercler l’abdomen de la
+victime (obèse, femme enceinte dans les derniers mois de grossesse…) et après
+une série de 5 claques dans le dos inefficaces. 
+
+~JUSTIFICATION%
+Le but de cette technique est de comprimer l’air contenu dans les poumons
+de la victime et d’expulser le corps étranger par un effet de « piston ». Suivant
+l’importance et la position du corps étranger, plusieurs pressions successives
+peuvent être nécessaires pour l’expulser.
+
+~Impossibilité d’encercler l abdomen de la victime%
+
+- Se positionner derrière la victime ;
+- placer ses avant-bras sous les bras de la victime et encercler la poitrine de la
+victime ;
+- Placer le point fermé (dos de la main vers le ciel) au milieu du sternum, sans appuyer
+sur la pointe inférieure du sternum ;
+- placer l’autre main sur la première sans appuyer les avant-bras sur les côtes ;
+- tirer franchement en exerçant une pression vers l’arrière ;
+- effectuer de 1 à 5 compressions, en relâchant entre chacune. 
+Cas particuliers : chez la victime consciente et alitée qui présente une obstruction grave
+des voies aériennes, le sauveteur peut réaliser des compressions thoraciques comme pour
+le massage cardiaque.
+
+~POINTS CLEFS%
+
+Les compressions thoraciques doivent être réalisées :
+- au milieu du sternum ;
+- sans appuyer sur les côtes ;
+- vers l’arrière.
+
+~Chez le nourrisson%
+
+~INDICATION%
+Cette technique est indiquée en cas d’obstruction grave des voies aériennes
+par un corps étranger, chez une victime qui peut tenir sur l’avant-bras du
+sauveteur, et immédiatement après une série de 5 claques dans le dos inefficaces.
+
+~JUSTIFICATION%
+Le but de cette technique est de comprimer l’air contenu dans les poumons
+de la victime afin d’expulser le corps étranger par un effet de « piston ». Suivant
+l’importance et la position du corps étranger, plusieurs pressions successives
+peuvent être nécessaires pour l’expulser.
+
+- placer l’avant-bras contre le dos du nourrisson, la main soutenant sa tête ;
+- tourner le nourrisson pour que sa face soit côté ciel ;
+- placer l’avant-bras, sur lequel repose le nourrisson, sur la cuisse du sauveteur. La
+tête du nourrisson doit être plus basse que le reste du corps ;
+- placer la pulpe de deux doigts d’une main dans l’axe du sternum, une largeur de
+doigt au-dessus d’un repère constitué par le bas du sternum à la jonction des
+dernières côtes ;
+- effectuer de 1 à 5 compressions profondes et successives en relâchant entre
+chacune. 
+
+~POINTS CLEFS%
+
+Les compressions thoraciques doivent être :
+- pratiquées au milieu de la poitrine ;
+- profondes', 11),
+    (19, 'Garrot', 'FICHE TECHNIQUE N° 7
+GARROT 
+Version : 2.2.2 Mise à jour : Juillet 2019
+
+~INDICATION %
+Cette technique est indiquée en cas d hémorragie d’un membre lorsque la
+compression directe est inefficace ou impossible. 
+
+~JUSTIFICATION%
+Le but de cette technique est d arrêter une hémorragie externe en interrompant
+totalement la circulation du sang du membre, en aval de l endroit où il est posé.
+
+~Matériel :%
+
+- Lien de toile, solide, non élastique, improvisé de 3 à 5 cm de large et d au moins 1,50 m
+de longueur ;
+- Barre, pièce longue de 10 à 20 cm environ en bois solide, PVC dur ou métal rigide pour
+permettre le serrage.
+NB : il existe dans le commerce des garrots spécialement conçus qui peuvent faire
+éventuellement partie d une trousse de secours. Les garrots équipés d une barre de serrage,
+d un lien large et d un dispositif de sécurité ont montré une meilleure efficacité. Il ne faut pas
+utiliser les garrots élastiques prévus pour les prises de sang.
+
+~Réalisation :%
+
+Le garrot est mis en place à quelques centimètres au-dessus de la plaie (entre le cœur et
+la plaie), jamais sur une articulation :
+1. faire deux tours autour du membre avec le lien large à l endroit où le garrot doit être
+placé ;
+2. faire un nœud ;
+3. placer au-dessus du nœud la barre et faire deux nœuds par-dessus pour la maintenir ;
+4. tourner la barre de façon à serrer le garrot jusqu à l arrêt du saignement et maintenir le
+serrage par le sauveteur même si la douleur provoquée est intense. Il est toutefois
+possible de maintenir le serrage en bloquant la position du bâton avec un second lien
+par exemple ou en bloquant la position de la barre par quelque moyen que ce soit si le
+sauveteur doit se libérer.
+NB : En l absence de barre, faire le garrot uniquement avec le lien large. Réaliser une boucle
+en glissant le lien au niveau de l hémorragie. Glisser une partie du lien dans la boucle afin
+que le garrot entoure le membre. Serrer le nœud du garrot le plus fortement possible en
+tirant sur chaque extrémité du lien et réaliser un double nœud de maintien.
+Une fois mis en place, le garrot doit toujours rester visible (ne pas le recouvrir) et ne jamais
+être retiré sans avis médical.
+
+~POINTS CLEFS%
+
+Le garrot doit :
+- être situé en amont de la plaie qui saigne (entre le cœur et la plaie);
+- être serré pour arrêter le saignement', 11),
+    (20, 'Insufflations', 'FICHE TECHNIQUE N° 8 INSUFFLATIONS
+Version : 1.1.2 Mise à jour :Janvier 2017
+
+~INDICATION%
+Cette technique est indiquée en présence d’une victime en arrêt cardiaque.
+
+~JUSTIFICATION%
+Cette technique permet d’apporter de l’air aux poumons d’une victime en arrêt
+cardiaque
+~%
+La victime étant préalablement installée en position horizontale et sur le dos :
+
+~Chez l’adulte et l’enfant%
+
+- basculer la tête de la victime en arrière comme pour la technique de libération des
+voies aériennes ;
+- pincer le nez de la victime entre le pouce et l’index, tout en maintenant la bascule en
+arrière de la tête (1) avec la main qui est placée sur le front ;
+- ouvrir légèrement la bouche de la victime en utilisant l’autre main et maintenir le
+menton élevé ;
+- inspirer, sans excès ;
+- appliquer la bouche largement ouverte autour de la bouche de la victime en appuyant
+fermement (2);
+- insuffler progressivement jusqu’à ce que la poitrine de la victime commence à se
+soulever (durant 1 seconde environ) ;
+- se redresser légèrement tout en maintenant la bascule de la tête en arrière afin de :
+ # reprendre son souffle ;
+ # vérifier l’affaissement de la poitrine de la victime ;
+- insuffler une seconde fois dans les mêmes conditions.
+La durée de réalisation de ces deux insufflations successives ne doit pas exéder 
+5 secondes (3).
+Si le ventre ou la poitrine de la victime ne se soulève pas lors des insufflations :
+- s’assurer que la tête de la victime est en bonne position et que son menton est élevé ;
+- s’assurer qu’il y a une bonne étanchéité et pas de fuite d’air lors de l’insufflation ;
+- rechercher la présence d’un corps étranger dans la bouche. Le retirer avec les doigts,
+si nécessaire.
+
+~Chez le nourrisson%
+
+La technique est sensiblement la même que pour l’adulte ou l’enfant. Toutefois, il convient
+de :
+- placer la tête du nourrisson en position neutre, menton élevé ;
+- englober avec la bouche à la fois la bouche et le nez de la victime ;
+- insuffler progressivement jusqu à ce que la poitrine du nourrisson commence à se
+soulever (durant 1 seconde environ) ;
+- se redresser légèrement tout en maintenant la tête en position neutre afin de :
+ # reprendre son souffle ;
+ # vérifier l’affaissement de la poitrine de la victime ;
+- insuffler une seconde fois dans les mêmes conditions.
+
+~POINTS CLEFS%
+
+Les deux insufflations doivent :
+- être lentes et progressives ;
+- cesser dès le début de soulèvement de la poitrine ;
+- être réalisées en 5 secondes au maximum.
+
+~JUSTIFICATIONS PARTICULIERES%
+
+(1) Le pincement du nez empêchera toute fuite d’air par le nez lors des insufflations.
+(2) La pression ferme autour de la bouche de la victime empêchera toute fuite d’air durant les insufflations.
+(3) La réalisation rapide des manœuvres d’insufflation permet de ne pas retarder la reprise des compressions
+thoraciques ', 11), 
+    (21, 'Libération des voies aériennes', 'FICHE TECHNIQUE N° 9 LIBERATION DES VOIES AERIENNES 
+Version : 1.1.2 Mise à jour :  Janvier 2017 
+
+~INDICATION %
+Cette technique doit être réalisée systématiquement avant de pouvoir
+apprécier la respiration chez une victime qui ne répond ou ne réagit à aucune
+sollicitation verbale ou physique.
+
+~JUSTIFICATION%
+La bascule de la tête en arrière (chez l’adulte ou l’enfant) ou la mise en position
+neutre (chez le nourrisson) et l’élévation du menton entraînent la langue qui, en se
+décollant du fond de la gorge, permet le passage de l’air.
+~%
+- placer la paume d’une main sur le front de la victime ;
+- placer 2 ou 3 doigts de l’autre main, juste sous la pointe du menton en prenant appui
+sur l’os. Eventuellement s’aider du pouce pour saisir le menton ;
+
+~Chez l’adulte ou l’enfant%
+
+- basculer doucement la tête de la victime en arrière en appuyant sur le front et élever
+le menton.
+
+~Chez le nourrisson%
+
+- amener doucement la tête du nourrisson en position neutre dans l’alignement du
+torse et élever le menton tout en évitant une bascule excessive susceptible de
+provoquer une extension du rachis et une gêne de la ventilation.
+
+~POINTS CLEFS%
+
+La liberté des voies aériennes est assurée lorsque :
+- le menton est élevé ;
+- la tête est maintenue dans cette position.',11), 
+    (22, 'Maintien de la tête', 'FICHE TECHNIQUE N° 10 
+MAINTIEN DE LA TETE
+Version : 2.1.2 Mise à jour : - Juillet 2019 -
+
+~INDICATION %
+Cette technique est indiquée chez la victime qui présente une douleur du cou à
+la suite d’un traumatisme (suspicion de traumatisme du rachis cervical), ou une
+plaie à l’œil.
+
+~JUSTIFICATION%
+Le maintien de la tête du blessé à deux mains permet de la stabiliser et de limiter
+les mouvements intempestifs du cou.
+~%
+- se placer en position stable à genou ou en trépied dans l axe de la victime, au niveau de
+sa tête ;
+- placer les deux mains de chaque côté de sa tête pour la maintenir dans la position où elle
+se trouve.
+Pour diminuer la fatigue, il est possible de prendre appui avec les coudes sur le sol ou sur
+les genoux.
+
+~POINTS CLEFS%
+
+Le maintien de la tête est efficace lorsque :
+- le sauveteur est en position stable ;
+- le maintien de la tête limite ses mouvements', 11), 
+    (23, 'Position Latérale de Séurité', 'FICHE TECHNIQUE N° 11 POSITION LATERALE DE SECURITE
+Version : 1.2.2 Mise à jour : - Juillet 2019 -
+
+~INDICATION%
+Cette technique est indiquée chez la victime qui ne répond ou ne réagit à
+aucune sollicitation verbale ou physique et respire.
+
+~JUSTIFICATION%
+La position latérale de sécurité permet de maintenir libres les voies aériennes
+supérieures de la victime en permettant l’écoulement des liquides vers l’extérieur
+et en évitant que la langue ne chute dans le fond de la gorge.
+
+~Chez l’adulte ou l’enfant%
+
+1er temps : Préparer le retournement de la victime. Pour cela :
+- retirer les lunettes de la victime si elle en porte ;
+- rapprocher délicatement les membres inférieurs de l’axe du corps ;
+- placer le bras de la victime, situé du côté sauveteur, à angle droit de son corps ;
+- plier le coude de ce même bras en gardant la paume de la main de la victime tournée
+vers le haut (1);
+- se placer à genoux ou en trépied à côté de la victime, au niveau de son thorax ;
+- saisir le bras opposé de la victime et amener le dos de la main de la victime sur son
+oreille, côté sauveteur ;
+- maintenir le dos de la main de la victime pressée contre son oreille, paume contre
+paume (2);
+- attraper la jambe opposée de la victime, avec l’autre main, juste derrière le genou ;
+- relever la jambe de la victime, tout en gardant le pied au sol (3);
+- s’éloigner du thorax de la victime afin de pouvoir la retourner sans avoir à reculer, si
+nécessaire ;
+2ème temps : Retourner la victime. Pour cela :
+- tirer sur la jambe relevée de la victime afin de la faire pivoter vers le sauveteur,
+jusqu’à ce que le genou touche le sol, sans brusquerie et en un seul temps ;
+- dégager doucement la main du sauveteur située sous la tête de la victime, tout en
+préservant la bascule de la tête en arrière, en maintenant le coude de la victime à
+l’aide de la main du sauveteur précédemment située au genou (4).
+3ème temps : Stabiliser la victime. Pour cela :
+- ajuster la jambe de la victime située au-dessus de telle sorte que la hanche et le
+genou soient à angle droit (5);
+- ouvrir la bouche de la victime sans mobiliser la tête et sans rabattre le menton sur le
+sternum (6);
+- contrôler en permanence la respiration.
+
+~Chez le nourrisson%
+
+- Placer le nourrisson sur le côté, dans les bras du sauveteur le plus souvent.
+
+~POINTS CLEFS%
+
+La mise en position latérale de sécurité doit :
+- limiter au maximum les mouvements de la colonne vertébrale ;
+- aboutir à une position stable, la plus latérale possible ;
+- permettre de contrôler la respiration de la victime ;
+- permettre l’écoulement des liquides vers l’extérieur (bouche ouverte).
+
+~Justifications particulières%
+
+(1) L’alignement des jambes et la position du membre supérieur anticipent la position finale.
+(2) Lors du retournement, le maintien de la main de la victime contre son oreille permet d’accompagner le
+mouvement de la tête et de diminuer la flexion de la colonne cervicale qui pourrait aggraver un
+traumatisme éventuel.
+(3) La saisie de la jambe de la victime au niveau du genou permet de l’utiliser comme « bras de levier » pour
+le retournement.
+(4) Le maintien de la main sous la tête de la victime limite les mouvements de la colonne cervicale.
+(5) La position de la jambe permet de stabiliser la PLS.
+(6) L’ouverture de la bouche de la victime facilite l’écoulement des liquides vers l’extérieur', 11); 
+
 
 --Illustrations
 --INSERT INTO Illustration(id, nomIllustration, descriptionIllustration, dessinIllustration) VALUES 
@@ -226,7 +1444,7 @@ secours
 --INSERT INTO Chapitre_conduiteATenir(Chapitre_id, conduiteATenir_id) VALUES 
 
 --Quizz      
-INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse_Vraie,sujets_id) VALUES
+INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse_Vraie, sujets_id) VALUES
     (1,'Quand peut on dire qu une personne a perdu connaissance?','ne respire pas','ne répond pas mais réagit','ne répond pas, ne réagit pas mais respire','ne répond pas, ne réagit pas et ne respire plus','C: ne répond pas, ne réagit pas mais respire',5),
     (2,'Quelles sont les causes d une perte de connaissance?','médicale, traumatique ou toxique','médicale et traumatique','médicale ou traumatique','médicale, traumatique et toxique','A: traumatique, médicale ou toxique',5),
     (3,'Vers quoi risque d évoluer une perte de connaissance?','arrêt respiratoire, arrêt cardiaque et malaise','arrêt cardiaque et arrêt respiratoire','arrêt cardiaque','arrêt respiratoire','B: arrêt cardiaque et arrêt respiratoire',5), 
@@ -323,42 +1541,179 @@ INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse
     (94,'Quel outil ne sert pas à  alerter la population de la survenance d une crise?','Sirènes','Médias','Panneaux publicitaires','Réseaux sociaux','C: Panneaux publicitaires',2),
     (95,'Combien de temps dure le SNA?','Variation du signal sur 3 cycles successifs d une durée de 1minutes et 21 secondes','Variation du signal sur 2 cycles successifs d une durée de 1minutes et 30 secondes','Variation du signal sur 2 cycles successifs d une durée de 1minutes et 21 secondes','Variation du signal sur 3 cycles successifs d une durée de 1minutes et 41 secondes','D: Variation du signal sur 3 cycles successifs d une durée de 1minutes et 41 secondes',2);
 
+--Questions
+INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question, aide_comprehension_id) VALUES
+    ('Question', 1, 'Respire', 'La victime respire-t-elle ?', null), --voir pour ajouter aide_comprehension (fiche 23)
+    ('Question', 3, 'OBVA', 'La victime a-t-elle avalé un objet de travers ?', null),
+    ('Question', 4, 'Hemo', 'La victime saigne-t-elle abondamment ?', null),
+    ('Question', 5, 'Trauma', 'La victime a-t-elle subit un traumatisme physique ?', null),
+    ('Question', 6, 'Plaie', 'La victime a-t-elle une plaie ?', null),
+    ('Question', 7, 'Brulure', 'La victime s''est-elle brûlée ?', null),
+    ('Question', 8, 'Malaise', 'La victime se sent-elle mal ?', null),
+    ('Question', 9, 'Type OBVA', 'La victime peut-elle parler ou tousser ?', null),
+    ('Question', 10, 'Type Hemo', 'De quelle partie du corps saigne la victime ?', null),
+    ('Question', 11, 'Localisation Trauma', 'Où la victime a-t-elle subit un traumatisme ?', null),
+    ('Question', 12, 'Type Plaie', 'La plaie est-elle simple ou grave ?', null),
+    ('Question', 13, 'Localisation Plaie Grave', 'Où se situe la plaie ?', null),
+    ('Question', 14, 'Type Brulure', 'La brûlure est-elle simple ou grave ?', null),
+    ('Question', 15, 'Cause Brulure', 'Quelle est la cause de la brûlure ?', null),
+    ('Question', 16, 'Type de victime PLS', 'La victime est-elle :', null),
+    ('Question', 17, 'Type de victime ACR', 'La victime est-elle :', null),
+    ('Question', 18, 'Type de victime OBVA totale', 'La victime est-elle :', null);
+INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, noeud_Racine, texte_Question, aide_comprehension_id) VALUES
+    ('Question', 2, 'Conscient', TRUE, 'La victime est-elle consciente ?', null); --voir pour ajouter aide_comprehension (fiche 24)
 
-INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES
-    ('Question', 1, 'Respire', 'La victime respire-t-elle ?'),
-    ('Question', 3, 'OBVA', 'La victime a-t-elle avalé un objet de travers ?'),
-    ('Question', 4, 'Hemo', 'La victime saigne-t-elle abondamment ?'),
-    ('Question', 5, 'Trauma', 'La victime a-t-elle subit un traumatisme physique ?'),
-    ('Question', 6, 'Plaie', 'La victime a-t-elle une plaie ?'),
-    ('Question', 7, 'Brulure', 'La victime s''est-elle brûlée ?'),
-    ('Question', 8, 'Malaise', 'La victime se sent-elle mal ?'),
-    ('Question', 9, 'Type OBVA', 'La victime peut-elle parler ou tousser ?'),
-    ('Question', 10, 'Type Hemo', 'De quelle partie du corps saigne la victime ?'),
-    ('Question', 11, 'Localisation Trauma', 'Où la victime a-t-elle subit un traumatisme ?'),
-    ('Question', 12, 'Type Plaie', 'La plaie est-elle simple ou grave ?'),
-    ('Question', 13, 'Localisation Plaie Grave', 'Où se situe la plaie ?'),
-    ('Question', 14, 'Type Brulure', 'La brûlure est-elle simple ou grave ?'),
-    ('Question', 15, 'Cause Brulure', 'Quelle est la cause de la brûlure ?');
-    --('Question', 16, 'Type de victime', 'La victime est-elle :');
-INSERT INTO Noeud_Decisionnel(DTYPE, id,nom_Noeud, noeud_Racine, texte_Question) VALUES
-    ('Question', 2, 'Conscient', TRUE, 'La victime est-elle consciente ?');
+--Fiches
+INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, nom_Fiche) VALUES
+    ('Fiche', 19, 'PLS', 'Position Latérale de Sécurité'),
+    ('Fiche', 20, 'ACR', 'Arrêt Cardiorespiratoire'),
+    ('Fiche', 21, 'OBVA_Totale', 'Obstruction totale des voies aérienne'),
+    ('Fiche', 22, 'OBVA_Partielle', 'Obstruction partielle des voies aérienne'),
+    ('Fiche', 23, 'LVA', 'Libération des voies aériennes'),
+    ('Fiche', 24, 'Inconscience', 'Reconnaitre inconscience');
 
 --Réponses
 INSERT INTO Reponse(id, libelle_reponse, question_posee_id, noeud_fils_id) VALUES
+    -- conscient ? id 2
     (1, 'OUI', 2, 3),
     (2, 'NON', 2, 1),
-    (3, 'OUI', 3, 4),
-    (4, 'NON', 3, 9);
+    -- OBVA ? id 3
+    (3, 'OUI', 3, 9),
+    (4, 'NON', 3, 4),
+    -- Hémorragie ? id 4
+    (5, 'OUI', 4, 10),
+    (6, 'NON', 4, 5),
+    -- Trauma ? 5
+    (7, 'OUI', 5, 11),
+    (8, 'NON', 5, 6),
+    -- Plaie ? 6
+    (9, 'OUI', 6, 12),
+    (10, 'NON', 6, 7),
+    (13, 'Grave', 12, 13),
+    --(14, 'Simple', 12, ), --ajouter ici l'id de la fiche plaie simple
+    -- Brûlure ? 7
+    (11, 'OUI', 7, 14),
+    (12, 'NON', 7, 8),
+    (15, 'Grave', 14, 15),
+    --(16, 'Simple', 14, ), --ajouter l'id de la fiche brulure simple
+    -- respire ? 1
+    (17, 'OUI', 1, 19),
+    (18, 'NON', 1, 20);
+
     --(3, 'OUI', 1, 16),
     --(4, 'NON', 1, 16); --voir comment demander le type de victime sachant un OneToOne entre réponse et noeud fils
 
-/*
+
 --Illustrations
-INSERT INTO Chapitre VALUES();
+INSERT INTO Illustration(id, description_illustration, nom_illustration, url_illustration) VALUES
+    (1, 'brûlure chimique aux yeux', 'Brulure_ChimiqueOeil_T_1', 'static/Images/Illustrations/Brulure_ChimiqueOeil_T_1.png'),
+    (2, 'rincer une brûlure grave', 'Brulure_grave_T_1', 'static/Images/Illustrations/Brulure_grave_T_1.png'),
+    (3, '', 'Brulure_Simple_AEN_1', 'static/Images/Illustrations/Brulure_Simple_AEN_1.png'),
+    (4, '', 'Brulure_Simple_AEN_2', 'static/Images/Illustrations/Brulure_Simple_AEN_2.png'),
+    (5, '', 'Brulure_Simple_AEN_3', 'static/Images/Illustrations/Brulure_Simple_AEN_3.png'),
+    (6, '', 'Brulure_Simple_AEN_4', 'static/Images/Illustrations/Brulure_Simple_AEN_4.png'),
+    (7, '', 'Hemorragie_Nez_T_1', 'static/Images/Illustrations/Hemorragie_Nez_T_1.png'),
+    (8, '', 'Hemorragie_Nez_T_2', 'static/Images/Illustrations/Hemorragie_Nez_T_2.png'),
+    (9, '', 'Hemorragie_Nez_T_3', 'static/Images/Illustrations/Hemorragie_Nez_T_3.png'),
+    (10, '', 'Hemorragie_Nez_T_4', 'static/Images/Illustrations/Hemorragie_Nez_T_4.png'),
+    (11, '', 'Inconscient_ACR_A_1', 'static/Images/Illustrations/Inconscient_ACR_A_1.png'),
+    (12, '', 'Inconscient_ACR_A_2', 'static/Images/Illustrations/Inconscient_ACR_A_2.png'),
+    (13, '', 'Inconscient_ACR_A_3', 'static/Images/Illustrations/Inconscient_ACR_A_3.png'),
+    (14, '', 'Inconscient_ACR_A_4', 'static/Images/Illustrations/Inconscient_ACR_A_4.png'),
+    (15, '', 'Inconscient_ACR_A_5', 'static/Images/Illustrations/Inconscient_ACR_A_5.png'),
+    (16, '', 'Inconscient_ACR_Defibrillateur_T_1', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_1.png'),
+    (17, '', 'Inconscient_ACR_Defibrillateur_T_2', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_2.png'),
+    (18, '', 'Inconscient_ACR_Defibrillateur_T_3', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_3.png'),
+    (19, '', 'Inconscient_ACR_Defibrillateur_T_4', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_4.png'),
+    (20, '', 'Inconscient_ACR_Defibrillateur_T_5', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_5.png'),
+    (21, '', 'Inconscient_ACR_Defibrillateur_T_6', 'static/Images/Illustrations/Inconscient_ACR_Defibrillateur_T_6.png'),
+    (22, '', 'Inconscient_ACR_E_1', 'static/Images/Illustrations/Inconscient_ACR_E_1.png'),
+    (23, '', 'Inconscient_ACR_E_2', 'static/Images/Illustrations/Inconscient_ACR_E_2.png'),
+    (24, '', 'Inconscient_ACR_E_3', 'static/Images/Illustrations/Inconscient_ACR_E_3.png'),
+    (25, '', 'Inconscient_ACR_Insuflations_AE_1', 'static/Images/Illustrations/Inconscient_ACR_Insuflations_AE_1.png'),
+    (26, '', 'Inconscient_ACR_Insuflations_AE_2', 'static/Images/Illustrations/Inconscient_ACR_Insuflations_AE_2.png'),
+    (27, '', 'Inconscient_ACR_Insuflations_AE_3', 'static/Images/Illustrations/Inconscient_ACR_Insuflations_AE_3.png'),
+    (28, '', 'Inconscient_ACR_Insuflations_AE_4', 'static/Images/Illustrations/Inconscient_ACR_Insuflations_AE_4.png'),
+    (29, '', 'Inconscient_ACR_N_1', 'static/Images/Illustrations/Inconscient_ACR_N_1.png'),
+    (30, '', 'Inconscient_ACR_N_2', 'static/Images/Illustrations/Inconscient_ACR_N_2.png'),
+    (31, '', 'Inconscient_ACR_N_3', 'static/Images/Illustrations/Inconscient_ACR_N_3.png'),
+    (32, '', 'Inconscient_Constat_AE_1', 'static/Images/Illustrations/Inconscient_Constat_AE_1.png'),
+    (33, '', 'Inconscient_Constat_AE_2', 'static/Images/Illustrations/Inconscient_Constat_AE_2.png'),
+    (34, '', 'Inconscient_LVA_AE_1', 'static/Images/Illustrations/Inconscient_LVA_AE_1.png'),
+    (35, '', 'Inconscient_LVA_AE_2', 'static/Images/Illustrations/Inconscient_LVA_AE_2.png'),
+    (36, '', 'Inconscient_LVA_AE_3', 'static/Images/Illustrations/Inconscient_LVA_AE_3.png'),
+    (37, '', 'Inconscient_LVA_AE_4', 'static/Images/Illustrations/Inconscient_LVA_AE_4.png'),
+    (38, '', 'Inconscient_LVA_AE_5', 'static/Images/Illustrations/Inconscient_LVA_AE_5.png'),
+    (39, '', 'Inconscient_LVA_AE_6', 'static/Images/Illustrations/Inconscient_LVA_AE_6.png'),
+    (40, '', 'Inconscient_PLS_AE_1', 'static/Images/Illustrations/Inconscient_PLS_AE_1.png'),
+    (41, '', 'Inconscient_PLS_AE_2', 'static/Images/Illustrations/Inconscient_PLS_AE_2.png'),
+    (42, '', 'Inconscient_PLS_AE_3', 'static/Images/Illustrations/Inconscient_PLS_AE_3.png'),
+    (43, '', 'Inconscient_PLS_AE_4', 'static/Images/Illustrations/Inconscient_PLS_AE_4.png'),
+    (44, '', 'Inconscient_PLS_AE_5', 'static/Images/Illustrations/Inconscient_PLS_AE_5.png'),
+    (45, '', 'Inconscient_PLS_AE_6', 'static/Images/Illustrations/Inconscient_PLS_AE_6.png'),
+    (46, '', 'Inconscient_PLS_AE_7', 'static/Images/Illustrations/Inconscient_PLS_AE_7.png'),
+    (47, '', 'Inconscient_PLS_AE_8', 'static/Images/Illustrations/Inconscient_PLS_AE_8.png'),
+    (48, '', 'Inconscient_PLS_AE_9', 'static/Images/Illustrations/Inconscient_PLS_AE_9.png'),
+    (49, '', 'Inconscient_PLS_AE_10', 'static/Images/Illustrations/Inconscient_PLS_AE_10.png'),
+    (50, '', 'Inconscient_PLS_AE_11', 'static/Images/Illustrations/Inconscient_PLS_AE_11.png'),
+    (51, '', 'Inconscient_PLS_AE_12', 'static/Images/Illustrations/Inconscient_PLS_AE_12.png'),
+    (52, '', 'Inconscient_PLS_AE_13', 'static/Images/Illustrations/Inconscient_PLS_AE_13.png'),
+    (53, '', 'Inconscient_PLS_AE_14', 'static/Images/Illustrations/Inconscient_PLS_AE_14.png'),
+    (54, '', 'Inconscient_PLS_AE_15', 'static/Images/Illustrations/Inconscient_PLS_AE_15.png'),
+    (55, '', 'Inconscient_PLS_AE_16', 'static/Images/Illustrations/Inconscient_PLS_AE_16.png'),
+    (56, '', 'Inconscient_PLS_AE_17', 'static/Images/Illustrations/Inconscient_PLS_AE_17.png'),
+    (57, '', 'Inconscient_PLS_N_1', 'static/Images/Illustrations/Inconscient_PLS_N_1.png'),
+    (58, '', 'OBVA_AEN_1', 'static/Images/Illustrations/OBVA_AEN_1.png'),
+    (59, '', 'OBVA_Partielle_AEN_1', 'static/Images/Illustrations/OBVA_Partielle_AEN_1.png'),
+    (60, '', 'OBVA_Partielle_AEN_2', 'static/Images/Illustrations/OBVA_Partielle_AEN_2.png'),
+    (61, '', 'OBVA_Totale_A_2', 'static/Images/Illustrations/OBVA_Totale_A_2.png'),
+    (62, '', 'OBVA_Totale_A_3', 'static/Images/Illustrations/OBVA_Totale_A_3.png'),
+    (63, '', 'OBVA_Totale_A_4', 'static/Images/Illustrations/OBVA_Totale_A_4.png'),
+    (64, '', 'OBVA_Totale_A_5', 'static/Images/Illustrations/OBVA_Totale_A_5.png'),
+    (65, '', 'OBVA_Totale_A_6', 'static/Images/Illustrations/OBVA_Totale_A_6.png'),
+    (66, '', 'OBVA_Totale_A_7', 'static/Images/Illustrations/OBVA_Totale_A_7.png'),
+    (67, '', 'OBVA_Totale_A_8', 'static/Images/Illustrations/OBVA_Totale_A_8.png'),
+    (68, '', 'OBVA_Totale_A_9', 'static/Images/Illustrations/OBVA_Totale_A_9.png'),
+    (69, '', 'OBVA_Totale_A_10', 'static/Images/Illustrations/OBVA_Totale_A_10.png'),
+    (70, '', 'OBVA_Totale_A_11', 'static/Images/Illustrations/OBVA_Totale_A_11.png'),
+    (71, '', 'OBVA_Totale_A_12', 'static/Images/Illustrations/OBVA_Totale_A_12.png'),
+    (72, '', 'OBVA_Totale_AE_1', 'static/Images/Illustrations/OBVA_Totale_AE_1.png'),
+    (73, '', 'OBVA_Totale_Aenceinteobese_1', 'static/Images/Illustrations/OBVA_Totale_Aenceinteobese_1.png'),
+    (74, '', 'OBVA_Totale_Aenceinteobese_2', 'static/Images/Illustrations/OBVA_Totale_Aenceinteobese_2.png'),
+    (75, '', 'Traumatisme_Membre_T_1', 'static/Images/Illustrations/Traumatisme_Membre_T_1.png'),
+    (76, '', 'Traumatisme_Membre_T_2', 'static/Images/Illustrations/Traumatisme_Membre_T_2.png'),
+    (77, '', 'Traumatisme_Rachis_T_1', 'static/Images/Illustrations/Traumatisme_Rachis_T_1.png'),
+    (78, '', 'Traumatisme_Rachis_T_2', 'static/Images/Illustrations/Traumatisme_Rachis_T_2.png'),
+    (79, '', 'Traumatisme_Rachis_T_3', 'static/Images/Illustrations/Traumatisme_Rachis_T_3.png');
+    /* (80, '', '', 'static/Images/Illustrations/.png'),
+    (81, '', '', 'static/Images/Illustrations/.png'),
+    (82, '', '', 'static/Images/Illustrations/.png'),
+    (83, '', '', 'static/Images/Illustrations/.png'),
+    (84, '', '', 'static/Images/Illustrations/.png'),
+    (85, '', '', 'static/Images/Illustrations/.png'), */
 
---Fiches
-INSERT INTO Chapitre VALUES();
+--Liens Illustrations -> Fiches
+INSERT INTO NOEUD_DECISIONNEL_DESSINS(guides_id, dessins_id) VALUES
+    --PLS
+    (19, 40), (19, 41), (19, 42), (19, 43), (19, 44), (19, 45), (19, 46), (19, 47), (19, 48), (19, 49),
+    (19, 50), (19, 51), (19, 52), (19, 53), (19, 54), (19, 55), (19, 56),
+    --Reconnaître l'inconscience
+    (24, 32), (24, 33),
+    --LVA
+    (23, 34), (23, 35), (23, 36), (23, 37), (23, 38), (23, 39);
 
+    /* (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
+    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), */
+
+/*
 --Media
 INSERT INTO Chapitre VALUES();
 */
