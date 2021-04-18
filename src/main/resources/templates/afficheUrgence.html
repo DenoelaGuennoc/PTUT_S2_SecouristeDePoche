@@ -30,7 +30,7 @@
    
     <!-- <h2 id="repqu">Répondez aux questions suivantes pour trouver que faire dans votre situation</h2>  -->
     <div id="titreNoeud">
-        <h3 id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3> 
+        <h3 class="titresNoeud" id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3> 
     </div>
     <input id="noeudId" name="idNoeud" type="hidden" value=n.id/>
 	<br>
@@ -40,7 +40,7 @@
 
     <!-- Template pour l'affichage de la question -->
     <script id="questionTemplate" type="text/template">
-        <div class="titresNoeud">{{texteQuestion}}</div>
+        <h3 class="titresNoeud">{{texteQuestion}}</h3>
     </script>
 
 	<!-- Template qui permet d'afficher les boutons de réponse aux questions avec Mustache -->
@@ -52,7 +52,7 @@
 
     <!-- Template pour l'affichage du nom d'une fiche -->
     <script id="ficheTitreTemplate" type="text/template">
-        <div class="titresNoeud">{{nomFiche}}</div>
+        <h3 class="titresNoeud">{{nomFiche}}</h3>
     </script>
 
     <!-- Template pour l'affichage des illustrations d'une fiche -->
