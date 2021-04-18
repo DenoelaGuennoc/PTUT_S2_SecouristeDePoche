@@ -15,6 +15,14 @@ html {
 	width: device-width;
   }
 
+  ul, li {
+	text-align: left;
+  }
+
+  td {
+	vertical-align: top;	  
+  }
+
   body {
 	  height: 100%;
 	width:100%;
@@ -54,7 +62,7 @@ html {
 	font-size: 2.6rem;
 }
 
-.lancerQCM {
+.lancerQCM,.button ,.buttonRep, .lancerQCMaléatoire {
   background-color: #2ab3c8; 
   border: none;
   color: black;
