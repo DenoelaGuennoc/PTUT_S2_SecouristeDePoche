@@ -21,22 +21,16 @@ public class Question extends NoeudDecisionnel{
     //@Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     //private Integer id;
 
-    @Column(unique=true)
-    @NonNull
-    private String resumeQuestion;
-
-    @Column(unique=true)
+    @Column
     @NonNull
     private String texteQuestion;
 
-    public Question (/*Integer idQuestion,*/ String resumeQuestion, String texteQuestion, Integer idNoeud, String nomNoeud){
+    public Question (String texteQuestion, Integer idNoeud, String nomNoeud){
         super(idNoeud, nomNoeud);
-        //this.id = idQuestion; 
-        this.resumeQuestion = resumeQuestion; 
         this.texteQuestion = texteQuestion;
     }
 
-    public Question (/*Integer idQuestion, String resumeQuestion,*/ Boolean noeudRacine, String texteQuestion, Integer idNoeud, String nomNoeud){
+    public Question (Boolean noeudRacine, String texteQuestion, Integer idNoeud, String nomNoeud){
         super(idNoeud, nomNoeud, noeudRacine);
         this.texteQuestion = texteQuestion;
     }
