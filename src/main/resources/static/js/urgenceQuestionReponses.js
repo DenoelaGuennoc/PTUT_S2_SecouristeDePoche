@@ -18,7 +18,7 @@ function showResultResponse(resultJson) {
     // On combine le template avec le résultat de la requête
     var processedTemplate = Mustache.to_html(template, resultJson);
     // On affiche le résultat dans la page
-    $('#reponses').html(processedTemplate);
+    $('#contenuNoeud').html(processedTemplate);
 
     // On récupère les id de tous les boutons créés pour y mettre des event listeners
     let boutonsReponse = document.getElementsByClassName("boutonReponse");
@@ -31,7 +31,7 @@ function showResultResponse(resultJson) {
 
 // Fonction qui traite les erreurs de la requête
 function showErrorResponse(xhr, status, message) {
-    $("#reponses").html("Erreur: " + status + " : " + message);
+    $("#contenuNoeud").html("Erreur: " + status + " : " + message);
 }
 
 //Fonction pour faire l'appel AJAX
@@ -57,7 +57,7 @@ function showResultNoeud(resultJson) {
         // On combine le template avec le résultat de la requête
         var processedTemplate = Mustache.to_html(template, resultJson);
         // On affiche le résultat dans la page
-        $('#question').html(processedTemplate);
+        $('#titreNoeud').html(processedTemplate);
 
         doRequestResponse();
     }
@@ -68,7 +68,7 @@ function showResultNoeud(resultJson) {
         // On combine le template avec le résultat de la requête
         var processedTemplate = Mustache.to_html(template, resultJson);
         // On affiche le résultat dans la page
-        $('#fiche_titre').html(processedTemplate);
+        $('#titreNoeud').html(processedTemplate);
         
         doRequestIllustrations();
     }
@@ -76,7 +76,7 @@ function showResultNoeud(resultJson) {
 
 // Fonction qui traite les erreurs de la requête
 function showErrorNoeud(xhr, status, message) {
-    $("#question").html("Erreur: " + status + " : " + message);
+    $("#titreNoeud").html("Erreur: " + status + " : " + message);
 }
 
 
@@ -130,12 +130,12 @@ function showResultIllustrations(resultJson) {
     // On combine le template avec le résultat de la requête
     var processedTemplate = Mustache.to_html(template, resultJson);
     // On affiche le résultat dans la page
-    $('#fiche_illustrations').html(processedTemplate);
+    $('#contenuNoeud').html(processedTemplate);
 }
 
 // Fonction qui traite les erreurs de la requête
 function showErrorIllustrations(xhr, status, message) {
-    $("#fiche_illustrations").html("Erreur: " + status + " : " + message);
+    $("#contenuNoeud").html("Erreur: " + status + " : " + message);
 }
 
 //Fonction pour faire l'appel AJAX
