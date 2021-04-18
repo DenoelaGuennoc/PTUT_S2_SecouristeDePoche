@@ -1,6 +1,6 @@
 let questionId = 2;
 let reponseId = 0;
-//let noeudFilsId = 0;
+
 
 /* Affichage des réponses */
 
@@ -46,7 +46,6 @@ function doRequestResponse() {
 }
 
 
-
 /* Affichage de la question */
 
 // Fonction qui traite les résultats de la requête
@@ -63,6 +62,9 @@ function showResultQuestion(resultJson) {
 function showErrorQuestion(xhr, status, message) {
     $("#question").html("Erreur: " + status + " : " + message);
 }
+
+
+/* Changement des questions et réponses */
 
 //Fonction pour faire l'appel AJAX
 function doRequestQuestion() {
@@ -97,15 +99,10 @@ function doRequestNoeudFils(){
 
 //Fonction pour changer les questions et réponses sur la page en fonction de la réponse de l'utilisateur
 async function changeIdQuestion() {
-    console.log("click")
     let idBouton = event.target.id;
-    console.log("id bouton = " + idBouton);
     reponseId = idBouton.split("_")[1];
-    console.log("id réponse = " + reponseId);
     let noeudFilsId = await doRequestNoeudFils();
-    console.log("id noeud fils = " + noeudFilsId);
     questionId = noeudFilsId;
-    console.log("id question fille = " + questionId);
     doRequestQuestion();
     doRequestResponse();
 }

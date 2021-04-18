@@ -188,10 +188,29 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id,nom_Noeud, noeud_Racine, texte_Question)
 
 --Réponses
 INSERT INTO Reponse(id, libelle_reponse, question_posee_id, noeud_fils_id) VALUES
+    -- conscient ? id 2
     (1, 'OUI', 2, 3),
     (2, 'NON', 2, 1),
-    (3, 'OUI', 3, 4),
-    (4, 'NON', 3, 9);
+    -- OBVA ? id 3
+    (3, 'OUI', 3, 9),
+    (4, 'NON', 3, 4),
+    -- Hémorragie ? id 4
+    (5, 'OUI', 4, 10),
+    (6, 'NON', 4, 5),
+    -- Trauma ? 5
+    (7, 'OUI', 5, 11),
+    (8, 'NON', 5, 6),
+    -- Plaie ? 6
+    (9, 'OUI', 6, 12),
+    (10, 'NON', 6, 7),
+    (13, 'Grave', 12, 13),
+    --(14, 'Simple', 12, ), --ajouter ici l'id de la fiche plaie simple
+    -- Brûlure ? 7
+    (11, 'OUI', 7, 14),
+    (12, 'NON', 7, 8),
+    (15, 'Grave', 14, 15),
+    --(16, 'Simple', 14, ), --ajouter l'id de la fiche brulure simple
+
     --(3, 'OUI', 1, 16),
     --(4, 'NON', 1, 16); --voir comment demander le type de victime sachant un OneToOne entre réponse et noeud fils
 
