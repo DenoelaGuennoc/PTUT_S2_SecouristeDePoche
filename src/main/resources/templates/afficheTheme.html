@@ -32,14 +32,17 @@
 
 
     <h3>Les thèmes</h3>
-    <span class="presentation">
-        <ul class="presentation" th:each="t:${themes}">
-            <li  th:text="${t.titre}">
-                <li> <a href="/SecouristeDePoche/chapitres"> <li th:each="c:${chapitres}" th:text="${c.titre}" ></li></a> </li>             
-            </li>
-                
-        </ul>
-    </span>
+
+        <table>
+            <tr><th th:each="theme : ${themes}" th:text="${theme.titre}">Titre du thème</th></tr>
+            <tr>
+                <td th:each="theme : ${themes}">
+                    <ul>
+                        <li th:each="chapitre : ${theme.chapitres}" th:text="${chapitre.titre}" >Titre du chapitre</li>            
+                    </ul>    
+                </td>
+            </tr>
+        </table>
 
 </body>
 

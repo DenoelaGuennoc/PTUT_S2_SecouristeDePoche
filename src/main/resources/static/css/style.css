@@ -15,6 +15,14 @@ html {
 	width: device-width;
   }
 
+  ul, li {
+	text-align: left;
+  }
+
+  td {
+	vertical-align: top;	  
+  }
+
   body {
 	  height: 100%;
 	width:100%;

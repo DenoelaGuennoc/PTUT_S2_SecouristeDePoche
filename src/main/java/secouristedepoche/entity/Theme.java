@@ -21,7 +21,7 @@ public class Theme {
     private String titre; 
     
     @OneToMany(mappedBy = "theme")
-    private List<Chapitre> ch = new ArrayList<>();
+    private List<Chapitre> chapitres = new ArrayList<>();
 
     @OneToMany (mappedBy = "sujets")
     private List<Quizz> interrogations = new LinkedList<>();
