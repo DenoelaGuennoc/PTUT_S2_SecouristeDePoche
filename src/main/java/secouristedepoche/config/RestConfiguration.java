@@ -4,12 +4,7 @@ import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
 import org.springframework.stereotype.Component;
 
-/* import secouristedepoche.entity.Chapitre;
-import secouristedepoche.entity.Fiche;
-import secouristedepoche.entity.Illustration; */
 import secouristedepoche.entity.*;
-
-
 
 
 @Component

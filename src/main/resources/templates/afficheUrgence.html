@@ -34,7 +34,6 @@
     </div>
     <input id="noeudId" name="idNoeud" type="hidden" value=n.id/>
 	<br>
-    <button id="doAjax">Exécuter la requête AJAX</button><br>
 	<div id="reponses"></div>
 
     <!-- Template pour l'affichage de la question -->
@@ -45,8 +44,7 @@
 	<!-- Template qui permet d'afficher les boutons de réponse aux questions avec Mustache -->
     <script id="reponsesTemplate" type="text/template">
         {{#content}}
-            <button class="boutonReponse" id='{{id}}'>{{libelleReponse}}</button>
-            <!-- ici il faut réussir à récupérer l'id de la réponse pour le mettre dans l'id du bouton puis compléter l'EventListener sur le js en fonction -->
+            <button class="boutonReponse" id='boutonReponse_{{id}}' >{{libelleReponse}}</button>
         {{/content}}
     </script>
 

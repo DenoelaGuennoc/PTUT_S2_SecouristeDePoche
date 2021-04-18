@@ -1,10 +1,13 @@
 let questionId = 2;
+let reponseId = 0;
+//let noeudFilsId = 0;
 
 /* Affichage des réponses */
 
 $(document).ready(
     function() {
-        $("#doAjax").click(doRequestResponse);
+        /* $("#doAjax").click(doRequestResponse); */
+        doRequestResponse();
     }
 );
 
@@ -16,6 +19,14 @@ function showResultResponse(resultJson) {
     var processedTemplate = Mustache.to_html(template, resultJson);
     // On affiche le résultat dans la page
     $('#reponses').html(processedTemplate);
+
+    // On récupère les id de tous les boutons créés pour y mettre des event listeners
+    let boutonsReponse = document.getElementsByClassName("boutonReponse");
+
+    for (let i = 0; i < boutonsReponse.length; i++) {
+        let idBouton = boutonsReponse[i].id; 
+        document.getElementById(idBouton).addEventListener("click", changeIdQuestion);
+    }
 }
 
 // Fonction qui traite les erreurs de la requête
@@ -59,44 +70,42 @@ function doRequestQuestion() {
         //appel de l'API auto-générée
         url: "../api/questions/" + questionId,
         dataType: "json",
-        success: showResult,
-        error: showError
+        success: showResultQuestion,
+        error: showErrorQuestion
     });
 }
 
-// compléter l'id dans l'EventListener en fonction de l'HTML
+//Fonction pour récupérer l'id du noeud fils
+function doRequestNoeudFils(){
+    const url = "../api/reponses/" + reponseId + "/noeudFils";
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    let noeudFilsId = 0;
+    const fetchOptions = {
+        method: "GET"
+    }
+    return fetch(url, fetchOptions)
+        .then((response) => {
+            return response.json();
+        })
+        .then((dataJSON) => {
+            noeudFilsId = dataJSON.id;
+            return noeudFilsId;
+        })
+        .catch((error) => console.log(error));
+}
 
-/* document.querySelectorAll("boutonReponse").forEach(item => {
-    item.addEventListener('click', event => {
-        let idBouton = event.target.id;
-        console.log(idBouton);
-        let noeudFilsId = idBouton.split("_")[1];
-        console.log(noeudFilsId);
-        questionId = noeudFilsId;
-        doRequestQuestion();
-        doRequestResponse();
-    })
-}) */
-
-
-/* let boutonsReponse = document.getElementsByClassName("boutonReponse")
-boutonsReponse.forEach(item => item.addEventListener('click', changeIdQuestion)); */
-
-// Revoir à partir d'ici pour le passge d'un noeud à l'autre
-
-/* let boutonsReponse = document.querySelectorAll(".boutonReponse");
-
-boutonsReponse.forEach(function(elem) {
-    console.log("étape 1");
-    elem.addEventListener("input", changeIdQuestion);
-}); */
-
-
-/* function changeIdQuestion(event) {
+//Fonction pour changer les questions et réponses sur la page en fonction de la réponse de l'utilisateur
+async function changeIdQuestion() {
     console.log("click")
     let idBouton = event.target.id;
-    //let noeudFilsId = idBouton.split("_")[1];;
-    questionId = idBouton; //noeudFilsId;
+    console.log("id bouton = " + idBouton);
+    reponseId = idBouton.split("_")[1];
+    console.log("id réponse = " + reponseId);
+    let noeudFilsId = await doRequestNoeudFils();
+    console.log("id noeud fils = " + noeudFilsId);
+    questionId = noeudFilsId;
+    console.log("id question fille = " + questionId);
     doRequestQuestion();
     doRequestResponse();
-} */
+}
