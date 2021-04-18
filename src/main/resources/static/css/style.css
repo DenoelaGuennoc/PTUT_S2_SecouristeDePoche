@@ -11,6 +11,9 @@ html {
 	background-color: #79D6E5; /*#93DFFF*/
   }
   
+  #contenuChap {
+      text-align: left
+  }
   @-ms-viewport {
 	width: device-width;
   }

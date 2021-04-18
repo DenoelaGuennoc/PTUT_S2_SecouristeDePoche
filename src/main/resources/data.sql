@@ -13,30 +13,194 @@ INSERT INTO Theme(id, titre) VALUES
     (11, 'Fiches Techniques');
 
 --Chapitres sans contenu
-INSERT INTO Chapitre(id, titre, theme_id) VALUES
-    (1,'Protection', 1), 
-    (2, 'Alerte', 2), 
-    (3, 'Alerte et Protection', 2), 
-    (4, 'Obstruction aiguë des voies aériennes', 3), 
-    (5, 'Hémorragie externe', 4), 
-    (6, 'Perte de connaissance', 5), 
-    (7, 'Arrêt cardio-respiratoire', 6), 
-    (8, 'Malaise', 7), 
-    (9, 'Brûlure', 8), 
-    (10, 'Plaie', 9), 
-    (11, 'Traumatisme', 10), 
-    (12, 'Compression Locale', 11), 
-    (13, 'Compression Thoracique', 11), 
-    (14, 'Défibrillateur Automatisé Externe', 11), 
-    (15, 'Défibrillation', 11), 
-    (16, 'Désobstruction par la methode des claques dans le dos', 11), 
-    (17, 'Désobstruction par la méthode des compressions abdominales', 11), 
-    (18, 'Désobstruction par la méthode des compressions thoraciques', 11), 
-    (19, 'Garrot', 11), 
-    (20, 'Insufflations', 11), 
-    (21, 'Libération des voies aériennes',11), 
-    (22, 'Maintien de la tête', 11), 
-    (23, 'Position Latérale de Séurité', 11); 
+INSERT INTO Chapitre(id, titre, contenu, theme_id) VALUES
+    (1,'Protection', '1', 1), 
+    (2, 'Alerte', '
+Version : 1.2.3 Mise à jour : - Juillet 2019 - 
+
+~Présentation % 
+
+L’alerte est l’action qui consiste à informer un service d’urgence de la présence d’une ou
+plusieurs victimes affectées par une ou plusieurs détresses ainsi que de la nature de
+l’assistance qui leur est apportée.
+L’absence d’information d’un service d’urgence peut compromettre la vie ou la santé d’une
+victime malgré les gestes de premiers secours assurés par un sauveteur. Le rôle du
+sauveteur dans l’alerte est donc essentiel.
+L’alerte doit être transmise, par le sauveteur ou un témoin, par les moyens disponibles les
+plus appropriés. Elle doit être rapide et précise afin de diminuer au maximum les délais de
+mise en œuvre de la chaîne de secours et de soins.
+L’alerte doit être réalisée, après une évaluation rapide de la situation, des risques et une
+éventuelle mise en sécurité des personnes, auprès d’un numéro d’urgence gratuit : 
+- le 18, numéro d’appel des sapeurs-pompiers, en charge notamment des secours
+d’urgence aux personnes, des secours sur accidents, incendies ;
+- le 15, numéro d’appel des SAMU, en charge de la réponse médicale, des problèmes
+urgents de santé et du conseil médical ;
+- le 112, numéro de téléphone réservé aux appels d’urgence et valide dans l’ensemble
+de l’Union Européenne ;
+- le 114, numéro d’appel accessible par SMS , fax, visio et tchat, réservé aux déficients
+auditifs (réception et orientation des personnes malentendantes vers les autres
+numéros d’urgence).
+Les secours peuvent conserver l’appelant au téléphone pour le conseiller ou le guider dans
+l’exécution de gestes, jusqu’à leur arrivée.Prévention et Secours Civiques de niveau 1
+
+
+~Conduite à tenir %
+
+Contacter un service d’urgence à l’aide d’un téléphone portable ou à défaut d’un téléphone
+fixe ou d’une borne d’appel :
+- transmettre les informations ;
+- répondre aux questions posées par les services de secours ;
+- appliquer les consignes données ;
+- raccrocher, sur les instructions de l’opérateur.
+Les informations minimales à transmettre sont :
+- le numéro de téléphone ou de la borne à partir duquel l’appel est passé ;
+- la nature du problème : maladie, accident… ;
+- la localisation la plus précise possible de l’évènement.
+Lorsque le sauveteur demande à une autre personne de donner l’alerte, il convient :
+- avant l’alerte, de s’assurer qu’elle possède tous les éléments ;
+- après l’alerte, de vérifier qu’elle a correctement exécuté l’action.
+Si possible, envoyer une personne pour accueillir les secours et organiser leur accès sur le
+lieu de l’accident, au plus près de la victime', 2), 
+    (3, 'Alerte et Protection', '1', 2), 
+    (4, 'Obstruction aiguë des voies aériennes', '1', 3), 
+    (5, 'Hémorragie externe',  'HEMORRAGIES EXTERNES
+Version : 2.2.2 Mise à jour : - Juillet 2019 -
+
+
+~Définition  Signes %
+
+Une hémorragie est une perte de sang prolongée qui provient d’une plaie ou d’un orifice
+naturel et qui ne s’arrête pas spontanément. Elle imbibe de sang un mouchoir de tissu ou
+de papier en quelques secondes.
+Un saignement dû à une écorchure, une éraflure ou une abrasion cutanée, qui s’arrête
+spontanément n’est pas une hémorragie.
+Le plus souvent, il est facile de constater une hémorragie. Toutefois, celle-ci peut
+temporairement être masquée par la position de la victime ou un vêtement particulièrement
+absorbant (manteau, blouson…).
+
+
+~Causes %
+
+L’hémorragie est généralement secondaire à un traumatisme comme un coup, une chute,
+une plaie par un objet tranchant (couteau), un projectile (une balle) ou une maladie comme
+la rupture de varice chez la personne âgée.
+
+
+~Risques %
+
+Les risques d’une perte abondante ou prolongée de sang sont :
+- pour la victime : d’entraîner une détresse circulatoire ou un arrêt cardiaque par une
+diminution importante de la quantité de sang dans l’organisme ;
+- pour le sauveteur : d’être infecté par une maladie transmissible s’il présente des
+effractions cutanées (plaies, piqûres) ou en cas de projection sur les muqueuses
+(bouche, yeux).
+
+
+~Principes d’action %
+
+Le sauveteur doit arrêter ou limiter la perte de sang de la victime et retarder l’installation
+d’une détresse qui peut entraîner la mort.
+
+
+~Conduite à tenir %
+
+- constater l’hémorragie, si nécessaire en écartant les vêtements ;
+- demander à la victime de comprimer immédiatement l’endroit qui saigne ou à défaut,
+le faire à sa place ;
+- allonger confortablement la victime, par exemple sur un lit, un canapé ou à défaut
+sur le sol (1);
+- alerter les secours. L’alerte est réalisée par :
+ # un témoin s’il est présent ;
+ # le sauveteur si la victime comprime elle-même la plaie ;
+ # le sauveteur, après avoir relayé la compression directe (réalisée par lui-même)
+si nécessaire par un pansement compressif (le haut-parleur du téléphone
+portable peut parfois permettre de maintenir la compression directe pendant
+l’alerte par le sauveteur) ;
+- si le saignement se poursuit, reprendre la compression directe par-dessus l’éventuel
+pansement compressif ;
+- si la compression directe d’une hémorragie d’un membre est inefficace (le
+saignement persiste malgré tout) ou impossible (nombreuses victimes, catastrophes,
+situations de violence collective ou de guerre, nombreuses lésions, plaie
+inaccessible, corps étranger), mettre en place un garrot au-dessus de la plaie pour
+arrêter le saignement (entre le cœur et la plaie) ;
+- rassurer la victime, en lui parlant régulièrement et en lui expliquant ce qui se passe ;
+- protéger la victime contre la chaleur, le froid ou les intempéries, la réchauffer si
+nécessaire ;
+- surveiller l’apparition de signes d’aggravation.
+Dans tous les cas, si l’état de la victime s’aggrave (sueurs abondantes, sensation de froid,
+pâleur intense, perte de connaissance) :
+- contacter à nouveau les secours pour signaler l’aggravation ;
+- pratiquer les gestes qui s’imposent si la victime a perdu connaissance ou présente
+un arrêt cardiaque.
+
+
+~Conduites à tenir particulières %
+
+En présence d’une victime qui saigne du nez :
+- l’asseoir, tête penchée en avant (ne jamais l’allonger) ;
+- lui demander de se moucher vigoureusement ;
+- lui demander de comprimer les deux narines avec les doigts, durant 10 minutes sans
+relâcher ;
+- demander un avis médical si :
+ # le saignement ne s’arrête pas ou se reproduit ;
+ # le saignement survient après une chute ou un coup ;
+ # la victime prend des médicaments, en particulier ceux qui augmentent les
+saignements.
+En présence d’une victime qui vomit ou crache du sang :
+Il s’agit d’un signe pouvant traduire une maladie grave nécessitant une prise en charge
+médicale.
+- Installer la victime dans la position :
+ # où elle se sent le mieux si elle est consciente ;
+ # allongée, en position stable sur le côté si elle a perdu connaissance ;
+- faire alerter ou alerter les secours et appliquer les consignes ;
+- surveiller en permanence.
+En présence d’une victime qui perd du sang par un orifice naturel (sauf le nez) et de
+façon inhabituelle :
+- allonger la victime ;
+- faire alerter ou alerter les secours et appliquer les consignes.
+En cas d’aggravation :
+- contacter à nouveau les secours pour signaler l’aggravation ;
+- pratiquer les gestes qui s’imposent si la victime a perdu connaissance.
+
+
+~Contact du sauveteur avec le sang de la victime %
+
+Si le sauveteur risque d’entrer en contact avec le sang de la victime, il doit si possible :
+- se protéger par le port de gants ;
+- à défaut glisser sa main dans un sac plastique.
+En cas de contact avec le sang d’une victime :
+- ne pas porter les mains à la bouche, au nez ou aux yeux ;
+- ne pas manger avant de s’être lavé les mains et de s’être changé ;
+- retirer les vêtements souillés de sang le plus tôt possible après la fin de l’action de
+secours 
+- se laver les mains ou toute zone souillée par le sang de la victime ;
+- se désinfecter (gel hydro-alcoolique, dakin…)
+- demander un avis médical, sans délai si le sauveteur :
+ # présente une plaie, même minime, ayant été souillée ;
+ # a subi une projection sur le visage.
+
+
+~Justifications particulières %
+
+(1) La position allongée retarde ou empêche l’installation d’une détresse liée à la perte importante de sang',4), 
+    (6, 'Perte de connaissance', '1', 5), 
+    (7, 'Arrêt cardio-respiratoire', '1', 6), 
+    (8, 'Malaise', '1', 7), 
+    (9, 'Brûlure', '1', 8), 
+    (10, 'Plaie', '1', 9), 
+    (11, 'Traumatisme', '1', 10), 
+    (12, 'Compression Locale', '1', 11), 
+    (13, 'Compression Thoracique', '1', 11), 
+    (14, 'Défibrillateur Automatisé Externe', '1', 11), 
+    (15, 'Défibrillation',  '1',11), 
+    (16, 'Désobstruction par la methode des claques dans le dos', '1', 11), 
+    (17, 'Désobstruction par la méthode des compressions abdominales', '1', 11), 
+    (18, 'Désobstruction par la méthode des compressions thoraciques', '1', 11), 
+    (19, 'Garrot', '1', 11), 
+    (20, 'Insufflations', '1', 11), 
+    (21, 'Libération des voies aériennes', '1',11), 
+    (22, 'Maintien de la tête', '1', 11), 
+    (23, 'Position Latérale de Séurité', '1', 11); 
 
 /*Problème pour mettre le fichier Txt dans la table Chapitre
     Première technique: 
@@ -158,13 +322,6 @@ INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse
     (93,'Quelle information n est pas indispensable à  donner?','Le numéro de téléphone ou de la borne à  partir duquel l appel est passé','La nature du problème: maladie, accident,..','La localisation la plus précise possible de l évènement','Les informations personnelles de la victime: nom, prénom, à¢ge,...','D: Les informations personnelles de la victime: nom, prénom, âge,...',2),
     (94,'Quel outil ne sert pas à  alerter la population de la survenance d une crise?','Sirènes','Médias','Panneaux publicitaires','Réseaux sociaux','C: Panneaux publicitaires',2),
     (95,'Combien de temps dure le SNA?','Variation du signal sur 3 cycles successifs d une durée de 1minutes et 21 secondes','Variation du signal sur 2 cycles successifs d une durée de 1minutes et 30 secondes','Variation du signal sur 2 cycles successifs d une durée de 1minutes et 21 secondes','Variation du signal sur 3 cycles successifs d une durée de 1minutes et 41 secondes','D: Variation du signal sur 3 cycles successifs d une durée de 1minutes et 41 secondes',2);
-
-
---Pas sûre
---Questions
---INSERT INTO Question(idQuestion,resumeQuestion,texteQuestion,idNoeud,nomNoeud, idFiche) VALUES
-
---Réponse
 
 
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question) VALUES

@@ -4,6 +4,7 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.*;
 
+
 // Un exemple d'entité
 // On utilise Lombok pour auto-générer getter / setter / toString...
 // cf. https://examples.javacodegeeks.com/spring-boot-with-lombok/
@@ -18,7 +19,7 @@ public class Chapitre {
     private String titre;
 
    //Il faut trouver un moyen de mettre du contenu dans chaque chapitre également
-    @Column(unique=true)
+    @Column (length = 50000)
     //@NonNull // ! à repasser en NonNull quand ils seront créés
     private String contenu; 
     
