@@ -15,6 +15,7 @@ public class NoeudDecisionnel {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
+
     @Column(unique=true)
     @NonNull
     private String nomNoeud;
