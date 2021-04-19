@@ -19,7 +19,7 @@ public class NoeudDecisionnel {
     @NonNull
     private String nomNoeud;
 
-    @Column(columnDefinition="tinyint(1) default 0")
+    @Column(columnDefinition="Integer default 0")
     @NonNull
     private Boolean noeudRacine;
     
