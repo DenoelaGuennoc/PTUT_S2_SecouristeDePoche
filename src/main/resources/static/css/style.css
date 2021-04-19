@@ -10,9 +10,22 @@ html {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	background-color: #79D6E5; /*#93DFFF*/
   }
-  
+/*Template Themes*/
   #contenuChap {
       text-align: left
+  }
+  table  {
+        margin : auto  }
+  .TitresTableau {
+      text-align: center;
+      font-weight: 500;      
+  }
+  .titreThème {
+      text-align: center ; 
+  }
+  .titreChapitre {
+      list-style: none;
+      text-align: center; 
   }
   @-ms-viewport {
 	width: device-width;

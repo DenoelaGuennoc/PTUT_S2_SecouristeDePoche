@@ -34,14 +34,18 @@
     <h3 id="titre">Les thèmes</h3>
     <p id ="contenuChap"> </p>
         <table id="tableau">
-            <tr><th th:each="theme : ${themes}" th:text="${theme.titre}">Titre du thème</th></tr>
+            <tr class="TitresTableau">
+                <td>Thèmes</td>
+                <td id="c">Chapitres</td> </tr>
+            <tr class = "titreThème" th:each="theme : ${themes}" >
+                <td  th:text="${theme.titre}" >Titre du thème
+                    <td>
+                        <ul>
+                            <li class ="titreChapitre" th:each="chapitre : ${theme.chapitres}" th:text="${chapitre.titre}" >Titre du chapitre</li>            
+                        </ul> 
+                    </td> 
+                </td> 
             <tr>
-                <td th:each="theme : ${themes}">
-                    <ul>
-                        <li class ="titreChapitre" th:each="chapitre : ${theme.chapitres}" th:text="${chapitre.titre}" >Titre du chapitre</li>            
-                    </ul>    
-                </td>
-            </tr>
         </table>
     <br><button class="button" id="goBack"> Retour aux thèmes </button>
 <script type="text/javascript" src="/src/main/resources/js/Theme.js" th:src="@{/js/Theme.js}"></script>
@@ -49,3 +53,4 @@
 </body>
 
 </html>
+
