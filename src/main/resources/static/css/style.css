@@ -330,7 +330,7 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 
 
 .boutonReponse{
-	background-color: #432b85; 
+	background-color: #c5b9e7; 
 	border-radius: 12px;
 	display: inline-block;
 	color : rgb(37, 37, 37);
@@ -338,7 +338,7 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 	vertical-align: middle;
 	user-select: none;
 	cursor: pointer;
-	padding: 2rem 1rem;
+	padding: 1rem 1rem;
 	font-size: 30px;
 	line-height: 1;
 	width : 33%;
@@ -349,4 +349,5 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 	margin-bottom: 0.5rem;
 	font-weight: 500;
 	line-height: 1.2;
+	font-size: 2.5rem;
 }
