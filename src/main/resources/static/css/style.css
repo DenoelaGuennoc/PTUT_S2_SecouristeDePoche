@@ -16,7 +16,7 @@ html {
   }
 
   ul, li {
-	text-align: left;
+	text-align: center;
   }
 
   td {
@@ -24,7 +24,7 @@ html {
   }
 
   body {
-	  height: 100%;
+	height: 100%;
 	width:100%;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 1rem;
@@ -149,6 +149,7 @@ hover : permet de changer de couleur au survol du boutton NORMALEMENT !
   color: green;
 }
 	
+
 	
 button:focus {
 	outline: 1px dotted;
@@ -159,16 +160,20 @@ button:focus {
 	list-style: none;
 	display: inline;
 	padding:20px 40px 4px 10px;
+	text-align: center;
+	margin: auto;
   }
 
  nav ul li a{
 	 color: rgb(255, 255, 255);
 	  text-decoration: none;
+	  text-align: center;
 	  }              
           
   nav {
-	  background-color: #00809D ;
-  }
+	  background-color: #00809D;
+	  display: block;
+}
 
   ul.presentation li{
       width: 200px;
@@ -182,12 +187,7 @@ button:focus {
 	color: white;
 }
 
-  span.presentation{
-		display: inline-flex;
-		align-items: center;
-		cursor: pointer;
-  }
-
+ 
 /*
 permet d'adapter le texte en fonction de la taille de l'écran
 */
@@ -201,12 +201,15 @@ permet d'adapter le texte en fonction de la taille de l'écran
 
 
 
-#hamburger, #hamburger-content{
+
+
+/*#hamburger, #hamburger-content{
 	display: inline;
-}
+
+}*/
   
 
-#hamburger-button{
+/*#hamburger-button{
 	cursor: pointer;
 	background: none;
 	border: none;
@@ -311,13 +314,11 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 		line-height: 56px;
 	}
 
-	#hamburger-content {
+	/*#hamburger-content {
 	display: none;
-	}
+	}*/
 
 
 }
 
-.header {
 
-}
