@@ -24,16 +24,17 @@
         </nav>
     </div>
 
-    <div class="col-12">
+    <div class="row no-padding">
+        <div class="col-12">
         <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site" th:src="@{/Images/logo ptut.png}"></div>
 
-        <p>Salut ! <br> Je suis ....., votre secouriste de poche !</p>
+        <p>Salut ! <br /> Je suis ....., votre secouriste de poche !</p>
         
         
         <h2 id="bienv">Bienvenue sur votre espace d'entraînement !</h2> 
         <div class="QCM">
         <p> Ici, vous trouverez des QCM pour vérifier vos connaissances.Vous pouvez choisir des QCM sur des thèmes spécifiques
-    <br>
+    <br />
         ou bien répondre à des QCM aléatoires et être interrogé(e)s sur l'intégralité du programme traité sur le site. </p>
         
         <a href="" ><button class= "lancerQCM" id="0"> Lancer un QCM aléatoire  </button> </a>
@@ -85,7 +86,7 @@
             <h3 id="themeChoisi"></h3>
             <p id="question"></p>
             
-            <br><p id="repA"></p>
+            <br /><p id="repA"></p>
             <button class="buttonRep" id="buttonA">Réponse A</button>
             
             <p id="repB"></p>
@@ -103,9 +104,10 @@
             <p id="fin"></p>
             <button class="button" id="suivant">Suivant</button>
             
-        <br><button class="button" id="retour"> Retour aux thèmes </button>
+        <br /><button class="button" id="retour"> Retour aux thèmes </button>
         </div>
         <script type="text/javascript" src="/src/main/resources/js/Quizz.js" th:src="@{/js/Quizz.js}"></script>
+    </div>
     </div>
 
 </body>

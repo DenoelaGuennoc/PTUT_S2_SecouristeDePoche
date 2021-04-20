@@ -18,7 +18,7 @@ public class Theme {
 
     @Column(unique=true)
     @NonNull
-    private String titre; 
+    public String titre; 
     
     @OneToMany(mappedBy = "theme")
     private List<Chapitre> chapitres = new ArrayList<>();

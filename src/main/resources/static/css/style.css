@@ -14,18 +14,24 @@ html {
   #contenuChap {
       text-align: left
   }
+  
   table  {
         margin : auto  }
-  .TitresTableau {
-      text-align: center;
-      font-weight: 500;      
-  }
-  .titreThème {
-      text-align: center ; 
+  .themes {
+      list-style: none; 
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 2rem;
+      text-decoration:underline; 
+      
   }
   .titreChapitre {
       list-style: none;
-      text-align: center; 
+      cursor: pointer ; 
+      font-weight: 300;
+      line-height: 1;
+      font-size: 1.5rem;
+      
   }
   @-ms-viewport {
 	width: device-width;
@@ -393,8 +399,8 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
   .col-8 {width: 66.66%;}
   .col-9 {width: 75%;}
   .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 110%;}
+  .col-11 {width: 91,33%;}
+  .col-12 {width: 105%;}
 
 
 .row::after {
@@ -408,4 +414,14 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 	padding-left:0;
 	}
 
-  
+
+	/* bouton SOS */
+
+.btnSOS {
+		max-width: 80%;
+		height: auto;
+	}
+
+
+/*	test fond d'écran */
+
