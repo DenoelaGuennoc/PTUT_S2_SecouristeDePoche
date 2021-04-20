@@ -18,6 +18,6 @@ public class RestConfiguration implements RepositoryRestConfigurer {
 	@Override
 	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
 		// Lister les classes dont on veut exposer les clés dans l'API REST
-		config.exposeIdsFor(Chapitre.class, Fiche.class, Illustration.class, Media.class, NoeudDecisionnel.class, Question.class, Quizz.class, Reponse.class, Theme.class);
+		config.exposeIdsFor(Chapitre.class, Fiche.class, Illustration.class, Media.class, NoeudDecisionnel.class, Question.class, Quizz.class, Reponse.class, Theme.class, FicheIllustration.class, FicheIllustrationId.class);
 	}
 }

@@ -1428,21 +1428,6 @@ le retournement.
 (6) L’ouverture de la bouche de la victime facilite l’écoulement des liquides vers l’extérieur', 11); 
 
 
---Illustrations
---INSERT INTO Illustration(id, nomIllustration, descriptionIllustration, dessinIllustration) VALUES 
-
--- Chapitre_images
---INSERT INTO Chapitre_images(Chapitre_id, images_id) VALUES
-
---Fiche 
---INSERT INTO Fiche(idFiche, nomFiche, idNoeud, nomNoeud) VALUES 
-
---Fiche_dessins
---INSERT INTO Fiche_dessins(Fiche_id, dessins_id) VALUES
-
---Chapitre_conduiteATenir
---INSERT INTO Chapitre_conduiteATenir(Chapitre_id, conduiteATenir_id) VALUES 
-
 --Quizz      
 INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse_Vraie, sujets_id) VALUES
     (1,'Quand peut on dire qu une personne a perdu connaissance?','ne respire pas','ne répond pas mais réagit','ne répond pas, ne réagit pas mais respire','ne répond pas, ne réagit pas et ne respire plus','C: ne répond pas, ne réagit pas mais respire',5),
@@ -1552,7 +1537,7 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, nom_Fiche) VALUES
 
 --Questions
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question, aide_comprehension_id) VALUES
-    ('Question', 1, 'Respire', 'La victime respire-t-elle ?', 23),
+    ('Question', 1, 'Respire', 'La victime respire-t-elle ?', null), --mettre à 23
     ('Question', 3, 'OBVA', 'La victime a-t-elle avalé un objet de travers ?', null),
     ('Question', 4, 'Hemo', 'La victime saigne-t-elle abondamment ?', null),
     ('Question', 5, 'Trauma', 'La victime a-t-elle subit un traumatisme physique ?', null),
@@ -1570,7 +1555,7 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question, aide_compreh
     ('Question', 17, 'Type de victime ACR', 'La victime est-elle :', null),
     ('Question', 18, 'Type de victime OBVA totale', 'La victime est-elle :', null);
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, noeud_Racine, texte_Question, aide_comprehension_id) VALUES
-    ('Question', 2, 'Conscient', 1, 'La victime est-elle consciente ?', 24);
+    ('Question', 2, 'Conscient', 1, 'La victime est-elle consciente ?', null); --mettre à 24
 
 
 
@@ -1695,7 +1680,17 @@ INSERT INTO Illustration(id, description_illustration, nom_illustration, url_ill
     (85, '', '', 'static/Images/Illustrations/.png'), */
 
 --Liens Illustrations -> Fiches
-ALTER TABLE NOEUD_DECISIONNEL_DESSINS
+INSERT INTO FICHE_ILLUSTRATION(guide_id, dessin_id, position_dessin) VALUES
+    --PLS
+    (19, 40, 1), (19, 41, 2), (19, 42, 3), (19, 43, 4), (19, 44, 5), (19, 45, 6), (19, 46, 7), (19, 47, 8), (19, 48, 9), (19, 49, 10),
+    (19, 50, 11), (19, 51, 12), (19, 52, 13), (19, 53, 14), (19, 54, 15), (19, 55, 16), (19, 56, 17),
+    --Reconnaître l'inconscience
+    (24, 32, 1), (24, 33, 2),
+    --LVA
+    (23, 34, 1), (23, 35, 2), (23, 36, 3), (23, 37, 4), (23, 38, 5), (23, 39, 6);
+
+
+/* ALTER TABLE NOEUD_DECISIONNEL_DESSINS
 ADD position_dessin INT;
 
 INSERT INTO NOEUD_DECISIONNEL_DESSINS(guides_id, dessins_id, position_dessin) VALUES
@@ -1706,7 +1701,7 @@ INSERT INTO NOEUD_DECISIONNEL_DESSINS(guides_id, dessins_id, position_dessin) VA
     (24, 32, 1), (24, 33, 2),
     --LVA
     (23, 34, 1), (23, 35, 2), (23, 36, 3), (23, 37, 4), (23, 38, 5), (23, 39, 6);
-
+ */
     /* (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
     (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
     (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
@@ -1718,7 +1713,3 @@ INSERT INTO NOEUD_DECISIONNEL_DESSINS(guides_id, dessins_id, position_dessin) VA
     (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
     (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), */
 
-/*
---Media
-INSERT INTO Chapitre VALUES();
-*/

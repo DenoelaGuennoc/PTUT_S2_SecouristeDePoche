@@ -35,4 +35,8 @@ public class NoeudDecisionnel {
         this.noeudRacine = noeudRacine;
     }
 
+    public int getId(){
+        return this.id;
+    }
+
 }
