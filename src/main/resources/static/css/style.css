@@ -408,4 +408,14 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 	padding-left:0;
 	}
 
-  
+
+	/* bouton SOS */
+
+.btnSOS {
+		max-width: 80%;
+		height: auto;
+	}
+
+
+/*	test fond d'écran */
+
