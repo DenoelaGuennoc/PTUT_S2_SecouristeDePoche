@@ -10,97 +10,103 @@
 </head>
 
 <body>
-    <h1>M'Entraîner</h1>
-    <nav>
-        <ul>
-            <li> <a href = "/">Accueil</a> </li>
-            <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
-            <li> <a href="/SecouristeDePoche/themes">Me former</a></li>
-            <li><a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
-        </ul>
-    </nav>
-    
-    <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site" th:src="@{/Images/logo ptut.png}"></div>
 
-    <p>Salut ! <br> Je suis ....., votre secouriste de poche !</p>
-	
-	
-    <h2 id="bienv">Bienvenue sur votre espace d'entraînement !</h2> 
-    <div class="QCM">
-	<p> Ici, vous trouverez des QCM pour vérifier vos connaissances.Vous pouvez choisir des QCM sur des thèmes spécifiques
-<br>
-	ou bien répondre à des QCM aléatoires et être interrogé(e)s sur l'intégralité du programme traité sur le site. </p>
-	
-	<a href="" ><button class= "lancerQCM" id="0"> Lancer un QCM aléatoire  </button> </a>
-	
-	<p> Ou séléctionnez un QCM dans l'un des thèmes suivants : </p>
-	
-	<p> <Strong>Thème 1</Strong> : Protection </p> 
-	
-	<a href="" ><button class= "lancerQCM" id="1"> Lancer un QCM aléatoire sur ce thème </button> </a>
-	
-	<p> <Strong>Thème 2</Strong> : Alerte </p> 
-	
-	<a href="" ><button class= "lancerQCM" id="2"> Lancer un QCM aléatoire sur ce thème </button> </a>
-	
-	<p> <Strong>Thème 3</Strong> : L'Obstruction des voies aériennes </p> 
-	
-	<a id=b1 href="/SecouristeDePoche/quizz" ><button class= "lancerQCM" id="3"> Lancer un QCM aléatoire sur ce thème </button> </a>
-	
-	<p> <Strong>Thème 4</Strong> : L'Hémorragie </p> 
-	
-	<a href="afficheQuizz.html" th:href="@{/SecouristeDePoche/quizz}" ><button class= "lancerQCM" id="4"> Lancer un QCM aléatoire sur ce thème </button> </a>
-	
-	<p> <Strong>Thème 5</Strong> : La Perte de connaissance </p> 
-	
-	<a href="" ><button class= "lancerQCM" id="5"> Lancer un QCM aléatoire sur ce thème </button> </a>
-	
-	<p> <Strong>Thème 6</Strong> : L'Arrêt rardio-respiratoire </p> 
-	
-	<a href="" ><button class= "lancerQCM" id="6"> Lancer un QCM aléatoire sur ce thème </button> </a>
-	
-	<p> <Strong>Thème 7</Strong> : Le Malaise </p> 
-	
-	<a href="" ><button class= "lancerQCM" id="7"> Lancer un QCM aléatoire sur ce thème </button> </a>
-	
-	<p> <Strong>Thème 8</Strong> : Les Brûlures </p> 
-	
-	<a href="" ><button class= "lancerQCM" id="8"> Lancer un QCM aléatoire sur ce thème </button> </a>
-        
-        <p> <Strong>Thème 9</Strong> : Les Plaies </p> 
-	
-	<a href="" ><button class= "lancerQCM" id="9"> Lancer un QCM aléatoire sur ce thème </button> </a>
+    <div class="col-1">
+        <h1>M'Entraîner</h1>
+        <nav>
+            <ul>
+                <li> <a href = "/">Accueil</a> </li>
+                <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
+                <li> <a href="/SecouristeDePoche/themes">Me former</a></li>
+                <li><a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
+            </ul>
+        </nav>
+    </div>
 
-        <p> <Strong>Thème 10</Strong> : Les Traumatismes </p> 
-	
-	<a href="" ><button class= "lancerQCM" id="10"> Lancer un QCM aléatoire sur ce thème </button> </a>
+    <div class="col-12">
+        <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site" th:src="@{/Images/logo ptut.png}"></div>
+
+        <p>Salut ! <br> Je suis ....., votre secouriste de poche !</p>
         
+        
+        <h2 id="bienv">Bienvenue sur votre espace d'entraînement !</h2> 
+        <div class="QCM">
+        <p> Ici, vous trouverez des QCM pour vérifier vos connaissances.Vous pouvez choisir des QCM sur des thèmes spécifiques
+    <br>
+        ou bien répondre à des QCM aléatoires et être interrogé(e)s sur l'intégralité du programme traité sur le site. </p>
+        
+        <a href="" ><button class= "lancerQCM" id="0"> Lancer un QCM aléatoire  </button> </a>
+        
+        <p> Ou séléctionnez un QCM dans l'un des thèmes suivants : </p>
+        
+        <p> <Strong>Thème 1</Strong> : Protection </p> 
+        
+        <a href="" ><button class= "lancerQCM" id="1"> Lancer un QCM aléatoire sur ce thème </button> </a>
+        
+        <p> <Strong>Thème 2</Strong> : Alerte </p> 
+        
+        <a href="" ><button class= "lancerQCM" id="2"> Lancer un QCM aléatoire sur ce thème </button> </a>
+        
+        <p> <Strong>Thème 3</Strong> : L'Obstruction des voies aériennes </p> 
+        
+        <a id=b1 href="/SecouristeDePoche/quizz" ><button class= "lancerQCM" id="3"> Lancer un QCM aléatoire sur ce thème </button> </a>
+        
+        <p> <Strong>Thème 4</Strong> : L'Hémorragie </p> 
+        
+        <a href="afficheQuizz.html" th:href="@{/SecouristeDePoche/quizz}" ><button class= "lancerQCM" id="4"> Lancer un QCM aléatoire sur ce thème </button> </a>
+        
+        <p> <Strong>Thème 5</Strong> : La Perte de connaissance </p> 
+        
+        <a href="" ><button class= "lancerQCM" id="5"> Lancer un QCM aléatoire sur ce thème </button> </a>
+        
+        <p> <Strong>Thème 6</Strong> : L'Arrêt rardio-respiratoire </p> 
+        
+        <a href="" ><button class= "lancerQCM" id="6"> Lancer un QCM aléatoire sur ce thème </button> </a>
+        
+        <p> <Strong>Thème 7</Strong> : Le Malaise </p> 
+        
+        <a href="" ><button class= "lancerQCM" id="7"> Lancer un QCM aléatoire sur ce thème </button> </a>
+        
+        <p> <Strong>Thème 8</Strong> : Les Brûlures </p> 
+        
+        <a href="" ><button class= "lancerQCM" id="8"> Lancer un QCM aléatoire sur ce thème </button> </a>
+            
+            <p> <Strong>Thème 9</Strong> : Les Plaies </p> 
+        
+        <a href="" ><button class= "lancerQCM" id="9"> Lancer un QCM aléatoire sur ce thème </button> </a>
+
+            <p> <Strong>Thème 10</Strong> : Les Traumatismes </p> 
+        
+        <a href="" ><button class= "lancerQCM" id="10"> Lancer un QCM aléatoire sur ce thème </button> </a>
+            
+        </div>
+        <div class ="quizz">
+            <h3 id="themeChoisi"></h3>
+            <p id="question"></p>
+            
+            <br><p id="repA"></p>
+            <button class="buttonRep" id="buttonA">Réponse A</button>
+            
+            <p id="repB"></p>
+            <button class="buttonRep" id="buttonB">Réponse B</button>
+            
+            <p id="repC"></p>
+            <button class="buttonRep" id="buttonC">Réponse C</button>
+            
+            <p id="repD"></p>
+            <button class="buttonRep" id="buttonD">Réponse D</button>
+            
+            <p id="repVraie"><p>
+            <p id="repFausse"></p>
+            
+            <p id="fin"></p>
+            <button class="button" id="suivant">Suivant</button>
+            
+        <br><button class="button" id="retour"> Retour aux thèmes </button>
+        </div>
+        <script type="text/javascript" src="/src/main/resources/js/Quizz.js" th:src="@{/js/Quizz.js}"></script>
     </div>
-    <div class ="quizz">
-        <h3 id="themeChoisi"></h3>
-        <p id="question"></p>
-        
-        <br><p id="repA"></p>
-        <button class="buttonRep" id="buttonA">Réponse A</button>
-        
-        <p id="repB"></p>
-        <button class="buttonRep" id="buttonB">Réponse B</button>
-        
-        <p id="repC"></p>
-        <button class="buttonRep" id="buttonC">Réponse C</button>
-        
-        <p id="repD"></p>
-        <button class="buttonRep" id="buttonD">Réponse D</button>
-        
-        <p id="repVraie"><p>
-        <p id="repFausse"></p>
-        
-        <p id="fin"></p>
-        <button class="button" id="suivant">Suivant</button>
-        
-       <br><button class="button" id="retour"> Retour aux thèmes </button>
-    </div>
-    <script type="text/javascript" src="/src/main/resources/js/Quizz.js" th:src="@{/js/Quizz.js}"></script>
+
 </body>
 
 </html>
