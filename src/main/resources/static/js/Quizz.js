@@ -71,7 +71,7 @@ function afficherQuizz(event){
             document.getElementById("repC").innerHTML = reponsesC[0];
             document.getElementById("repD").innerHTML = reponsesD[0];
             document.getElementById("repVraie").innerHTML ="Bien joué, la réponse est bien => " +  reponsesVraies[0];
-            document.getElementById("repFausse").innerHTML = "FAUX";
+            document.getElementById("repFausse").innerHTML = "Faux, retente ta chance";
             //Cacher la réponse vraie
             document.getElementById("repVraie").style.display ='none';
             document.getElementById("repFausse").style.display = 'none';

@@ -1,4 +1,4 @@
-Lexique : 
+Lexique pour mettre du contenu dans Chapitres en dataSQL : 
 différents points : 
 	§
 		#
