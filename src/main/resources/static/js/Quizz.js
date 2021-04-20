@@ -76,7 +76,7 @@ function afficherQuizz(event){
             document.getElementById("repVraie").style.display ='none';
             document.getElementById("repFausse").style.display = 'none';
             //Questions suivantes
-            var k=1;
+            let k=0;
             document.getElementById("suivant").addEventListener("click", afficherQuestionsSuivantes);
             //Fonction pour afficher les autres questions du QCM
             //A améliorer
@@ -85,13 +85,13 @@ function afficherQuizz(event){
                     document.getElementById("repVraie").style.display = 'none';
                     document.getElementById("repFausse").style.display = 'none';
                     
-                    document.getElementById("question").innerHTML = intitules[k];
-                    document.getElementById("repA").innerHTML = reponsesA[k];
-                    document.getElementById("repB").innerHTML = reponsesB[k];
-                    document.getElementById("repC").innerHTML = reponsesC[k];
-                    document.getElementById("repD").innerHTML = reponsesD[k];
+                    document.getElementById("question").innerHTML = intitules[k+1];
+                    document.getElementById("repA").innerHTML = reponsesA[k+1];
+                    document.getElementById("repB").innerHTML = reponsesB[k+1];
+                    document.getElementById("repC").innerHTML = reponsesC[k+1];
+                    document.getElementById("repD").innerHTML = reponsesD[k+1];
                     document.getElementById("repVraie").innerHTML ="Bien joué, la réponse est bien => " + reponsesVraies[k]; 
-                    k++;              
+                    k++;       
                     document.getElementById("fin").innerHTML = " ";
                              }
                 else {                    
