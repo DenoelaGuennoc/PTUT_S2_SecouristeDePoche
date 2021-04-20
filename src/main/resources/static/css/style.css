@@ -403,6 +403,15 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 	display: block;
   }
 
-  
+  .no-padding > [class*='col-'] {
+	padding-right:0;
+	padding-left:0;
+	}
 
   
+/* mettre les images côte à côte : */
+
+.illustrationsFiches {
+	width: 850px;
+    height:620px
+}
