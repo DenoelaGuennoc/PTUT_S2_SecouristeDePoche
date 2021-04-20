@@ -26,15 +26,15 @@ function afficheChapitre(event){
               console.log(dataJSON.content);
               for (var i=0; i<dataJSON.content.length; i++){
                   if (titreChapitre === dataJSON.content[i].titre){
-                      document.getElementById("tableau").style.display = 'none' ; 
+                      document.getElementById("sommaire").style.display = 'none' ; 
                       document.getElementById("titre").innerHTML = titreChapitre ; 
                       document.getElementById("information").style.display ='none'; 
                       //bouton retour aux themes est visible
                       document.getElementById("goBack").style.display ='block';
                       //Un peu de mise en forme
                       contenu = dataJSON.content[i].contenu ; 
-                      var premierchgmt = contenu.replace (/-/gi , "<br> &nbsp &nbsp &nbsp -").replace(/#/gi , "<br>&nbsp &nbsp &nbsp &nbsp &nbsp-").replace(/°/gi, "<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-").replace(/$/gi, "<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-"); 
-                      var secondchgmt = premierchgmt.replace (/~/gi, "<br></br><h4>").replace(/%/gi, "</h4><br>"); 
+                      var premierchgmt = contenu.replace (/§/gi , "<br> &nbsp &nbsp &nbsp -").replace(/#/gi , "<br>&nbsp &nbsp &nbsp &nbsp &nbsp-").replace(/°/gi, "<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-").replace(/$/gi, "<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-"); 
+                      var secondchgmt = premierchgmt.replace (/~/gi, "<br></br><h4>").replace(/%/gi, "</h4><br>").replace(/µ/gi, "<br/>"); 
                       document.getElementById("contenuChap").innerHTML = secondchgmt ; 
                      
                      } }
@@ -47,8 +47,8 @@ function afficheChapitre(event){
 
 //Fonction pour revenir au menu principal 
 document.getElementById("goBack").addEventListener("click", goBack); 
-function goBack(event){
-    document.getElementById("tableau").style.display = 'block';
+function goBack(){
+    document.getElementById("sommaire").style.display = 'block';
     document.getElementById("information").style.display ='block'; 
     document.getElementById("titre").innerHTML ="Les thèmes"; 
     document.getElementById("contenuChap").innerHTML = " " ; 

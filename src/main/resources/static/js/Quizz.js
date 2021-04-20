@@ -79,8 +79,9 @@ function afficherQuizz(event){
             let k=0;
             document.getElementById("suivant").addEventListener("click", afficherQuestionsSuivantes);
             //Fonction pour afficher les autres questions du QCM
-            function afficherQuestionsSuivantes (event) {              
-                if (k < dataJSON.content.length -1) {
+            //A améliorer
+            function afficherQuestionsSuivantes () {              
+                if (k < dataJSON.content.length - 1) {
                     document.getElementById("repVraie").style.display = 'none';
                     document.getElementById("repFausse").style.display = 'none';
                     
@@ -89,7 +90,7 @@ function afficherQuizz(event){
                     document.getElementById("repB").innerHTML = reponsesB[k+1];
                     document.getElementById("repC").innerHTML = reponsesC[k+1];
                     document.getElementById("repD").innerHTML = reponsesD[k+1];
-                    document.getElementById("repVraie").innerHTML ="Bien joué, la réponse est bien => " + reponsesVraies[k]; 
+                    document.getElementById("repVraie").innerHTML ="Bien joué, la réponse est bien => " + reponsesVraies[k+1]; 
                     k++;       
                     document.getElementById("fin").innerHTML = " ";
                              }
@@ -101,7 +102,7 @@ function afficherQuizz(event){
             } document.getElementById("fin").innerHTML = " ";
             //Fonction pour retourner aux thèmes
             document.getElementById("retour").addEventListener("click",retourAuxThemes); 
-            function retourAuxThemes (event) {
+            function retourAuxThemes () {
                 cacheTexte("quizz"); 
                 afficheTexte("QCM");
                 k=0; //pour que les questions des autres thèmes recommencent à la première
@@ -111,7 +112,7 @@ function afficherQuizz(event){
                 for (var i=0; i<reponse.length; i++) {
                     reponse[i].addEventListener("click", afficherReponse);}
             function afficherReponse (event){
-                    var repV = document.getElementById("repVraie").innerText ;  
+                    var repV = document.getElementById("repVraie").innerText ;
                     var itemVrai = repV.substr(34,1);
                     var repChoisie = this.id.substring(this.id.length -1);
                     if (itemVrai === repChoisie) {

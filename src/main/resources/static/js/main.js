@@ -1,4 +1,8 @@
+/*
+sert à faire le menu burger, mais non fonctionnel
+ */ 
 var content = document.querySelector('#hamburger-content');
+/* contenue du menu en mode ordi */
 var sidebarBody = document.querySelector('#hamburger-sidebar-body');
 var button = document.querySelector('#hamburger-button');
 var overlay = document.querySelector('#hamburger-overlay');
@@ -14,7 +18,6 @@ button.addEventListener('click', function(e){
     this.parentNode.classList.add(activatedClass);
     
 });
-console.log("cc");
 button.addEventListener('keydown', function(e) {
     if (this.perentNode.classList.contains(activatedClass))
     {
