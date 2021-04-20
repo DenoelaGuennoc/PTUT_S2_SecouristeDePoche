@@ -18,7 +18,7 @@ public class Chapitre {
     @NonNull
     private String titre;
 
-   //Il faut trouver un moyen de mettre du contenu dans chaque chapitre également
+   //trouver un moyen de mettre du contenu dans chaque chapitre également
     @Column (length = 50000)
     //@NonNull // ! à repasser en NonNull quand ils seront créés
     private String contenu; 

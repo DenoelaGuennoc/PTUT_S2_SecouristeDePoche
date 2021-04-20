@@ -80,7 +80,7 @@ function afficherQuizz(event){
             document.getElementById("suivant").addEventListener("click", afficherQuestionsSuivantes);
             //Fonction pour afficher les autres questions du QCM
             //A améliorer
-            function afficherQuestionsSuivantes (event) {              
+            function afficherQuestionsSuivantes () {              
                 if (k < dataJSON.content.length - 1) {
                     document.getElementById("repVraie").style.display = 'none';
                     document.getElementById("repFausse").style.display = 'none';
@@ -102,7 +102,7 @@ function afficherQuizz(event){
             } document.getElementById("fin").innerHTML = " ";
             //Fonction pour retourner aux thèmes
             document.getElementById("retour").addEventListener("click",retourAuxThemes); 
-            function retourAuxThemes (event) {
+            function retourAuxThemes () {
                 cacheTexte("quizz"); 
                 afficheTexte("QCM");
                 k=0; //pour que les questions des autres thèmes recommencent à la première

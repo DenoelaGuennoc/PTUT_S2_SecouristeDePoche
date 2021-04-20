@@ -47,59 +47,10 @@ function afficheChapitre(event){
 
 //Fonction pour revenir au menu principal 
 document.getElementById("goBack").addEventListener("click", goBack); 
-function goBack(event){
+function goBack(){
     document.getElementById("tableau").style.display = 'block';
     document.getElementById("information").style.display ='block'; 
     document.getElementById("titre").innerHTML ="Les thèmes"; 
     document.getElementById("contenuChap").innerHTML = " " ; 
     document.getElementById("goBack").style.display ='none'; 
 }
-
-
-
-
-
-/*var chapitre = document.getElementsByClassName("titreTheme");
-    for (var i = 0; i < chapitre.length; i++) {
-    chapitre[i].addEventListener("click",afficheChapitre);
-    }
-    function afficheChapitre(event){
-         const headers = {
-          "Content-Type": "application/json"
-        };
-        const fetchOptions = { headers: headers, method:"GET" };
-        //empecher le rechargement de la page
-        event.preventDefault();
-        //ici, les id des thèmes correspondent à leurs id dans la table
-        var titreTheme = this.innerText;
-        let url = "../api/themes/" ; 
-        // la req AJAX
-        fetch(url, fetchOptions)
-          .then((response) => {
-            return response.json();
-          })
-          .then((dataJSON) => { 
-              for (var i=0; i<dataJSON.content.length;i++) {
-                  if (titreTheme === dataJSON.content[i].titre){
-                      var idTheme = dataJSON.content[i].id;
-                      //chercher les chapitres correspondants
-                      let url2 = "../api/themes/" + idTheme + "/chapitres";
-                       // la req AJAX
-                        fetch(url2, fetchOptions)
-                             .then((response) => {
-                                 return response.json();
-                        })
-                                .then((dataJSON) => { 
-                                    for (i=0; i< dataJSON.content.length; i++){
-                                        document.getElementsByClassName("titreChapitre").innerHTML = dataJSON.content[i].titre; 
-                                    
-                                    console.log(dataJSON.content[i].titre);}
-                                    })
-                                .catch((error) => console.log(error));
-                  }
-              }
-              
-          })
-          .catch((error) => console.log(error));
-}*/
-
