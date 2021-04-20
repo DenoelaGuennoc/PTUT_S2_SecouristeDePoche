@@ -1541,9 +1541,18 @@ INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse
     (94,'Quel outil ne sert pas à  alerter la population de la survenance d une crise?','Sirènes','Médias','Panneaux publicitaires','Réseaux sociaux','C: Panneaux publicitaires',2),
     (95,'Combien de temps dure le SNA?','Variation du signal sur 3 cycles successifs d une durée de 1minutes et 21 secondes','Variation du signal sur 2 cycles successifs d une durée de 1minutes et 30 secondes','Variation du signal sur 2 cycles successifs d une durée de 1minutes et 21 secondes','Variation du signal sur 3 cycles successifs d une durée de 1minutes et 41 secondes','D: Variation du signal sur 3 cycles successifs d une durée de 1minutes et 41 secondes',2);
 
+--Fiches
+INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, nom_Fiche) VALUES
+    ('Fiche', 19, 'PLS', 'Position Latérale de Sécurité'),
+    ('Fiche', 20, 'ACR', 'Arrêt Cardiorespiratoire'),
+    ('Fiche', 21, 'OBVA_Totale', 'Obstruction totale des voies aérienne'),
+    ('Fiche', 22, 'OBVA_Partielle', 'Obstruction partielle des voies aérienne'),
+    ('Fiche', 23, 'LVA', 'Libération des voies aériennes'),
+    ('Fiche', 24, 'Inconscience', 'Reconnaitre inconscience');
+
 --Questions
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question, aide_comprehension_id) VALUES
-    ('Question', 1, 'Respire', 'La victime respire-t-elle ?', null), --voir pour ajouter aide_comprehension (fiche 23)
+    ('Question', 1, 'Respire', 'La victime respire-t-elle ?', 23),
     ('Question', 3, 'OBVA', 'La victime a-t-elle avalé un objet de travers ?', null),
     ('Question', 4, 'Hemo', 'La victime saigne-t-elle abondamment ?', null),
     ('Question', 5, 'Trauma', 'La victime a-t-elle subit un traumatisme physique ?', null),
@@ -1561,16 +1570,9 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question, aide_compreh
     ('Question', 17, 'Type de victime ACR', 'La victime est-elle :', null),
     ('Question', 18, 'Type de victime OBVA totale', 'La victime est-elle :', null);
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, noeud_Racine, texte_Question, aide_comprehension_id) VALUES
-    ('Question', 2, 'Conscient', TRUE, 'La victime est-elle consciente ?', null); --voir pour ajouter aide_comprehension (fiche 24)
+    ('Question', 2, 'Conscient', 1, 'La victime est-elle consciente ?', 24);
 
---Fiches
-INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, nom_Fiche) VALUES
-    ('Fiche', 19, 'PLS', 'Position Latérale de Sécurité'),
-    ('Fiche', 20, 'ACR', 'Arrêt Cardiorespiratoire'),
-    ('Fiche', 21, 'OBVA_Totale', 'Obstruction totale des voies aérienne'),
-    ('Fiche', 22, 'OBVA_Partielle', 'Obstruction partielle des voies aérienne'),
-    ('Fiche', 23, 'LVA', 'Libération des voies aériennes'),
-    ('Fiche', 24, 'Inconscience', 'Reconnaitre inconscience');
+
 
 --Réponses
 INSERT INTO Reponse(id, libelle_reponse, question_posee_id, noeud_fils_id) VALUES
