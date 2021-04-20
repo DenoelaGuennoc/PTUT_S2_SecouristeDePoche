@@ -30,9 +30,18 @@ function afficherQuizz(event){
         const fetchOptions = { headers: headers, method:"GET" };
         //empecher le rechargement de la page
         event.preventDefault();
-        //ici, les id des thèmes correspondent à leurs id dans la table
-        var id = this.id; 
-        let url = "../api/themes/" +id+ "/interrogations"; 
+        //QCM aléatoire
+        if (this.id === "0"){
+            console.log(this.id); 
+            var  nombreId= document.getElementsByClassName("lancerQCM").length -1 ;  
+            var id = 1+Math.floor(Math.random()*nombreId); 
+            var url = "../api/themes/" +id+ "/interrogations"; 
+        }
+        else {
+             //ici, les id des thèmes correspondent à leurs id dans la table
+            id = this.id; 
+            url = "../api/themes/" +id+ "/interrogations";  
+        }
         // la req AJAX
         fetch(url, fetchOptions)
           .then((response) => {
@@ -132,9 +141,4 @@ function afficherQuizz(event){
             })
           .catch((error) => console.log(error));
       }
-      
-//afficher QCM aléatoire 
-/*document.getElementById("0").addEventListener("click", afficherQuizzAléatoire);
-function afficherQuizzAléatoire (event) {
     
-}*/

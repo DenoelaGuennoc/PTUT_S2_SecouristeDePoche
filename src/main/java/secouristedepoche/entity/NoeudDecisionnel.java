@@ -15,11 +15,12 @@ public class NoeudDecisionnel {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
 
+
     @Column(unique=true)
     @NonNull
     private String nomNoeud;
 
-    @Column(columnDefinition="tinyint(1) default 0")
+    @Column(columnDefinition="Integer default 0")
     @NonNull
     private Boolean noeudRacine;
     
