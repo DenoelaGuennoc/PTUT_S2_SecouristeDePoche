@@ -61,7 +61,7 @@ function showErrorResponse(xhr, status, message) {
 }
 
 //Fonction pour faire l'appel AJAX
-function doRequestResponse() {
+function  doRequestResponse() {
     $.ajax({
         //appel de l'API auto-générée
         url: "../api/questions/" + noeudId + "/reponsePossible",

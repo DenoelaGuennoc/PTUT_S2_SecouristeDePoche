@@ -41,16 +41,16 @@
         <p id ="contenuChap"> </p>
             <table id="tableau">
                 <tr class="TitresTableau">
-                    <td>Thèmes</td>
-                    <td id="c">Chapitres</td> </tr>
+                    <td>Thèmes</td></tr>
                 <tr class = "titreThème" th:each="theme : ${themes}" >
-                    <td  th:text="${theme.titre}" >Titre du thème
-                        <td>
+                    <ul>
+                    <li  th:text="${theme.titre}" >Titre du thème</li> 
+                        
                             <ul>
                                 <li class ="titreChapitre" th:each="chapitre : ${theme.chapitres}" th:text="${chapitre.titre}" >Titre du chapitre</li>            
                             </ul> 
-                        </td> 
-                    </td> 
+                    </ul>    
+                        
                 <tr>
             </table>
         <br><button class="button" id="goBack"> Retour aux thèmes </button>
