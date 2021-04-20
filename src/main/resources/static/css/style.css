@@ -397,13 +397,13 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
   .col-12 {width: 100%;}
 
 
-  .row::after {
+.row::after {
 	content: "";
 	clear: both;
 	display: block;
-  }
+}
 
-  .no-padding > [class*='col-'] {
+.no-padding > [class*='col-'] {
 	padding-right:0;
 	padding-left:0;
 	}
