@@ -29,10 +29,17 @@ public class Fiche extends NoeudDecisionnel {
     @ManyToMany (mappedBy = "conduiteATenir")
     private List<Chapitre> situations = new LinkedList<>();
 
-    @ManyToMany
-    List<Illustration> dessins = new LinkedList<>();
+    /* @ManyToMany
+    List<Illustration> dessins = new LinkedList<>(); */
+
+    @OneToMany(mappedBy = "guide")
+    private List<FicheIllustration> relationGuideDessin = new LinkedList<>();
+
 
     @OneToMany(mappedBy = "aideComprehension")
     private List<Question> information = new LinkedList<>();
 
+    public int getId(){
+        return super.getId();
+    }
 }

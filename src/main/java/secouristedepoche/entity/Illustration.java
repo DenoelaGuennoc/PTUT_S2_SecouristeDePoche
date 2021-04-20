@@ -28,6 +28,13 @@ public class Illustration {
     @ManyToMany (mappedBy = "images")
     private List<Chapitre> cours = new LinkedList<>();
 
-    @ManyToMany (mappedBy = "dessins")
-    private List<Fiche> guides = new LinkedList<>();
+    @OneToMany(mappedBy = "dessin")
+    private List<FicheIllustration> relationDessinGuide = new LinkedList<>();
+
+    /* @ManyToMany (mappedBy = "dessins")
+    private List<Fiche> guides = new LinkedList<>(); */
+
+    public int getId(){
+        return this.id;
+    }
 }
