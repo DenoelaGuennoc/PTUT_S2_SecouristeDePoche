@@ -397,6 +397,12 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
   .col-12 {width: 100%;}
 
 
+  .row::after {
+	content: "";
+	clear: both;
+	display: block;
+  }
 
+  
 
   
