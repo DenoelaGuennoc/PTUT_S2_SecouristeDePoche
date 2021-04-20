@@ -90,7 +90,7 @@ function afficherQuizz(event){
                     document.getElementById("repB").innerHTML = reponsesB[k+1];
                     document.getElementById("repC").innerHTML = reponsesC[k+1];
                     document.getElementById("repD").innerHTML = reponsesD[k+1];
-                    document.getElementById("repVraie").innerHTML ="Bien joué, la réponse est bien => " + reponsesVraies[k]; 
+                    document.getElementById("repVraie").innerHTML ="Bien joué, la réponse est bien => " + reponsesVraies[k+1]; 
                     k++;       
                     document.getElementById("fin").innerHTML = " ";
                              }
@@ -112,7 +112,7 @@ function afficherQuizz(event){
                 for (var i=0; i<reponse.length; i++) {
                     reponse[i].addEventListener("click", afficherReponse);}
             function afficherReponse (event){
-                    var repV = document.getElementById("repVraie").innerText ;  
+                    var repV = document.getElementById("repVraie").innerText ;
                     var itemVrai = repV.substr(34,1);
                     var repChoisie = this.id.substring(this.id.length -1);
                     if (itemVrai === repChoisie) {
