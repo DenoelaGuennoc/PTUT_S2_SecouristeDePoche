@@ -283,10 +283,6 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 @media screen and (max-width: 1024px) {
 
 	.button1{
-		display: none;
-	}
-
-	.buttonTel{
 		background-color: #cf0505; 
 		border-radius: 12px;
 		display: inline-block;
@@ -301,16 +297,14 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 		width : 33%;
 	}
 
-	h3{
+		
+	
+	h2 {
 		margin-top: 0;
 		margin-bottom: 0.5rem;
 		font-weight: 500;
 		line-height: 1.2;
 		font-size: 30px;
-	  }
-	
-	h2 {
-	display: none;
 	}	
 
 	h1 {
@@ -351,3 +345,10 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 	line-height: 1.2;
 	font-size: 2.5rem;
 }
+
+
+/* grille responsive : */
+
+* {
+	box-sizing: border-box;
+  }
