@@ -14,18 +14,24 @@ html {
   #contenuChap {
       text-align: left
   }
+  
   table  {
         margin : auto  }
-  .TitresTableau {
-      text-align: center;
-      font-weight: 500;      
-  }
-  .titreThème {
-      text-align: center ; 
+  .themes {
+      list-style: none; 
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 2rem;
+      text-decoration:underline; 
+      
   }
   .titreChapitre {
       list-style: none;
-      text-align: center; 
+      cursor: pointer ; 
+      font-weight: 300;
+      line-height: 1;
+      font-size: 1.5rem;
+      
   }
   @-ms-viewport {
 	width: device-width;

@@ -27,33 +27,34 @@
     <div class="col-12">
         <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site" th:src="@{/Images/logo ptut.png}" /></div>
         <h2 id="bienv">Bienvenue sur votre espace de formation !</h2>
-        <br>
+        <br />
         <p> Vous faites le bon choix en venant ici, félicitation ! Dans la vie, il y a certaines choses que tout le monde
             devrait connaître, et les gestes de premiers secours en font partie. </p>
         <p id = "information" > Ici vous trouverez des fichiers, des vidéos et des explications pour vous permettre d'agir en situation
-            d'urgence avant que les secours n'arrivent. <br> Toutes ces informations sont triées par thèmes et
+            d'urgence avant que les secours n'arrivent. <br /> Toutes ces informations sont triées par thèmes et
             chapitres pour vous y retrouver plus facilement. </p>
         <p> Nous cherchons toujours à nous améliorer, alors surtout n'hésitez pas à nous laisser des commentaires, des
-            remarques<br>ou des questions que vous pourriez vous poser. </p>
+            remarques<br />ou des questions que vous pourriez vous poser. </p>
 
 
-        <h3 id="titre">Les thèmes</h3>
+        <h3 id="titre"></h3>
         <p id ="contenuChap"> </p>
+        <div id= "sommaire">
             <table id="tableau">
                 <tr class="TitresTableau">
-                    <td>Thèmes</td></tr>
-                <tr class = "titreThème" th:each="theme : ${themes}" >
+                    </tr>
+                <tr th:each="theme : ${themes}" >
                     <ul>
-                    <li  th:text="${theme.titre}" >Titre du thème</li> 
+                        <br />
+                    <li  class ="themes" th:text="${theme.titre}"  >Titre du thème</li> 
                         
-                            <ul>
                                 <li class ="titreChapitre" th:each="chapitre : ${theme.chapitres}" th:text="${chapitre.titre}" >Titre du chapitre</li>            
-                            </ul> 
                     </ul>    
                         
-                <tr>
+                </tr>
             </table>
-        <br><button class="button" id="goBack"> Retour aux thèmes </button>
+        </div>
+        <br /><button class="button" id="goBack"> Retour aux thèmes </button>
     <script type="text/javascript" src="/src/main/resources/js/Theme.js" th:src="@{/js/Theme.js}"></script>
 </div>
 

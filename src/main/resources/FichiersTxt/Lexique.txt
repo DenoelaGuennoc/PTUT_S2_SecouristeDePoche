@@ -1,6 +1,6 @@
 Lexique : 
 différents points : 
-	-
+	§
 		#
 			°
 				$
@@ -11,3 +11,4 @@ Si exposant :
 	etc
 
 Grandes parties : sont encadrées par ~...%
+Retour à la ligne sans sauter de ligne : µ
