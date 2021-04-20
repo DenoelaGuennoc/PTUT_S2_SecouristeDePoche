@@ -32,12 +32,12 @@ public class FicheIllustration {
 
     @Column
     @NonNull
-    private int position_dessin;
+    private int positionDessin;
 
-    public FicheIllustration(Fiche guide, Illustration dessin, int position_dessin){
+    public FicheIllustration(Fiche guide, Illustration dessin, int positionDessin){
         this.id = new FicheIllustrationId(guide.getId(), dessin.getId());
         this.guide = guide;
         this.dessin = dessin;
-        this.position_dessin = position_dessin;
+        this.positionDessin = positionDessin;
     }
 }

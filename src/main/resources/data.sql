@@ -1061,10 +1061,6 @@ La mise en position latérale de sécurité doit :
 (5) La position de la jambe permet de stabiliser la PLS.
 (6) L’ouverture de la bouche de la victime facilite l’écoulement des liquides vers l’extérieur', 11); 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9692a0aaba1844f5297de8a433ec260499d81871
 --Quizz      
 INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse_Vraie, sujets_id) VALUES
     (1,'Quand peut on dire qu une personne a perdu connaissance?','ne respire pas','ne répond pas mais réagit','ne répond pas, ne réagit pas mais respire','ne répond pas, ne réagit pas et ne respire plus','C: ne répond pas, ne réagit pas mais respire',5),
@@ -1174,7 +1170,7 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, nom_Fiche) VALUES
 
 --Questions
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question, aide_comprehension_id) VALUES
-    ('Question', 1, 'Respire', 'La victime respire-t-elle ?', null), --mettre à 23
+    ('Question', 1, 'Respire', 'La victime respire-t-elle ?', 23), --mettre à 23
     ('Question', 3, 'OBVA', 'La victime a-t-elle avalé un objet de travers ?', null),
     ('Question', 4, 'Hemo', 'La victime saigne-t-elle abondamment ?', null),
     ('Question', 5, 'Trauma', 'La victime a-t-elle subit un traumatisme physique ?', null),
@@ -1192,7 +1188,7 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question, aide_compreh
     ('Question', 17, 'Type de victime ACR', 'La victime est-elle :', null),
     ('Question', 18, 'Type de victime OBVA totale', 'La victime est-elle :', null);
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, noeud_Racine, texte_Question, aide_comprehension_id) VALUES
-    ('Question', 2, 'Conscient', 1, 'La victime est-elle consciente ?', null); --mettre à 24
+    ('Question', 2, 'Conscient', 1, 'La victime est-elle consciente ?', 24); --mettre à 24
 
 
 

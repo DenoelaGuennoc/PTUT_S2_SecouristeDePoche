@@ -1,5 +1,9 @@
 let noeudId = 0; //noeudRacine dans notre base
 let reponseId = 0;
+let illustrationsPositionFiche = new Map();
+let illustrationsFiche = new Array();
+let illustrationsPositionAC = new Map();
+let illustrationsAC = new Array();
 
 // A l'ouverture de la page
 $(document).ready(
@@ -37,7 +41,8 @@ function findNoeudRacine(){
 
 /* Affichage des réponses aux questions */
 
-// Fonction qui traite les résultats de la requête
+// Fonction qui traite les résultats de la requête doRequestReponse()
+// Elle affiche les réponses des noeuds question
 function showResultResponse(resultJson) {
     // Le code source du template est dans la page
     var template = $('#reponsesTemplate').html();
@@ -55,12 +60,12 @@ function showResultResponse(resultJson) {
     }
 }
 
-// Fonction qui traite les erreurs de la requête
+// Fonction qui traite les erreurs de la requête doRequestReponse()
 function showErrorResponse(xhr, status, message) {
     $("#contenuNoeud").html("Erreur: " + status + " : " + message);
 }
 
-//Fonction pour faire l'appel AJAX
+//Fonction pour faire l'appel AJAX et récupérer les réponses possibles au noeud actuel
 function  doRequestResponse() {
     $.ajax({
         //appel de l'API auto-générée
@@ -74,7 +79,8 @@ function  doRequestResponse() {
 
 /* Affichage de la question ou de la fiche */
 
-// Fonction qui traite les résultats de la requête
+// Fonction qui traite les résultats de la requête doRequestNoeud()
+// Elle affiche les question ou titre des fiches et appelle les fonction nécessaires aux requêtes des autres attributs du noeud
 function showResultNoeud(resultJson) {
     // si c'est une question
     if(resultJson.nomFiche == null){
@@ -84,7 +90,7 @@ function showResultNoeud(resultJson) {
         var processedTemplate = Mustache.to_html(template, resultJson);
         // On affiche le résultat dans la page
         $('#titreNoeud').html(processedTemplate);
-
+        // récupérer les réponses associées à la question
         doRequestResponse();
         // vérifier si la question a une aide-compréhension
         findAideComprehension();
@@ -97,12 +103,12 @@ function showResultNoeud(resultJson) {
         var processedTemplate = Mustache.to_html(template, resultJson);
         // On affiche le résultat dans la page
         $('#titreNoeud').html(processedTemplate);
-        
+        // récupérer les illustrations de la fiche
         doRequestIllustrations();
     }
 }
 
-// Fonction qui traite les erreurs de la requête
+// Fonction qui traite les erreurs de la requête doRequestNoeud()
 function showErrorNoeud(xhr, status, message) {
     $("#titreNoeud").html("Erreur: " + status + " : " + message);
 }
@@ -110,7 +116,7 @@ function showErrorNoeud(xhr, status, message) {
 
 /* Changement de noeud décisionnel */
 
-//Fonction pour faire l'appel AJAX
+//Fonction pour faire l'appel AJAX et récupérer les information du noeud sur lequel on se trouve
 function doRequestNoeud() {
     $.ajax({
         //appel de l'API auto-générée
@@ -141,6 +147,7 @@ function doRequestNoeudFils(){
         .catch((error) => console.log(error));
 }
 
+
 //Fonction pour changer de noeud sur la page en fonction de la réponse de l'utilisateur
 async function changeIdNoeud() {
     let idBouton = event.target.id;
@@ -157,62 +164,180 @@ async function changeIdNoeud() {
 
 /* Affichage des illustrations */
 
-// Fonction qui traite les résultats de la requête
-function showResultIllustrations(resultJson) {
+//modifié
+// Fonction qui trie les illustrations des fiches par position puis les affiche dans l'ordre
+function showResultIllustrations() {
+    // Récupération des illustrations de la fiche
+    var illustrations = illustrationsFiche;
+    // Tri des illustrations selon leur valeur de positionDessin
+    illustrations.sort(function compare(a, b) {
+        if (a.relationDessinGuide[0].positionDessin < b.relationDessinGuide[0].positionDessin)
+           return -1;
+        if (a.relationDessinGuide[0].positionDessin > b.relationDessinGuide[0].positionDessin)
+           return 1;
+        return 0;
+    });
     // Le code source du template est dans la page
     var template = $('#ficheIllustrationsTemplate').html();
     // On combine le template avec le résultat de la requête
-    var processedTemplate = Mustache.to_html(template, resultJson);
+    var processedTemplate = Mustache.to_html(template, illustrations);
     // On affiche le résultat dans la page
     $('#contenuNoeud').html(processedTemplate);
 }
 
-// Fonction qui traite les erreurs de la requête
-function showErrorIllustrations(xhr, status, message) {
-    $("#contenuNoeud").html("Erreur: " + status + " : " + message);
+//nouveau
+// Fonction pour récupérer les id et positions des illustrations de la fiche
+function getIdPositionIllustrations(resultJson){
+    //vider la map des potentielles illustrations qui y serait restées de la dernière requête
+    illustrationsPositionFiche.clear();
+    let nbIllustrations = resultJson.relationGuideDessin.length;
+    for(let i = 0; i<nbIllustrations; i++){
+        let positionIllustration = resultJson.relationGuideDessin[i].positionDessin;
+        let idIllustration = resultJson.relationGuideDessin[i].id.dessin;
+        illustrationsPositionFiche.set(positionIllustration, idIllustration);
+    }
+    afficheIllustrations();
 }
 
-//Fonction pour faire l'appel AJAX
+//nouveau
+// Fonction qui traite les erreurs de la requête doRequestIllustrations()
+function showErrorgetIdPositionIllustrations(xhr, status, message) {
+    console.log("erreur de récupération des id et position d'illustration dans la fiche");
+}
+
+//modifié
+//Fonction pour faire l'appel AJAX des informations sur une fiche
 function doRequestIllustrations() {
     $.ajax({
         //appel de l'API auto-générée
-        url: "../api/fiches/" + noeudId + "/dessins",
+        url: "../api/fiches/" + noeudId,
         dataType: "json",
-        success: showResultIllustrations,
-        error: showErrorIllustrations
+        success: getIdPositionIllustrations,
+        error: showErrorgetIdPositionIllustrations
     });
+}
+
+//nouveau
+// Fonction pour la requête des illustrations d'une fiche
+function afficheIllustrations(){
+    //vider l'array pour supprimer les illustrations de la dernière requête
+    illustrationsFiche.length = 0;
+    for(let i = 1; i<illustrationsPositionFiche.size +1; i++){
+        // récupération des id des illustrations de la fiche
+        let idIllustration = illustrationsPositionFiche.get(i);
+        // fetch des illustrations
+        const url = "../api/illustrations/" + idIllustration;
+        let myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        const fetchOptions = {
+            method: "GET"
+        }
+        fetch(url, fetchOptions)
+            .then((response) => {
+                return response.json();
+            })
+            .then((dataJSON) => {
+                //on met toutes les illustrations de la fiche dans une Array pour faire l'affichage en une fois et n'avoir qu'une template
+                illustrationsFiche.push(dataJSON);
+            })
+            .catch((error) => console.log(error));
+    }
+    //après un temps donné (quand les n fetch ont été réalisés) déclencher showResultIllustrations()        
+    setTimeout(
+        ()=>{
+            showResultIllustrations();
+        }, 500
+    );
 }
 
 
 /* Affichage des aides à la compréhension */
 
-// Fonction qui traite les résultats de la requête
-function showResultACIllustrations(resultJson) {
+// Fonction qui trie les illustrations dans l'array en fonction de leur valeur de position puis les affiche
+function showResultACIllustrations() {
+    // Récupération des illustrations de la fiche d'aide
+    let illustrations = illustrationsAC;
+    // Tri des illustrations selon leur valeur de positionDessin
+    illustrations.sort(function compare(a, b) {
+        if (a.relationDessinGuide[0].positionDessin < b.relationDessinGuide[0].positionDessin)
+           return -1;
+        if (a.relationDessinGuide[0].positionDessin > b.relationDessinGuide[0].positionDessin)
+           return 1;
+        return 0;
+    });
     // Le code source du template est dans la page
     var template = $('#ficheIllustrationsTemplate').html();
     // On combine le template avec le résultat de la requête
-    var processedTemplate = Mustache.to_html(template, resultJson);
+    var processedTemplate = Mustache.to_html(template, illustrations);
     // On affiche le résultat dans la page
     $('#aide_comprehension_illustrations').html(processedTemplate);
 }
 
-// Fonction qui traite les erreurs de la requête
-function showErrorACIllustrations(xhr, status, message) {
-    $("#aide_comprehension_illustrations").html("Erreur: " + status + " : " + message);
+//nouveau
+// Fonction pour récupérer les id et positions des illustrations de la fiche d'aide
+function getIdPositionACIllustrations(resultJson){
+    //vider la map des potentielles illustrations qui y serait restées de la dernière requête
+    illustrationsPositionAC.clear();
+    let nbIllustrations = resultJson.relationGuideDessin.length;
+    for(let i = 0; i<nbIllustrations; i++){
+        let positionIllustration = resultJson.relationGuideDessin[i].positionDessin;
+        let idIllustration = resultJson.relationGuideDessin[i].id.dessin;
+        illustrationsPositionAC.set(positionIllustration, idIllustration);
+    }
+    afficheACIllustrations();
 }
 
-// Fonction pour faire l'appel AJAX
+//nouveau
+// Fonction qui traite les erreurs de la requête doRequestACIllustrations()
+function showErrorgetIdPositionACIllustrations(xhr, status, message) {
+    console.log("erreur de récupération des id et position d'illustration dans la fiche");
+}
+
+//nouveau
+// Fonction pour la requête des illustrations de la fiche d'aide
+function afficheACIllustrations(){
+    //vider l'array des illustrations présentent à cause des fiches traitée plus tôt
+    illustrationsAC.length = 0;
+    for(let i = 1; i<illustrationsPositionAC.size +1; i++){
+        let idIllustration = illustrationsPositionAC.get(i);
+        //fetch des infos de chaque illustration
+        const url = "../api/illustrations/" + idIllustration;
+        let myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        const fetchOptions = {
+            method: "GET"
+        }
+        fetch(url, fetchOptions)
+            .then((response) => {
+                return response.json();
+            })
+            .then((dataJSON) => {
+                //on place toutes les illustrations dans une array pour les gérer en même temps à l'affichage et au trie
+                illustrationsAC.push(dataJSON);
+            })
+            .catch((error) => console.log(error));
+    }
+    //attendre avant de lancer showResultACIllustrations    
+    setTimeout(
+        ()=>{
+            showResultACIllustrations(illustrationsAC);
+        }, 300
+    );
+}
+
+//modifié
+// Fonction pour faire l'appel AJAX des informations de la fiche
 function doRequestACIllustrations(aideId) {
     $.ajax({
         //appel de l'API auto-générée
-        url: "../api/fiches/" + aideId + "/dessins",
+        url: "../api/fiches/" + aideId,
         dataType: "json",
-        success: showResultACIllustrations,
-        error: showErrorACIllustrations
+        success: getIdPositionACIllustrations,
+        error: showErrorgetIdPositionACIllustrations
     });
 }
 
-// Fonction qui traite les résultats de la requête
+// Fonction qui traite les résultats de la requête doRequestAideCompréhension() et affiche le titre de la fiche
 function showResultAideComprehension(resultJson) {
     // Le code source du template est dans la page
     var template = $('#ficheTitreTemplate').html();
@@ -223,12 +348,12 @@ function showResultAideComprehension(resultJson) {
     doRequestACIllustrations(resultJson.id);
 }
 
-// Fonction qui traite les erreurs de la requête
+// Fonction qui traite les erreurs de la requête doRequestAideComprehension()
 function showErrorAideComprehension(xhr, status, message) {
     $("#aide_comprehension_titre").html("Erreur: " + status + " : " + message);
 }
 
-//Fonction pour faire l'appel AJAX
+//Fonction pour faire l'appel AJAX des informations de la fiche
 function doRequestAideComprehension(resultJson) {
     aideId = resultJson.id;
     $.ajax({
@@ -240,6 +365,7 @@ function doRequestAideComprehension(resultJson) {
     });
 }
 
+// Fonction permettant par la gestion des erreurs de savoir si la fiche possède une aide compréhension
 function gestionAbsenceAideComprehension(xhr, status, message){
     if(xhr.status==404) { //404 => la page n'existe pas => pas d'aide compréhension sur ce noeud
         // s'il n'y a pas d'aide compréhension associée à cette question

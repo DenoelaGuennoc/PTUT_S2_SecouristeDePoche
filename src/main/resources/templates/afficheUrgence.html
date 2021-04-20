@@ -66,10 +66,12 @@
 
         <!-- Template pour l'affichage des illustrations d'une fiche -->
         <script id="ficheIllustrationsTemplate" type="text/template">
-            {{#content}}
-                <p class="numeroEtape">Etape {{position_dessin}} :</p>
+            {{#.}}
+                {{#relationDessinGuide}}
+                    <p class="numeroEtape">Etape {{positionDessin}} :</p>
+                {{/relationDessinGuide}}
                 <img class="illustrationsFiches" src='{{urlIllustration}}' th:src='@{/Images/Illustrations/{{nomIllustration}}.png}' alt='{{descriptionIllustration}}' id='Illustration_{{id}}'>
-            {{/content}}
+            {{/.}}
         </script>
     </div>
     </div>
