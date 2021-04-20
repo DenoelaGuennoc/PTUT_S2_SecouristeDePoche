@@ -15,57 +15,59 @@
 
 </head>
 
-     <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site" th:src="@{/Images/logo ptut.png}"></div>
-
-    <h1>Urgence</h1>
-    <nav>
-        <ul>
-            <li> <a href="/">Accueil</a></li>
-            <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
-            <li> <a href="/SecouristeDePoche/themes">Me former</a></li>
-            <li><a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
-        </ul>
-    </nav>
+    
+    <div class="logo"><img src="../static/Images/logo ptut.png" alt="Logo du site" th:src="@{/Images/logo ptut.png}"></div>
+    <div class="col-1">
+        <h1>Urgence</h1>
+        <nav>
+            <ul>
+                <li> <a href="/">Accueil</a></li>
+                <li> <a href="/SecouristeDePoche/urgence">Urgence</a></li>
+                <li> <a href="/SecouristeDePoche/themes">Me former</a></li>
+                <li><a href="/SecouristeDePoche/entrainement">M'entraîner</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <br>
     <br>
     <br>
     
-   
-    <!-- <h2 id="repqu">Répondez aux questions suivantes pour trouver que faire dans votre situation</h2>  -->
-    <div id="titreNoeud">
-        <!-- <h3 class="titresNoeud" id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3>  -->
+    <div class="col-12">
+        <!-- <h2 id="repqu">Répondez aux questions suivantes pour trouver que faire dans votre situation</h2>  -->
+        <div id="titreNoeud">
+            <h3 class="titresNoeud" id="qu"> <em th:each="n:${noeuds}" th:if="${n.noeudRacine == TRUE}" th:text="${n.texteQuestion}"></em></h3> 
+        </div>
+            <input id="noeudId" name="idNoeud" type="hidden" value=n.id/>
+	    <br>
+	    <div id="contenuNoeud"></div>
+        <div id="aide_comprehension_titre"></div>
+        <div id="aide_comprehension_illustrations"></div>
+
+        <!-- Template pour l'affichage de la question -->
+        <script id="questionTemplate" type="text/template">
+            <h3 class="titresNoeud">{{texteQuestion}}</h3>
+        </script>
+
+	    <!-- Template qui permet d'afficher les boutons de réponse aux questions avec Mustache -->
+        <script id="reponsesTemplate" type="text/template">
+            {{#content}}
+                <button class="boutonReponse" id='boutonReponse_{{id}}' >{{libelleReponse}}</button>
+            {{/content}}
+        </script>
+
+        <!-- Template pour l'affichage du nom d'une fiche -->
+        <script id="ficheTitreTemplate" type="text/template">
+            <h3 class="titresNoeud">{{nomFiche}}</h3>
+        </script>
+
+        <!-- Template pour l'affichage des illustrations d'une fiche -->
+        <script id="ficheIllustrationsTemplate" type="text/template">
+            {{#content}}
+                <img class="illustrationsFiches" src='{{urlIllustration}}' th:src='@{/Images/Illustrations/{{nomIllustration}}.png}' alt='{{descriptionIllustration}}' id='Illustration_{{id}}'>
+            {{/content}}
+        </script>
     </div>
-    <input id="noeudId" name="idNoeud" type="hidden" value=n.id/>
-	<br>
-	<div id="contenuNoeud"></div>
-    <div id="aide_comprehension_titre"></div>
-    <div id="aide_comprehension_illustrations"></div>
-
-    <!-- Template pour l'affichage de la question -->
-    <script id="questionTemplate" type="text/template">
-        <h3 class="titresNoeud">{{texteQuestion}}</h3>
-    </script>
-
-	<!-- Template qui permet d'afficher les boutons de réponse aux questions avec Mustache -->
-    <script id="reponsesTemplate" type="text/template">
-        {{#content}}
-            <button class="boutonReponse" id='boutonReponse_{{id}}' >{{libelleReponse}}</button>
-        {{/content}}
-    </script>
-
-    <!-- Template pour l'affichage du nom d'une fiche -->
-    <script id="ficheTitreTemplate" type="text/template">
-        <h3 class="titresNoeud">{{nomFiche}}</h3>
-    </script>
-
-    <!-- Template pour l'affichage des illustrations d'une fiche -->
-    <script id="ficheIllustrationsTemplate" type="text/template">
-        {{#content}}
-            <img class="illustrationsFiches" src='{{urlIllustration}}' th:src='@{/Images/Illustrations/{{nomIllustration}}.png}' alt='{{descriptionIllustration}}' id='Illustration_{{id}}'>
-        {{/content}}
-    </script>
-
     <script type="text/javascript" src="static/js/urgenceQuestionReponses.js" th:src="@{/js/urgenceQuestionReponses.js}"></script>
 
 </html>
