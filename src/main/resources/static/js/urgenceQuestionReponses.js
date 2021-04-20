@@ -147,6 +147,10 @@ async function changeIdNoeud() {
     reponseId = idBouton.split("_")[1];
     let noeudFilsId = await doRequestNoeudFils();
     noeudId = noeudFilsId;
+    //vider les espaces d'affichage des aides entre deux noeuds
+    $("#aide_comprehension_titre").html("");
+    $("#aide_comprehension_illustrations").html("");
+    //requêter le noeud suivant
     doRequestNoeud();
 }
 
@@ -237,10 +241,8 @@ function doRequestAideComprehension(resultJson) {
 }
 
 function gestionAbsenceAideComprehension(xhr, status, message){
-    if(xhr.status==404) {
-        // s'il n'y a pas d'aide compréhension associée à cette question, vider les espaces prévus pour son affichage
-        $("#aide_comprehension_titre").html("");
-        $("#aide_comprehension_illustrations").html("");
+    if(xhr.status==404) { //404 => la page n'existe pas => pas d'aide compréhension sur ce noeud
+        // s'il n'y a pas d'aide compréhension associée à cette question
         console.log("pas d'aide comprehension ici");
     }
     else {
