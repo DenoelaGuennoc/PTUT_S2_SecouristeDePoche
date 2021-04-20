@@ -209,7 +209,7 @@ button:focus {
 permet d'adapter le texte en fonction de la taille de l'écran
 */
 
-@media all and (max-device-width: 480px)
+@media all and (max-device-width: 1024px)
 {
     #bloc_page
 	{width: auto;}
@@ -305,9 +305,9 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 		user-select: none;
 		cursor: pointer;
 		padding: 2rem 1rem;
-		font-size: 60px;
+		font-size: 150%;
 		line-height: 1;
-		width : 33%;
+		width : 40%;
 	}
 
 		
@@ -360,7 +360,7 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 }
 
 .illustrationsFiches {
-    max-width: 80%;
+    max-width: 40%;
     height: auto;
 }
 
@@ -394,7 +394,7 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
   .col-9 {width: 75%;}
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
+  .col-12 {width: 110%;}
 
 
 .row::after {
@@ -409,9 +409,3 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 	}
 
   
-/* mettre les images côte à côte : */
-
-.illustrationsFiches {
-	width: 850px;
-    height:620px
-}
