@@ -164,7 +164,7 @@ async function changeIdNoeud() {
 
 /* Affichage des illustrations */
 
-//modifié
+
 // Fonction qui trie les illustrations des fiches par position puis les affiche dans l'ordre
 function showResultIllustrations() {
     // Récupération des illustrations de la fiche
@@ -185,7 +185,7 @@ function showResultIllustrations() {
     $('#contenuNoeud').html(processedTemplate);
 }
 
-//nouveau
+
 // Fonction pour récupérer les id et positions des illustrations de la fiche
 function getIdPositionIllustrations(resultJson){
     //vider la map des potentielles illustrations qui y serait restées de la dernière requête
@@ -199,13 +199,13 @@ function getIdPositionIllustrations(resultJson){
     afficheIllustrations();
 }
 
-//nouveau
+
 // Fonction qui traite les erreurs de la requête doRequestIllustrations()
 function showErrorgetIdPositionIllustrations(xhr, status, message) {
     console.log("erreur de récupération des id et position d'illustration dans la fiche");
 }
 
-//modifié
+
 //Fonction pour faire l'appel AJAX des informations sur une fiche
 function doRequestIllustrations() {
     $.ajax({
@@ -217,7 +217,7 @@ function doRequestIllustrations() {
     });
 }
 
-//nouveau
+
 // Fonction pour la requête des illustrations d'une fiche
 function afficheIllustrations(){
     //vider l'array pour supprimer les illustrations de la dernière requête
@@ -273,7 +273,7 @@ function showResultACIllustrations() {
     $('#aide_comprehension_illustrations').html(processedTemplate);
 }
 
-//nouveau
+
 // Fonction pour récupérer les id et positions des illustrations de la fiche d'aide
 function getIdPositionACIllustrations(resultJson){
     //vider la map des potentielles illustrations qui y serait restées de la dernière requête
@@ -287,13 +287,13 @@ function getIdPositionACIllustrations(resultJson){
     afficheACIllustrations();
 }
 
-//nouveau
+
 // Fonction qui traite les erreurs de la requête doRequestACIllustrations()
 function showErrorgetIdPositionACIllustrations(xhr, status, message) {
     console.log("erreur de récupération des id et position d'illustration dans la fiche");
 }
 
-//nouveau
+
 // Fonction pour la requête des illustrations de la fiche d'aide
 function afficheACIllustrations(){
     //vider l'array des illustrations présentent à cause des fiches traitée plus tôt
@@ -325,7 +325,7 @@ function afficheACIllustrations(){
     );
 }
 
-//modifié
+
 // Fonction pour faire l'appel AJAX des informations de la fiche
 function doRequestACIllustrations(aideId) {
     $.ajax({
