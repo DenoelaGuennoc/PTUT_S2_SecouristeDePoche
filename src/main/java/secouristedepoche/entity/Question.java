@@ -39,6 +39,7 @@ public class Question extends NoeudDecisionnel{
     List<Reponse> reponsePossible = new LinkedList<>();
 
     @ManyToOne
+    @JoinColumn(nullable = true)
     Fiche aideComprehension;
 
 }
