@@ -1695,14 +1695,17 @@ INSERT INTO Illustration(id, description_illustration, nom_illustration, url_ill
     (85, '', '', 'static/Images/Illustrations/.png'), */
 
 --Liens Illustrations -> Fiches
-INSERT INTO NOEUD_DECISIONNEL_DESSINS(guides_id, dessins_id) VALUES
+ALTER TABLE NOEUD_DECISIONNEL_DESSINS
+ADD position_dessin INT;
+
+INSERT INTO NOEUD_DECISIONNEL_DESSINS(guides_id, dessins_id, position_dessin) VALUES
     --PLS
-    (19, 40), (19, 41), (19, 42), (19, 43), (19, 44), (19, 45), (19, 46), (19, 47), (19, 48), (19, 49),
-    (19, 50), (19, 51), (19, 52), (19, 53), (19, 54), (19, 55), (19, 56),
+    (19, 40, 1), (19, 41, 2), (19, 42, 3), (19, 43, 4), (19, 44, 5), (19, 45, 6), (19, 46, 7), (19, 47, 8), (19, 48, 9), (19, 49, 10),
+    (19, 50, 11), (19, 51, 12), (19, 52, 13), (19, 53, 14), (19, 54, 15), (19, 55, 16), (19, 56, 17),
     --Reconnaître l'inconscience
-    (24, 32), (24, 33),
+    (24, 32, 1), (24, 33, 2),
     --LVA
-    (23, 34), (23, 35), (23, 36), (23, 37), (23, 38), (23, 39);
+    (23, 34, 1), (23, 35, 2), (23, 36, 3), (23, 37, 4), (23, 38, 5), (23, 39, 6);
 
     /* (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
     (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
