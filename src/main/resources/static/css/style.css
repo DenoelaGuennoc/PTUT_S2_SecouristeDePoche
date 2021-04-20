@@ -359,6 +359,10 @@ permet de changer le bouton et le texte lors de l'affichage sur téléphone
 	font-size: 2.5rem;
 }
 
+.illustrationsFiches {
+    max-width: 80%;
+    height: auto;
+}
 
 /* grille responsive : */
 
