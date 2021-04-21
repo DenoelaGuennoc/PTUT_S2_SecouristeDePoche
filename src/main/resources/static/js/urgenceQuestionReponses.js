@@ -9,6 +9,7 @@ let illustrationsAC = new Array();
 // A l'ouverture de la page
 $(document).ready(
     function() {
+        console.log("ready");
         findNoeudRacine();
     }
 );
@@ -30,6 +31,7 @@ function findNoeudRacine(){
             for(let i=0; i<noeuds.length; i++){
                 if(noeuds[i].noeudRacine == true){
                     noeudId = noeuds[i].id;
+                    console.log("nouveau noeud racine = ", noeudId);
                     break;
                 }
             }
