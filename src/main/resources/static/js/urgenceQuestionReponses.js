@@ -9,7 +9,6 @@ let illustrationsAC = new Array();
 // A l'ouverture de la page
 $(document).ready(
     function() {
-        console.log("ready");
         findNoeudRacine();
     }
 );
@@ -28,20 +27,16 @@ function findNoeudRacine(){
         })
         .then((dataJSON) => {
             noeuds = dataJSON.content;
-            console.log("dataJSON.content = ", dataJSON.content);
             for(let i=0; i<noeuds.length; i++){
-                console.log("i = ", i);
-                console.log("noeudRacine = ", noeuds[i].noeudRacine);
                 if(noeuds[i].noeudRacine == true){
                     noeudId = noeuds[i].id;
-                    console.log("nouveau noeud racine = ", noeudId);
                     break;
                 }
             }
             doRequestNoeud();
             doRequestResponse();
         })
-        .catch((error) => console.log(error, "l'erreur se situe ici"));
+        .catch((error) => console.log(error));
 }
 
 
