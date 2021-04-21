@@ -1161,12 +1161,33 @@ INSERT INTO Quizz (id, intitule, reponseA, reponseB, reponseC, reponseD, reponse
 
 --Fiches
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, nom_Fiche) VALUES
-    ('Fiche', 19, 'PLS', 'Position Latérale de Sécurité'),
-    ('Fiche', 20, 'ACR', 'Arrêt Cardiorespiratoire'),
-    ('Fiche', 21, 'OBVA_Totale', 'Obstruction totale des voies aérienne'),
+    ('Fiche', 19, 'PLS_adulte_enfant', 'Position Latérale de Sécurité'),
+    ('Fiche', 20, 'ACR_adulte', 'Arrêt Cardiorespiratoire chez un adulte'),
+    ('Fiche', 21, 'OBVA_Totale_adulte', 'Obstruction totale des voies aérienne chez un adulte'),
     ('Fiche', 22, 'OBVA_Partielle', 'Obstruction partielle des voies aérienne'),
     ('Fiche', 23, 'LVA', 'Libération des voies aériennes'),
-    ('Fiche', 24, 'Inconscience', 'Reconnaitre inconscience');
+    ('Fiche', 24, 'Inconscience', 'Reconnaitre inconscience'),
+    ('Fiche', 25, 'ACR_enfant', 'Arrêt Cardiorespiratoire chez un enfant'),
+    ('Fiche', 26, 'ACR_nourrisson', 'Arrêt Cardiorespiratoire chez un nourrisson'),
+    ('Fiche', 27, 'PLS_nourrisson', 'Position Latérale de Sécurité chez le nourrisson'),
+    ('Fiche', 28, 'Brulure_simple', 'Brûlure simple'),
+    ('Fiche', 29, 'Brulure_grave', 'Brulure grave'),
+    ('Fiche', 30, 'Brulure_chimique_oeil', 'Brûlure par produit chimique aux yeux'),
+    ('Fiche', 31, 'Brulure_chimique', 'Brûlure par produit chimique'),
+    ('Fiche', 32, 'Brulure_électrique', 'Brûlure par un courant électrique'),
+    ('Fiche', 33, 'Brulure_interne', 'Brûlure par inhalation de vapeurs chaudes ou caustiques'),
+    ('Fiche', 34, 'Hemorragie_nez', 'Hémorragie par le nez'),
+    ('Fiche', 35, 'Hemorragie_crachats', 'Hémorragie par crachats ou vomissements de sang'),
+    ('Fiche', 36, 'Hemorragie_orifice_naturel', 'Hémorragie par un orifice naturel'),
+    ('Fiche', 37, 'Hemorragie', 'Hémorragie'),
+    ('Fiche', 38, 'Malaise_signes', 'Malaise : les signes à rechercher'),
+    ('Fiche', 39, 'OBVA_Totale_enfant', 'Obstruction totale des voies aérienne chez un enfant'),
+    ('Fiche', 40, 'OBVA_Totale_nourrisson', 'Obstruction totale des voies aérienne chez un nourrisson'),
+    ('Fiche', 41, 'Plaie_grave', 'Plaie grave'),
+    ('Fiche', 42, 'Plaie_simple', 'Plaie simple'),
+    ('Fiche', 43, 'Trauma_signes_immediats', 'Traumatisme avec signes immédiats'),
+    ('Fiche', 44, 'Trauma_rachis', 'Traumatisme avec douleur au cou (suspicion de traumatisme du rachis cervical)'); 
+
 
 --Questions
 INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question, aide_comprehension_id) VALUES
@@ -1179,9 +1200,9 @@ INSERT INTO Noeud_Decisionnel(DTYPE, id, nom_Noeud, texte_Question, aide_compreh
     ('Question', 8, 'Malaise', 'La victime se sent-elle mal ?', null),
     ('Question', 9, 'Type OBVA', 'La victime peut-elle parler ou tousser ?', null),
     ('Question', 10, 'Type Hemo', 'De quelle partie du corps saigne la victime ?', null),
-    ('Question', 11, 'Localisation Trauma', 'Où la victime a-t-elle subit un traumatisme ?', null),
+    ('Question', 11, 'Localisation Trauma', 'Où la victime a-t-elle des douleurs ?', null),
     ('Question', 12, 'Type Plaie', 'La plaie est-elle simple ou grave ?', null),
-    ('Question', 13, 'Localisation Plaie Grave', 'Où se situe la plaie ?', null),
+    ('Question', 13, 'Localisation Brulure Chimique', 'Où la victime a-t-elle été brûlée ?', null),
     ('Question', 14, 'Type Brulure', 'La brûlure est-elle simple ou grave ?', null),
     ('Question', 15, 'Cause Brulure', 'Quelle est la cause de la brûlure ?', null),
     ('Question', 16, 'Type de victime PLS', 'La victime est-elle :', null),
@@ -1209,19 +1230,47 @@ INSERT INTO Reponse(id, libelle_reponse, question_posee_id, noeud_fils_id) VALUE
     --Plaie ? 6
     (9, 'OUI', 6, 12),
     (10, 'NON', 6, 7),
-    (13, 'Grave', 12, 13),
-    --(14, 'Simple', 12, ), --ajouter ici l'id de la fiche plaie simple
+    (13, 'Grave', 12, 41),
+    (14, 'Simple', 12, 42),
     --Brûlure ? 7
     (11, 'OUI', 7, 14),
     (12, 'NON', 7, 8),
-    (15, 'Grave', 14, 15),
-    --(16, 'Simple', 14, ), --ajouter l'id de la fiche brulure simple
     --respire ? 1
-    (17, 'OUI', 1, 19),
-    (18, 'NON', 1, 20);
-
-    --(3, 'OUI', 1, 16),
-    --(4, 'NON', 1, 16); --voir comment demander le type de victime sachant un OneToOne entre réponse et noeud fils
+    (17, 'OUI', 1, 16),
+    (18, 'NON', 1, 17),
+    (24, 'un Adulte', 17, 20),
+    (25, 'un Enfant', 17, 25),
+    (26, 'un Bébé', 17, 26),
+    --Type OBVA ? 9
+    (19, 'OUI', 9, 22),
+    (20, 'NON', 9, 18),
+    (21, 'un Adulte', 18, 21),
+    (22, 'un Enfant', 18, 39),
+    (23, 'un Bébé', 18, 40),
+    --Type hémo ? 10
+    (27, 'du nez', 10, 34),
+    (28, 'crache ou vomit du sang', 10, 35),
+    (29, 'depuis un orifice naturel', 10, 36),
+    (30, 'autre', 10, 37),
+    --Type trauma ? 11
+    (31, 'au cou', 11, 44),
+    (32, 'ailleurs', 11, 43),
+    --Type brulure ? 14
+    (15, 'Grave', 14, 15),
+    (16, 'Simple', 14, 28),
+    (33, 'électrique', 15, 32),
+    (34, 'par produit chimique', 15, 13),
+    (35, 'par inhalation de vapeurs', 15, 33),
+    (36, 'autre', 15, 29),
+    (37, 'aux yeux', 13, 30),
+    (38, 'ailleurs', 13, 31),
+    --Malaise ? 8
+    (39, 'OUI', 8, 38),
+    (40, 'NON - revenir au début', 8, 2),
+    --Type PLS ? 16
+    (41, 'adulte ou enfant', 16, 19),
+    (42, 'bébé', 16, 27);
+    
 
 
 --Illustrations
@@ -1314,35 +1363,33 @@ INSERT INTO Illustration(id, description_illustration, nom_illustration, url_ill
 
 --Liens Illustrations -> Fiches
 INSERT INTO FICHE_ILLUSTRATION(guide_id, dessin_id, position_dessin) VALUES
-    --PLS
+    --PLS adulte enfant
     (19, 40, 1), (19, 41, 2), (19, 42, 3), (19, 43, 4), (19, 44, 5), (19, 45, 6), (19, 46, 7), (19, 47, 8), (19, 48, 9), (19, 49, 10),
     (19, 50, 11), (19, 51, 12), (19, 52, 13), (19, 53, 14), (19, 54, 15), (19, 55, 16), (19, 56, 17),
     --Reconnaître l'inconscience
     (24, 32, 1), (24, 33, 2),
     --LVA
-    (23, 34, 1), (23, 35, 2), (23, 36, 3), (23, 37, 4), (23, 38, 5), (23, 39, 6);
-
-
-/* ALTER TABLE NOEUD_DECISIONNEL_DESSINS
-ADD position_dessin INT;
-
-INSERT INTO NOEUD_DECISIONNEL_DESSINS(guides_id, dessins_id, position_dessin) VALUES
-    --PLS
-    (19, 40, 1), (19, 41, 2), (19, 42, 3), (19, 43, 4), (19, 44, 5), (19, 45, 6), (19, 46, 7), (19, 47, 8), (19, 48, 9), (19, 49, 10),
-    (19, 50, 11), (19, 51, 12), (19, 52, 13), (19, 53, 14), (19, 54, 15), (19, 55, 16), (19, 56, 17),
-    --Reconnaître l'inconscience
-    (24, 32, 1), (24, 33, 2),
-    --LVA
-    (23, 34, 1), (23, 35, 2), (23, 36, 3), (23, 37, 4), (23, 38, 5), (23, 39, 6);
- */
-    /* (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
-    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
-    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
-    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
-    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
-    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
-    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1),
-    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
-    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), 
-    (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), (1, 1), */
+    (23, 34, 1), (23, 35, 2), (23, 36, 3), (23, 37, 4), (23, 38, 5), (23, 39, 6),
+    --PLS nourrisson
+    (27, 57, 1),
+    --OBVA partielle
+    (22, 58, 1), (22, 59, 2), (22, 60, 3),
+    --OBVA totale adulte
+    (21, 58, 1), (21, 72, 2), (21, 61, 3), (21, 62, 4), (21, 63, 4), (21, 64, 5), (21, 65, 6), (21, 66, 7), (21, 67, 8), (21, 68, 9),
+    (21, 69, 10), (21, 70, 11), (21, 73, 12), (21, 74, 13),
+    --Hémo nez
+    (34, 7, 1), (34, 8, 2), (34, 9, 3), (34, 10, 4),
+    --Brulure simple
+    (28, 3, 1), (28, 4, 2), (28, 5, 3), (28, 6, 4),
+    --Brulure chimique oeil
+    (30, 1, 1),
+    --ACR adulte
+    (20, 11, 1), (20, 12, 2), (20, 13, 3), (20, 14, 4), (20, 15, 5),
+    (20, 25, 6), (20, 26, 7), (20, 27, 8), (20, 28, 9),
+    (20, 16, 10), (20, 17, 11), (20, 18, 12), (20, 19, 13), (20, 20, 14),
+    --ACR enfant
+    (25, 22, 1), (25, 23, 2), (25, 24, 3), (25, 25, 4), (25, 26, 5), (25, 27, 6), (25, 28, 7),
+    (25, 16, 8), (25, 17, 9), (25, 21, 10),
+    --ACR nourrisson
+    (26, 29, 1), (26, 30, 2), (26, 31, 3), (26, 16, 4), (26, 21, 5);
 

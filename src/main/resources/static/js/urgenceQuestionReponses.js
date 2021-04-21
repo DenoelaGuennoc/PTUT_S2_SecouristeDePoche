@@ -191,12 +191,17 @@ function getIdPositionIllustrations(resultJson){
     //vider la map des potentielles illustrations qui y serait restées de la dernière requête
     illustrationsPositionFiche.clear();
     let nbIllustrations = resultJson.relationGuideDessin.length;
-    for(let i = 0; i<nbIllustrations; i++){
-        let positionIllustration = resultJson.relationGuideDessin[i].positionDessin;
-        let idIllustration = resultJson.relationGuideDessin[i].id.dessin;
-        illustrationsPositionFiche.set(positionIllustration, idIllustration);
+    if(nbIllustrations == 0){
+        $('#contenuNoeud').html("Toutes nos excuses ces illustrations ne sont pas encore disponibles");
     }
-    afficheIllustrations();
+    else{
+        for(let i = 0; i<nbIllustrations; i++){
+            let positionIllustration = resultJson.relationGuideDessin[i].positionDessin;
+            let idIllustration = resultJson.relationGuideDessin[i].id.dessin;
+            illustrationsPositionFiche.set(positionIllustration, idIllustration);
+        }
+        afficheIllustrations();
+    }
 }
 
 
@@ -279,12 +284,17 @@ function getIdPositionACIllustrations(resultJson){
     //vider la map des potentielles illustrations qui y serait restées de la dernière requête
     illustrationsPositionAC.clear();
     let nbIllustrations = resultJson.relationGuideDessin.length;
-    for(let i = 0; i<nbIllustrations; i++){
-        let positionIllustration = resultJson.relationGuideDessin[i].positionDessin;
-        let idIllustration = resultJson.relationGuideDessin[i].id.dessin;
-        illustrationsPositionAC.set(positionIllustration, idIllustration);
+    if(nbIllustrations == 0){
+        $('#aide_comprehension_illustrations').html("Toutes nos excuses ces illustrations ne sont pas encore disponibles");
     }
-    afficheACIllustrations();
+    else{
+        for(let i = 0; i<nbIllustrations; i++){
+            let positionIllustration = resultJson.relationGuideDessin[i].positionDessin;
+            let idIllustration = resultJson.relationGuideDessin[i].id.dessin;
+            illustrationsPositionAC.set(positionIllustration, idIllustration);
+        }
+        afficheACIllustrations();
+    }
 }
 
 
