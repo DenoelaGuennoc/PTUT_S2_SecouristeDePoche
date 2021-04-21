@@ -1,4 +1,4 @@
-let noeudId = 0; //noeudRacine dans notre base
+let noeudId = 2; //noeudRacine dans notre base
 let reponseId = 0;
 let aideComprehensionId = 0;
 let illustrationsPositionFiche = new Map();
