@@ -262,7 +262,7 @@ function afficheIllustrations(){
     setTimeout(
         ()=>{
             showResultIllustrations();
-        }, 700
+        }, 800
     );
 }
 
