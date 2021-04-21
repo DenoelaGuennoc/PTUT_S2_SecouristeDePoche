@@ -1,4 +1,4 @@
-let noeudId = 2; //noeudRacine dans notre base
+let noeudId = 5; //noeudRacine dans notre base
 let reponseId = 0;
 let aideComprehensionId = 0;
 let illustrationsPositionFiche = new Map();
@@ -38,7 +38,7 @@ function findNoeudRacine(){
             doRequestNoeud();
             doRequestResponse();
         })
-        .catch((error) => console.log(error));
+        .catch((error) => console.log(error, "l'erreur se situe ici"));
 }
 
 
