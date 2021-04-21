@@ -1,5 +1,6 @@
 let noeudId = 0; //noeudRacine dans notre base
 let reponseId = 0;
+let aideComprehensionId = 0;
 let illustrationsPositionFiche = new Map();
 let illustrationsFiche = new Array();
 let illustrationsPositionAC = new Map();
@@ -14,7 +15,7 @@ $(document).ready(
 
 // Fonction permettant de trouver le premier noeud à afficher
 function findNoeudRacine(){
-    const url = "../api/noeudDecisionnels";
+    const url = "../api/questions";
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     const fetchOptions = {
@@ -169,12 +170,22 @@ async function changeIdNoeud() {
 function showResultIllustrations() {
     // Récupération des illustrations de la fiche
     var illustrations = illustrationsFiche;
-    // Tri des illustrations selon leur valeur de positionDessin
+    // Tri des illustrations selon leur valeur de positionDessin quand l'id du guide associé à la position est égal à l'id du noeud souhaité
     illustrations.sort(function compare(a, b) {
-        if (a.relationDessinGuide[0].positionDessin < b.relationDessinGuide[0].positionDessin)
-           return -1;
-        if (a.relationDessinGuide[0].positionDessin > b.relationDessinGuide[0].positionDessin)
-           return 1;
+        let i = 0;
+        let j = 0;
+        while(a.relationDessinGuide[i].id.guide != noeudId && i < a.relationDessinGuide.length){
+            a.relationDessinGuide.shift(); //on élimine cette position puisqu'elle ne correspond pas à la bonne fiche
+        }
+        a.relationDessinGuide.length = 1; // on élimine toutes les positions après celle qui correspond à notre fiche
+        while(b.relationDessinGuide[j].id.guide != noeudId && j < b.relationDessinGuide.length){
+            b.relationDessinGuide.shift(); //on élimine cette position puisqu'elle ne correspond pas à la bonne fiche
+        }
+        b.relationDessinGuide.length = 1; // on élimine toutes les positions après celle qui correspond à notre fiche
+        if (a.relationDessinGuide[i].positionDessin < b.relationDessinGuide[j].positionDessin)
+        return -1;
+        if (a.relationDessinGuide[i].positionDessin > b.relationDessinGuide[j].positionDessin)
+        return 1;
         return 0;
     });
     // Le code source du template est dans la page
@@ -251,7 +262,7 @@ function afficheIllustrations(){
     setTimeout(
         ()=>{
             showResultIllustrations();
-        }, 500
+        }, 800
     );
 }
 
@@ -264,10 +275,20 @@ function showResultACIllustrations() {
     let illustrations = illustrationsAC;
     // Tri des illustrations selon leur valeur de positionDessin
     illustrations.sort(function compare(a, b) {
-        if (a.relationDessinGuide[0].positionDessin < b.relationDessinGuide[0].positionDessin)
-           return -1;
-        if (a.relationDessinGuide[0].positionDessin > b.relationDessinGuide[0].positionDessin)
-           return 1;
+        let i = 0;
+        let j = 0;
+        while(a.relationDessinGuide[i].id.guide != aideComprehensionId && i < a.relationDessinGuide.length){
+            a.relationDessinGuide.shift(); //on élimine cette position puisqu'elle ne correspond pas à la bonne fiche
+        }
+        a.relationDessinGuide.length = 1; // on élimine toutes les positions après celle qui correspond à notre fiche
+        while(b.relationDessinGuide[j].id.guide != aideComprehensionId && j < b.relationDessinGuide.length){
+            b.relationDessinGuide.shift(); //on élimine cette position puisqu'elle ne correspond pas à la bonne fiche
+        }
+        b.relationDessinGuide.length = 1; // on élimine toutes les positions après celle qui correspond à notre fiche
+        if (a.relationDessinGuide[i].positionDessin < b.relationDessinGuide[j].positionDessin)
+        return -1;
+        if (a.relationDessinGuide[i].positionDessin > b.relationDessinGuide[j].positionDessin)
+        return 1;
         return 0;
     });
     // Le code source du template est dans la page
@@ -331,16 +352,16 @@ function afficheACIllustrations(){
     setTimeout(
         ()=>{
             showResultACIllustrations(illustrationsAC);
-        }, 300
+        }, 500
     );
 }
 
 
 // Fonction pour faire l'appel AJAX des informations de la fiche
-function doRequestACIllustrations(aideId) {
+function doRequestACIllustrations(aideComprehensionId) {
     $.ajax({
         //appel de l'API auto-générée
-        url: "../api/fiches/" + aideId,
+        url: "../api/fiches/" + aideComprehensionId,
         dataType: "json",
         success: getIdPositionACIllustrations,
         error: showErrorgetIdPositionACIllustrations
@@ -365,10 +386,10 @@ function showErrorAideComprehension(xhr, status, message) {
 
 //Fonction pour faire l'appel AJAX des informations de la fiche
 function doRequestAideComprehension(resultJson) {
-    aideId = resultJson.id;
+    aideComprehensionId = resultJson.id;
     $.ajax({
         //appel de l'API auto-générée
-        url: "../api/fiches/" + aideId,
+        url: "../api/fiches/" + aideComprehensionId,
         dataType: "json",
         success: showResultAideComprehension,
         error: showErrorAideComprehension
