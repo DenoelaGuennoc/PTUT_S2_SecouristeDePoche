@@ -16,7 +16,7 @@ $(document).ready(
 
 // Fonction permettant de trouver le premier noeud à afficher
 function findNoeudRacine(){
-    const url = "../api/noeudDecisionnels";
+    const url = "../api/questions";
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     const fetchOptions = {
