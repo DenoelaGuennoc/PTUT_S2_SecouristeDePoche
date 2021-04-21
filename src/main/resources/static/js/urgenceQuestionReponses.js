@@ -1,4 +1,4 @@
-let noeudId = 5; //noeudRacine dans notre base
+let noeudId = 0; //noeudRacine dans notre base
 let reponseId = 0;
 let aideComprehensionId = 0;
 let illustrationsPositionFiche = new Map();
@@ -28,7 +28,10 @@ function findNoeudRacine(){
         })
         .then((dataJSON) => {
             noeuds = dataJSON.content;
+            console.log("dataJSON.content = ", dataJSON.content);
             for(let i=0; i<noeuds.length; i++){
+                console.log("i = ", i);
+                console.log("noeudRacine = ", noeuds[i].noeudRacine);
                 if(noeuds[i].noeudRacine == true){
                     noeudId = noeuds[i].id;
                     console.log("nouveau noeud racine = ", noeudId);
