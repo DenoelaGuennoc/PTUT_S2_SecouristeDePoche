@@ -1353,13 +1353,20 @@ INSERT INTO Illustration(id, description_illustration, nom_illustration, url_ill
     (76, '', 'Traumatisme_Membre_T_2', 'static/Images/Illustrations/Traumatisme_Membre_T_2.png'),
     (77, '', 'Traumatisme_Rachis_T_1', 'static/Images/Illustrations/Traumatisme_Rachis_T_1.png'),
     (78, '', 'Traumatisme_Rachis_T_2', 'static/Images/Illustrations/Traumatisme_Rachis_T_2.png'),
-    (79, '', 'Traumatisme_Rachis_T_3', 'static/Images/Illustrations/Traumatisme_Rachis_T_3.png');
-    /* (80, '', '', 'static/Images/Illustrations/.png'),
-    (81, '', '', 'static/Images/Illustrations/.png'),
-    (82, '', '', 'static/Images/Illustrations/.png'),
-    (83, '', '', 'static/Images/Illustrations/.png'),
-    (84, '', '', 'static/Images/Illustrations/.png'),
-    (85, '', '', 'static/Images/Illustrations/.png'), */
+    (79, '', 'Traumatisme_Rachis_T_3', 'static/Images/Illustrations/Traumatisme_Rachis_T_3.png'),
+    
+    (80, '', 'Inconscient_ACR_A_6', 'static/Images/Illustrations/Inconscient_ACR_A_6.png'),
+    (81, '', 'Inconscient_ACR_A_7', 'static/Images/Illustrations/Inconscient_ACR_A_7.png'),
+    (82, '', 'Inconscient_ACR_E_4', 'static/Images/Illustrations/Inconscient_ACR_E_4.png'),
+    (83, '', 'Inconscient_ACR_E_5', 'static/Images/Illustrations/Inconscient_ACR_E_5.png'),
+    (84, '', 'Inconscient_ACR_N_4', 'static/Images/Illustrations/Inconscient_ACR_N_4.png'),
+    (85, '', 'Inconscient_ACR_N_5', 'static/Images/Illustrations/Inconscient_ACR_N_5.png'),
+    (86, '', 'Inconscient_ACR_N_6', 'static/Images/Illustrations/Inconscient_ACR_N_6.png'),
+    (87, '', 'OBVA_Totale_A_13', 'static/Images/Illustrations/OBVA_Totale_A_13.png'),
+    (88, '', 'OBVA_Totale_Aenceinteobese_3', 'static/Images/Illustrations/OBVA_Totale_Aenceinteobese_3.png'),
+    (89, '', 'OBVA_Totale_Aenceinteobese_4', 'static/Images/Illustrations/OBVA_Totale_Aenceinteobese_4.png'),
+
+
 
 --Liens Illustrations -> Fiches
 INSERT INTO FICHE_ILLUSTRATION(guide_id, dessin_id, position_dessin) VALUES
@@ -1376,7 +1383,8 @@ INSERT INTO FICHE_ILLUSTRATION(guide_id, dessin_id, position_dessin) VALUES
     (22, 58, 1), (22, 59, 2), (22, 60, 3),
     --OBVA totale adulte
     (21, 58, 1), (21, 72, 2), (21, 61, 3), (21, 62, 4), (21, 63, 4), (21, 64, 5), (21, 65, 6), (21, 66, 7), (21, 67, 8), (21, 68, 9),
-    (21, 69, 10), (21, 70, 11), (21, 73, 12), (21, 74, 13),
+    (21, 69, 10), (21, 70, 11), (21, 71, 12), (21, 87, 13),
+    (21, 73, 14), (21, 74, 15), (21, 88, 16), (21, 89, 17),
     --Hémo nez
     (34, 7, 1), (34, 8, 2), (34, 9, 3), (34, 10, 4),
     --Brulure simple
@@ -1385,11 +1393,13 @@ INSERT INTO FICHE_ILLUSTRATION(guide_id, dessin_id, position_dessin) VALUES
     (30, 1, 1),
     --ACR adulte
     (20, 11, 1), (20, 12, 2), (20, 13, 3), (20, 14, 4), (20, 15, 5),
-    (20, 25, 6), (20, 26, 7), (20, 27, 8), (20, 28, 9),
-    (20, 16, 10), (20, 17, 11), (20, 18, 12), (20, 19, 13), (20, 20, 14),
+    (20, 25, 6), (20, 26, 7), (20, 27, 8), (20, 28, 9), (20, 80, 10), (20, 81, 11),
+    (20, 16, 12), (20, 17, 13), (20, 18, 14), (20, 19, 15), (20, 20, 16),
     --ACR enfant
     (25, 22, 1), (25, 23, 2), (25, 24, 3), (25, 25, 4), (25, 26, 5), (25, 27, 6), (25, 28, 7),
-    (25, 16, 8), (25, 17, 9), (25, 21, 10),
+    (25, 82, 8), (25, 83, 9),
+    (25, 16, 10), (25, 17, 11), (25, 21, 12),
     --ACR nourrisson
-    (26, 29, 1), (26, 30, 2), (26, 31, 3), (26, 16, 4), (26, 21, 5);
+    (26, 29, 1), (26, 30, 2), (26, 31, 3), (26, 84, 4), (26, 85, 5), (26, 86, 6),
+    (26, 16, 7), (26, 21, 8);
 
