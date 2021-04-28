@@ -1364,7 +1364,7 @@ INSERT INTO Illustration(id, description_illustration, nom_illustration, url_ill
     (86, '', 'Inconscient_ACR_N_6', 'static/Images/Illustrations/Inconscient_ACR_N_6.png'),
     (87, '', 'OBVA_Totale_A_13', 'static/Images/Illustrations/OBVA_Totale_A_13.png'),
     (88, '', 'OBVA_Totale_Aenceinteobese_3', 'static/Images/Illustrations/OBVA_Totale_Aenceinteobese_3.png'),
-    (89, '', 'OBVA_Totale_Aenceinteobese_4', 'static/Images/Illustrations/OBVA_Totale_Aenceinteobese_4.png'),
+    (89, '', 'OBVA_Totale_Aenceinteobese_4', 'static/Images/Illustrations/OBVA_Totale_Aenceinteobese_4.png');
 
 
 
